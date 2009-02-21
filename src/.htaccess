@@ -1,0 +1,10 @@
+AddHandler fastcgi-script .py
+Options +ExecCGI -Indexes
+AddDefaultCharset utf-8
+ServerSignature Off
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^$ index.cgi [L]
+RewriteRule ^moar.(txt|html)$ raw.cgi?format=$1 [QSA,L]
+RewriteRule \.py - [F,L]

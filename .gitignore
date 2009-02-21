@@ -1,0 +1,6 @@
+.DS_Store
+*.pyc
+html
+conversation.py
+_tumblr
+.old
