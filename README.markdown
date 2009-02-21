@@ -31,10 +31,12 @@ Diving in
 
 A quick overview of the folder structure:
 
-* `src` -- All the essential stuff.
-* `bin` -- Some scripts for updating `meme.boxofjunk.ws`. You'll need to
-           edit some variables if you want to use these.
-* `images` -- Image files used by scripts in the `bin` folder.
+* `src` &mdash; All the essential stuff.
+
+* `bin` &mdash; Some scripts for updating `meme.boxofjunk.ws`. You'll need to
+  edit some variables if you want to use these.
+
+* `images` &mdash; Image files used by scripts in the `bin` folder.
 
 To see the meme generator in action:
 
