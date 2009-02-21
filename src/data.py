@@ -3,10 +3,10 @@
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 footer = []
-footer.append('<p>Read the <a href="http://automeme.tumblr.com/">Blog</a> '
-              'for updates and crap')
-footer.append('<p>Comments? Suggestions? Email: <em>meme</em> at '
-              '<em>boxofjunk.ws</em></p>')
+footer.append('<p><a href="http://github.com/inky/automeme/tree/master">'\
+              'Source code</a> now available!</p>')
+footer.append('<p>Read the <a href="http://automeme.tumblr.com/">Blog</a> '\
+              'for more updates and crap')
 
 css = """
 html { font-size: 100.01%; text-transform: uppercase; }
