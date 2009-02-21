@@ -10,6 +10,8 @@ sometimes it's downright offensive. You have been warned.
 The bulk of the code was written in Summer 2008. It has been edited on and off
 since then.
 
+Licensed under the GNU General Public License (see the `COPYING` file).
+
 
 Caveats
 -------
