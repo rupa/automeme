@@ -96,4 +96,6 @@ patterns = [
     ( 'I am _BEST {1}_, the best {1} ever!', ('noun', ['name', no_article]) ),
     ( 'You have no chance to {1}, make your time', ('iverb') ),
     ( 'i just accidentally a {1}, is this {2}?', 'noun', ('~bad', '~dangerous') ),
+    ( 'how is {1} formed? how {2} get {3}?', ('noun', 'noun', 'name'),
+            ('noun', 'noun', 'name'), ('adj', '~pragnent') ),
 ]
