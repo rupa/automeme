@@ -98,4 +98,6 @@ patterns = [
     ( 'i just accidentally a {1}, is this {2}?', 'noun', ('~bad', '~dangerous') ),
     ( 'how is {1} formed? how {2} get {3}?', ('noun', 'noun', 'name'),
             ('noun', 'noun', 'name'), ('adj', '~pragnent') ),
+    [( 'My name is {1}. You killed my {2}. Prepare to {3}.',
+            ('name', 'name', 'spengbab'), ('noun', 'noun1'), 'iverb' ), no_the],
 ]

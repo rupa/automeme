@@ -5,9 +5,9 @@ __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 from common import *
 
 spengbab = lambda: randel(\
-        ['Spange','Speng','Sporg','Splorg',
+        ['Spange','Speng','Sporg','Splorg','Spang',
         'Spernd','Splort','Spunk','Scram','Spange','Speeng',
-        'Splen','Spengj','Spinge']\
+        'Splen','Spengj','Spinge','Spong']\
         ) + randel(\
         ['bob','bob','bob','bab','bab','beb','blat','berp','bharb',
         'blar','borg'])
@@ -19,6 +19,10 @@ sqarpents = lambda: randel(\
         'ponts'])
 
 vocab = {
+    'spengbab': [
+        lambda: '%s %s' % (spengbab(), sqarpents()),
+    ],
+
     'name': [
         'Abbath',
         'Acid Burn',
@@ -79,6 +83,7 @@ vocab = {
         'Trogdor',
         'Woll Smoth',
         'Xenu',
+        'Xzibit',
         'YouTube',
         'Za Warudo',
         'Zero Cool',
@@ -283,6 +288,7 @@ vocab = {
                 'done a barrel roll; doing a barrel roll',
         'download mp3s; downloads mp3s; downloaded mp3s; ~; downloading mp3s',
         'drink; ~s; drank; drunk; drinking',
+        'drive; ~s; drove; driven; driving',
         'duck; ducks; ducked; ~; ducking',
         'eat; eats; ate; eaten; eating',
         'fap; faps; fapped; ~; fapping',
