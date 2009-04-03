@@ -6,7 +6,7 @@ footer = []
 footer.append('<p><a href="http://github.com/inky/automeme/tree/master">'\
               'Source code</a> now available!</p>')
 footer.append('<p>Read the <a href="http://automeme.tumblr.com/">Blog</a> '\
-              'for more updates and crap')
+              'for more updates and crap</p>')
 
 css = """
 html { font-size: 100.01%; text-transform: uppercase; }
