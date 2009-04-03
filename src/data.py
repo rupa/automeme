@@ -20,8 +20,7 @@ a,img { border: none !important; }
 #meme-w2 { margin-left: 250px; font-weight: bold; }
 #meme-w2 div { background: #eed; font-size: 3em; letter-spacing: -0.05em; position:relative;
                word-spacing: 0.1em; margin: 0 40px 0 0; padding: 0.3em 0.4em 0.4em;
-               -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em;
-               -webkit-transform: rotate(-1deg); -webkit-box-shadow: -1px 2px 1px #d3cbcb; }
+               -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em; }
 #meme-w2 .arrow { width:0; height:0; line-height:0; position:absolute;
                   border-right:35px solid #eed; border-top:0.5em solid #fff;
                   border-bottom:0.1em solid #fff; bottom:0.5em; left:-34px; }
