@@ -18,10 +18,13 @@ a,img { border: none !important; }
 #body { padding-top: 50px; }
 #meme-w1 { width: 100%; float: right; color: #C00; margin-left: -250px; }
 #meme-w2 { margin-left: 250px; font-weight: bold; }
-#meme { background: #eed; font-size: 3em; letter-spacing: -0.05em;
-        word-spacing: 0.1em; margin: 0 40px 0 0; padding: 0.3em 0.4em 0.4em;
-        -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em;
-        -webkit-transform: rotate(-1deg); -webkit-box-shadow: -1px 2px 1px #d3cbcb; }
+#meme-w2 div { background: #eed; font-size: 3em; letter-spacing: -0.05em; position:relative;
+               word-spacing: 0.1em; margin: 0 40px 0 0; padding: 0.3em 0.4em 0.4em;
+               -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em;
+               -webkit-transform: rotate(-1deg); -webkit-box-shadow: -1px 2px 1px #d3cbcb; }
+#meme-w2 .arrow { width:0; height:0; line-height:0; position:absolute;
+                  border-right:35px solid #eed; border-top:0.5em solid #fff;
+                  border-bottom:0.1em solid #fff; bottom:0.5em; left:-34px; }
 
 #push { width: 250px; height: 350px; float: left; }
 #butan { width: 150px; height: 0; padding-top: 150px; margin: 80px 0 0 50px;
@@ -53,9 +56,9 @@ Content-type: text/html; charset=UTF-8
 <meta name="microid" content="mailto+http:sha1:76913cf666bba15787e5936fb332bb8779bffe5e"/>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mongs.tumblr.com/rss"/>
 </head><body><div id="body">
-<div id="meme-w1"><div id="meme-w2"><p id="meme">
+<div id="meme-w1"><div id="meme-w2"><div><p id="meme">
 %s
-</p></div></div>
+</p><span class="arrow"/></div></div></div>
 <div id="push"><div id="butan">&nbsp;</div></div>
 <div id="footer">%s</div>
 </div></body></html>
