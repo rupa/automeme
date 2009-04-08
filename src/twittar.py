@@ -67,9 +67,12 @@ def get():
         ))
     crap = None
     while not crap:
-        crap = reduce(lambda x, y: len(y) > len(x) and y or x,
-                      filter(lambda s: len(s.encode('utf-8')) <= 140,
-                             (meme.generate('twitter') for x in xrange(5)) ))
+        try:
+            crap = reduce(lambda x, y: len(y) > len(x) and y or x,
+                        filter(lambda s: len(s.encode('utf-8')) <= 140,
+                                (meme.generate('twitter') for x in xrange(5)) ))
+        except TypeError:
+            continue
     return crap
 
 
