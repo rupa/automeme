@@ -94,11 +94,13 @@ def generate(format = 'html', pattern = ''):
             meme = meme.replace('{%sa}' % (i+1), a_word(word))
 
     meme = meme.upper()
-    if format == 'html':
-        meme = re_sub(r'(^|\W) _([^_]*)_ (\W|$)', r'\1<em>\2</em>\3', meme)
-        meme = re_sub(r'(^|\W) -- (\W|$)', r'\1&#8212;\2', meme)
-    elif format == 'plain':
+    if format in ('plain', 'twitter'):
         meme = re_sub(r'(^|\W) _([^_]*)_ (\W|$)', r'\1\2\3', meme)
+    if format in ('html', ):
+        meme = re_sub(r'(^|\W) -- (\W|$)', r'\1&#8212;\2', meme)
+        meme = re_sub(r'(^|\W) _([^_]*)_ (\W|$)', r'\1<em>\2</em>\3', meme)
+    if format in ('twitter', ):
+        meme = re_sub(r'(^|\W) -- (\W|$)', ur'\1\u2014\2', meme)
     return meme
 
 def html():
