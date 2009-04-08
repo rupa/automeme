@@ -3,17 +3,21 @@
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 footer = []
-footer.append('<p><a href="http://github.com/inky/automeme/tree/master">'\
-              'Source code</a> now available!</p>')
-footer.append('<p>Read the <a href="http://automeme.tumblr.com/">Blog</a> '\
-              'for more updates and crap</p>')
+footer.append(
+    '<p>NEW: @<a href="http://twitter.com/automeme">automeme</a> on Twitter!</p>')
+footer.append('<p>%s</p>' % '\n&middot; '.join((
+    '<a href="http://automeme.tumblr.com/">Blog</a>',
+    '<a href="http://mongs.tumblr.com/">Tumblr</a>',
+    '<a href="http://twitter.com/automeme">Twitter</a>',
+    '<a href="http://github.com/inky/automeme/tree/master">Source</a>',
+    )) )
 
 css = """
 html { font-size: 100.01%; text-transform: uppercase; }
 body { background: #fff; font: 1em/1 'Helvetica Neue', 'DejaVu Sans', 'Helvetica', sans-serif; }
 div,p,body { margin:0; padding:0; }
-a { color: #666; }
-a:hover { color: #C00 !important; }
+a { color: #666; text-decoration:none; }
+a:hover { color: #C00 !important; text-decoration:underline; }
 a,img { border: none !important; }
 #body { padding-top: 50px; }
 #meme-w1 { width: 100%; float: right; color: #C00; margin-left: -250px; }

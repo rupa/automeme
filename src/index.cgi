@@ -11,7 +11,7 @@ if __name__ == '__main__':
         import meme, time
         t = time.time()
         output = meme.html()
-        output += '<!-- %s s -->' % (time.time()-t)
+        output += '<!-- %.5f s -->' % (time.time()-t)
     except:
         output = "HTTP/1.0 500 Internal Server Error\n"
 
