@@ -67,8 +67,9 @@ def get():
         ))
     crap = None
     while not crap:
-        crap = randel(tuple(filter(lambda s: len(s.encode('utf-8')) <= 140,
-            (meme.generate('twitter') for x in xrange(10)) )))
+        crap = reduce(lambda x, y: len(y) > len(x) and y or x,
+                      filter(lambda s: len(s.encode('utf-8')) <= 140,
+                             (meme.generate('twitter') for x in xrange(5)) ))
     return crap
 
 
