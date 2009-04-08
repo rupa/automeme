@@ -46,6 +46,32 @@ password: wxyz
     return u, p
 
 
+def get():
+    meme.vocab['name'].extend((
+        'Twitter',
+        ))
+    meme.vocab['noun'].extend((
+        'tweet; ~s',
+        'Twitter; ~s',
+        ))
+    meme.vocab['verb'].extend((
+        'follow; ~s; followed; ~; following',
+        'tweet about; tweets about; tweeted about; ~; tweeting about',
+        ))
+    meme.vocab['iverb'].extend((
+        'tweet; tweets; tweeted; ~; tweeting',
+        ))
+    meme.vocab['adj'].extend((
+        'SEO',
+        'Twitter',
+        ))
+    crap = None
+    while not crap:
+        crap = randel(tuple(filter(lambda s: len(s.encode('utf-8')) <= 140,
+            (meme.generate('twitter') for x in xrange(10)) )))
+    return crap
+
+
 def api():
     u, p = cred()
     if not u or not p:
@@ -59,12 +85,7 @@ def post():
     if not t:
         return
 
-    crap = None
-    while not crap:
-        crap = randel(tuple(filter(lambda s: len(s.encode('utf-8')) <= 140,
-            (meme.generate('twitter') for x in xrange(10)) )))
-
-    status = t.PostUpdate(crap)
+    status = t.PostUpdate(get())
     print status.text
     try:
         print 'http://twitter.com/%s/status/%d' % (status.user.screen_name, status.id)
@@ -73,9 +94,12 @@ def post():
 
 
 def main():
-    if '--cron' in sys.argv and randint(1,24) != 7:
+    if '--dryrun' in sys.argv or '-n' in sys.argv:
+        print get()
+    elif '--cron' in sys.argv and randint(1,24) != 7:
         return
-    post()
+    else:
+        post()
 
 
 if __name__ == '__main__':
