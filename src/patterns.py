@@ -100,4 +100,5 @@ patterns = [
             ('noun', 'noun', 'name'), ('adj', '~pragnent') ),
     [( 'Hello. My name is {1}. You killed my {2}. Prepare to {3}.',
             ('name', 'name', 'spengbab'), ('noun', 'noun1'), 'iverb' ), no_the],
+    ( "{1} {2}: {3} DOESN'T LIKE IT", ('~SCREAMING', 'adj'), 'noun', 'name' ),
 ]
