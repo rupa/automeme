@@ -7,6 +7,7 @@ footer.append(
     '<p>NEW: @<a href="http://twitter.com/automeme">automeme</a> on Twitter!</p>')
 footer.append('<p>%s</p>' % '\n&middot; '.join((
     '<a href="http://automeme.tumblr.com/">Blog</a>',
+    '<a href="api.html">API</a>',
     '<a href="http://mongs.tumblr.com/">Tumblr</a>',
     '<a href="http://twitter.com/automeme">Twitter</a>',
     '<a href="http://github.com/inky/automeme/tree/master">Source</a>',
