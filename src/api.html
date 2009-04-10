@@ -27,18 +27,20 @@ table {border-collapse:collapse; border-spacing:0;}
 
 body {background:#eed; color:#A00;
       font:12pt/1.5 'Helvetica Neue','DejaVu Sans','Helvetica',sans-serif;}
-#body {margin:4em; max-width:40em;}
-h1 {font-weight:bold; font-size:3em; margin-bottom:0.5em; line-height:1;}
+#body {margin:3em 4em; max-width:40em;}
+h1 {font-weight:bold; font-size:3em; margin-bottom:0.5em; line-height:1;
+    text-shadow:1px 2px 1px #fff;}
 h2 {font-size:1.5em; margin:2em 0 1em; line-height:1;}
 h3 {font-weight:bold; font-size:1.25em; line-height:1.2;}
 p, pre {margin-bottom:1.5em;}
 pre, code {font-size:1em;}
-ul {margin:1.5em 0; list-style:square;}
-li {line-height:1.5;}
-table {margin:0 1.5em 1.5em;}
+ul {margin:0 2em 1.5em; list-style:square;}
+li {line-height:1.5; color:#A88;}
+li code {color:#A00;}
+table {margin:0 2em 1.5em;}
 thead tr {border-bottom:1px solid #CAA;}
 thead code {font-weight:bold;}
-td {padding-right:1.5em;}
+td {padding-right:2em;}
 a {color:#C00 !important;}
 abbr, .caps {font-size:0.9em;}
 .hurr {color:#A88;}
@@ -95,7 +97,7 @@ one of the following <abbr>URL</abbr>s:</p>
 <h3>Python</h3>
 <pre><code><span class="hurr">&gt;&gt;&gt;</span> import urllib
 <span class="hurr">&gt;&gt;&gt;</span> url = 'http://meme.boxofjunk.ws/moar.txt'
-<span class="hurr">&gt;&gt;&gt;</span> memes = urllib.urlopen(url).read().split("\n")
+<span class="hurr">&gt;&gt;&gt;</span> memes = urllib.urlopen(url).read().rstrip().split("\n")
 <span class="hurr">&gt;&gt;&gt;</span> print memes.pop()</code></pre>
 
 <h3>Ruby</h3>
