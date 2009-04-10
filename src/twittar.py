@@ -100,7 +100,7 @@ def post():
 def main():
     if '--dryrun' in sys.argv or '-n' in sys.argv:
         print get()
-    elif '--cron' in sys.argv and randint(1,24) != 7:
+    elif '--cron' in sys.argv and randint(1,20) != 4:
         return
     else:
         post()
