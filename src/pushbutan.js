@@ -1,3 +1,6 @@
+if (top !== self)
+    top.location.href = self.location.href;
+
 function AutoMeme(tagButton, tagMeme)
 {
     var memes = new Array();
