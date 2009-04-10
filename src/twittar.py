@@ -98,11 +98,11 @@ def post():
 
 
 def main():
-    if '--dryrun' in sys.argv or '-n' in sys.argv:
+    if '--dryrun' in sys.argv or '-n' in sys.argv \
+       or ('--cron' in sys.argv and randint(1,20) != 4):
         print get()
-    elif '--cron' in sys.argv and randint(1,20) != 4:
-        return
     else:
+        print 'Posting to twitter...'
         post()
 
 
