@@ -15,6 +15,7 @@ __author__ = 'Liam Cooke <http://github.com/inky>'
 
 import ConfigParser
 import sys
+import time
 from os import path
 from random import randint
 
@@ -98,12 +99,11 @@ def post():
 
 
 def main():
-    if '--dryrun' in sys.argv or '-n' in sys.argv \
-       or ('--cron' in sys.argv and randint(1,16) != 4):
-        print get()
-    else:
+    if '--cron' in sys.argv and not time.gmtime()[3] % 5:
         print 'Posting to twitter...'
         post()
+    else:
+        print get()
 
 
 if __name__ == '__main__':

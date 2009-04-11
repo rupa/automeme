@@ -6,7 +6,7 @@ ing_in = lambda s: re_sub(r'(IN)G(\W|$)', r'\1\2', s)
 no_the = lambda s: re_sub(r'(^|\s) THE (\W|S)', r'\2',
                           s).strip().replace('[THE]','THE')
 no_article = lambda s: re_isub(r'^(AN?|THE|YOUR)\s', '', s)
-thants = lambda s: re_isub(r'<(TH|BL) [^AEIOU]*([^>]*)>', r'\1\2', s)
+thants = lambda s: re_isub(r'<(TH|BL) [^AEIOU4]*([^>]*)>', r'\1\2', s)
 
 patterns = [
     ( 'im in ur {1}, {2} ur {3}', ('noun','noun1'), 'verb4', 'noun1' ),
@@ -97,11 +97,11 @@ patterns = [
     ( 'I am _BEST {1}_, the best {1} ever!', ('noun', ['name', no_article]) ),
     ( 'You have no chance to {1}, make your time', ('iverb') ),
     ( 'i accidentally a {1}, is this {2}?', 'noun', ('~bad', '~dangerous') ),
-    ( 'how is {1} formed? how {2} get {3}?', ('noun', 'noun', 'name'),
-            ('noun', 'noun', 'name'), ('adj', '~pragnent') ),
+    [( 'how is {1} formed? how {2} get {3}?', ('noun', 'noun', 'name'),
+            ('noun', 'noun', 'name'), ('adj', '~pragnent') ), no_the],
     [( 'Hello. My name is {1}. You killed my {2}. Prepare to {3}.',
             ('name', 'name', 'spengbab'), ('noun', 'noun1'), 'iverb' ), no_the],
     ( "{1} {2}: {3} DOESN'T LIKE IT", ('~SCREAMING', 'adj'), 'noun', 'name' ),
-    [( 'Thanks, {1}. <TH {1}>.', ('noun', 'noun1', 'name') ), no_the, thants],
-    [( 'Bless you, {1}. <BL {1}>.', ('noun', 'noun1', 'name') ), no_the, thants],
+    [( 'Thanks, {1}. <TH {1}>.', ('noun1', 'name') ), no_the, thants],
+    [( 'Bless you, {1}. <BL {1}>.', ('noun1', 'name') ), no_the, thants],
 ]
