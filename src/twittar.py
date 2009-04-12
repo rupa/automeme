@@ -15,7 +15,6 @@ __author__ = 'Liam Cooke <http://github.com/inky>'
 
 import ConfigParser
 import sys
-import time
 from os import path
 from random import randint
 
@@ -25,24 +24,27 @@ import meme
 from common import *
 
 
-CFG_FILE = path.join(path.expanduser('~'), '.automeme')
+CFG_FILES = [
+    '../.automeme',
+    path.join(path.expanduser('~'), '.automeme'),
+]
 
 
 def cred():
     cfg = ConfigParser.ConfigParser()
-    cfg.read(CFG_FILE)
+    cfg.read(CFG_FILES)
     u, p = None, None
     try:
         u = cfg.get('Twitter', 'username', None)
         p = cfg.get('Twitter', 'password', None)
     except ConfigParser.NoSectionError:
         sys.stderr.write("""\
-%s must contain a Twitter section, with the format:
+.automeme must contain a Twitter section, with the format:
 
 [Twitter]
 username: abcd
 password: wxyz
-""" % CFG_FILE)
+""")
 
     return u, p
 
@@ -99,7 +101,7 @@ def post():
 
 
 def main():
-    if '--cron' in sys.argv and not time.gmtime()[3] % 5:
+    if '--cron' in sys.argv and not randint(0,15):
         print 'Posting to twitter...'
         post()
     else:
