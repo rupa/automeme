@@ -3,8 +3,6 @@
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 footer = []
-footer.append(
-    '<p>NEW: @<a href="http://twitter.com/automeme">automeme</a> on Twitter!</p>')
 footer.append('<p>%s</p>' % '\n&middot; '.join((
     '<a href="http://automeme.tumblr.com/">Blog</a>',
     '<a href="api.html">API</a>',
