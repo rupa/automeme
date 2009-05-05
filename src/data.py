@@ -28,11 +28,11 @@ a,img { border: none !important; }
                   border-right:35px solid #eed; border-top:0.5em solid #fff;
                   border-bottom:0.1em solid #fff; bottom:0.5em; left:-34px; }
 
-#push { width: 250px; height: 350px; float: left; }
-#butan { width: 150px; height: 0; padding-top: 150px; margin: 80px 0 0 50px;
-         overflow: hidden; background: url(butan.png) 0 0 no-repeat; }
+#push { width: 250px; float: left; }
+#butan { width: 150px; height: 0; padding-top: 150px; margin: 80px 0 20px 50px;
+         overflow: hidden; background: url(butan.png) 0 1px no-repeat; }
 #butan:hover { background-position: 0 -150px; }
-#hint {padding-top:20px; text-align:center;}
+#hint { text-align: center; }
 #footer { color: #888; clear: both; overflow: visible; text-align: center;
           font-size: 0.7em; width: 728px; margin: 0 auto; padding-top: 12px; }
 #footer p { text-align: center; margin: 0.75em; }
