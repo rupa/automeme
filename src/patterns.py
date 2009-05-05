@@ -104,4 +104,11 @@ patterns = [
     ( "{1} {2}: {3} DOESN'T LIKE IT", ('~SCREAMING', 'adj'), 'noun', 'name' ),
     [( 'Thanks, {1}. <TH {1}>.', ('noun1', 'name') ), no_the, thants],
     [( 'Bless you, {1}. <BL {1}>.', ('noun1', 'name') ), no_the, thants],
+    ( "These are not the {1} you're looking for", 'noun1' ),
+    ( "Whatever {1} your {2}", 'verb1', ('noun', 'noun1') ),
+    ( "That's not {1a}; _this_ is {1a}", 'noun' ),
+    ( "I am {1}, hear me {2}", 'name', ('iverb', 'iverb', '~roar') ),
+    ( "Dammit Jim, I'm {1a}, not {2a}", 'noun', 'noun' ),
+    ( "In Soviet Russia, {1} {2} _YOU!_", ('noun', 'noun', 'name'), 'verb1' ),
+    ( "I, for one, welcome our new {1} overlords", 'noun' ),
 ]
