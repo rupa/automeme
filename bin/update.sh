@@ -11,5 +11,5 @@ outputdir=../html
 cp -p \
     ../src/.htaccess \
     ../src/*.{py,cgi,html,js} \
-    ../images/tumblr_background.jpg \
+    ../images/{tumblr_background.jpg,click.png} \
     $outputdir/

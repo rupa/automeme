@@ -32,6 +32,7 @@ a,img { border: none !important; }
 #butan { width: 150px; height: 0; padding-top: 150px; margin: 80px 0 0 50px;
          overflow: hidden; background: url(butan.png) 0 0 no-repeat; }
 #butan:hover { background-position: 0 -150px; }
+#hint {padding-top:20px; text-align:center;}
 #footer { color: #888; clear: both; overflow: visible; text-align: center;
           font-size: 0.7em; width: 728px; margin: 0 auto; padding-top: 12px; }
 #footer p { text-align: center; margin: 0.75em; }
@@ -61,7 +62,10 @@ Content-type: text/html; charset=UTF-8
 <div id="meme-w1"><div id="meme-w2"><div><p id="meme">
 %s
 </p><span class="arrow"/></div></div></div>
-<div id="push"><div id="butan">&nbsp;</div></div>
+<div id="push">
+<div id="butan">&nbsp;</div>
+<div id="hint"><img src="click.png" alt=""/></div>
+</div>
 <div id="footer">%s</div>
 </div></body></html>
 """.strip()

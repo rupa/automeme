@@ -1,10 +1,11 @@
 if (top !== self)
     top.location.href = self.location.href;
 
-function AutoMeme(tagButton, tagMeme)
+function AutoMeme(tagButton, tagMeme, tagHint)
 {
     var memes = new Array();
     var blocked = false;
+    var first = true;
 
     unblock();
 
@@ -73,11 +74,15 @@ function AutoMeme(tagButton, tagMeme)
         }
     }
 
-
     function meme()
     {
         if (blocked) return;
         block();
+
+        if (first) {
+            tagHint.style.display = 'none';
+            first = false;
+        }
 
         if (memes.length > 0) {
             pop();
@@ -92,5 +97,6 @@ function AutoMeme(tagButton, tagMeme)
 window.onload = function()
 {
     var automeme = new AutoMeme(document.getElementById('butan'),
-                                document.getElementById('meme'));
+                                document.getElementById('meme'),
+                                document.getElementById('hint'));
 };
