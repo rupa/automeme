@@ -63,7 +63,7 @@ Content-type: text/html; charset=UTF-8
 <head profile="http://www.w3.org/2005/10/profile">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>%s</title>
-<meta name="description" content="FOR GREAT JUSTICE"/>
+<meta name="description" content="One very cheeky random nonsense generator. Inspired by the utter insanity of 4chan, and internet memes in general. Sometimes cute; sometimes offensive. You have been warned!"/>
 <link rel="icon" type="image/png" href="/icon32.png"/>
 <link rel="apple-touch-icon" href="/icon.png"/>
 <meta name="viewport" content="width=800"/>
