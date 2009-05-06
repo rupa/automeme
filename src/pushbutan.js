@@ -27,12 +27,12 @@ function AutoMeme(tagButton, tagMeme, tagHint)
     function block()
     {
         blocked = true;
-        tagButton.style.cursor = 'wait';
+        //tagButton.style.cursor = 'wait';
     }
     function unblock()
     {
         blocked = false;
-        tagButton.style.cursor = 'pointer';
+        //tagButton.style.cursor = 'pointer';
     }
 
     function queue(items)

@@ -111,4 +111,8 @@ patterns = [
     ( "Dammit Jim, I'm {1a}, not {2a}", 'noun', 'noun' ),
     ( "In Soviet Russia, {1} {2} _YOU!_", ('noun', 'noun', 'name'), 'verb1' ),
     ( "I, for one, welcome our new {1} overlords", 'noun' ),
+    ( "You wouldn't {1} a {2}", ('~download', 'verb'), 'noun' ),
+    ( "To be a {1}, you must have {2}, {2} and {3a}.", ('~man', 'noun'),
+            ('noun', 'noun1'), ('noun', '~penis') ),
+    ( "Ceiling {1} is watching you {2}", 'noun', ('~fap', 'iverb', 'iverb') ),
 ]

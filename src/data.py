@@ -44,7 +44,8 @@ a,img { border: none !important; }
 
 #push { width: 250px; float: left; }
 #butan { width: 150px; height: 0; padding-top: 150px; margin: 80px 0 20px 50px;
-         overflow: hidden; background: url(butan.png) 0 1px no-repeat; }
+         overflow: hidden; background: url(butan.png) 0 1px no-repeat;
+         cursor: pointer; }
 #butan:hover { background-position: 0 -150px; }
 #hint { text-align: center; color: #888; font-size: 0.8em; line-height: 1.25; }
 #footer { color: #888; clear: both; overflow: visible; text-align: center;
@@ -64,7 +65,7 @@ Content-type: text/html; charset=UTF-8
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>%s</title>
 <meta name="description" content="One very cheeky random nonsense generator. Inspired by the utter insanity of 4chan, and internet memes in general."/>
-<meta name="keywords" content="meme 4chan random nonsense generator python"/>
+<meta name="keywords" content="meme random nonsense generator 4chan lulz snowclone python"/>
 <link rel="icon" type="image/png" href="/icon32.png"/>
 <link rel="apple-touch-icon" href="/icon.png"/>
 <meta name="viewport" content="width=800"/>

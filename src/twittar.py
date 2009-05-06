@@ -101,7 +101,7 @@ def post():
 
 
 def main():
-    if '--cron' in sys.argv and not randint(0,15):
+    if ('--cron' in sys.argv and not randint(0,15)) or '--poast' in sys.argv:
         print 'Posting to twitter...'
         post()
     else:
