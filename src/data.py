@@ -3,7 +3,7 @@
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 footer = []
-footer.append('<p>%s</p>' % '\n&middot; '.join((
+footer.append('<p>%s</p>' % '\n&nbsp;&middot;&nbsp; '.join((
     '<a href="http://automeme.tumblr.com/">Blog</a>',
     '<a href="api.html">API</a>',
     '<a href="http://mongs.tumblr.com/">Tumblr</a>',
@@ -29,7 +29,7 @@ css = """
 html { font-size: 100.01%; text-transform: uppercase; }
 body { background: #fff; font: 1em/1 'Helvetica Neue', 'DejaVu Sans', 'Helvetica', sans-serif; }
 div,p,body { margin:0; padding:0; }
-a { color: #888; text-decoration:none; }
+a { color: #444; text-decoration:none; }
 a:hover { color: #C00 !important; text-decoration:underline; }
 a,img { border: none !important; }
 #body { padding-top: 50px; }
@@ -47,11 +47,10 @@ a,img { border: none !important; }
          overflow: hidden; background: url(butan.png) 0 1px no-repeat; }
 #butan:hover { background-position: 0 -150px; }
 #hint { text-align: center; color: #888; font-size: 0.8em; line-height: 1.25; }
-#hint p { margin-bottom: 0.25em; }
 #footer { color: #888; clear: both; overflow: visible; text-align: center;
-          font-size: 0.8em; width: 728px; margin: 2em auto 0; padding-top: 12px; }
-#footer p { text-align: center; margin: 0.75em; }
-#sellout { padding-top: 2em; }
+          font-size: 0.8em; width: 728px; margin: 0 auto; padding-top: 3em; }
+#footer p { text-align: center; margin: 0.75em; line-height: 1.5; }
+#sellout { padding-top: 1.5em; }
 .hide { display: none; }
 """.replace('\n\n','\n').strip()
 
@@ -78,7 +77,7 @@ Content-type: text/html; charset=UTF-8
 </p><span class="arrow"/></div></div></div>
 <div id="push">
 <div id="butan">&nbsp;</div>
-<div id="hint"><p><img src="click.png" alt=""/></p><p>push butan<br/>receive meme</p></div>
+<div id="hint">push butan<br/>receive meme</div>
 </div>
 <div id="footer">%s</div>
 </div></body></html>
