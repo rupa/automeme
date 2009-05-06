@@ -116,4 +116,10 @@ patterns = [
             ('noun', 'noun1'), ('noun', '~penis') ),
     ( "Ceiling {1} is watching you {2}", 'noun', ('~fap', 'iverb', 'iverb') ),
     ( "I {1}, therefore I {2}.", ('iverb', 'iverb', '~think'), 'iverb' ),
+    # religion is the opiate of the mudkips
+    ( "{1} is the {2} of the {3}", ('name', 'noun', 'noun'), 'noun', 'noun1' ),
+    ( 'Dr. {1}, or how I learned to stop {2} and {3} the {4}', ['name', no_article],
+        ('~worrying', 'iverb4', 'iverb4'), ('~love', 'verb'), ('noun', 'noun1') ),
+    ( "We've secretly replaced {1}'s {2} with {3a}. Let's see if he notices...",
+        'name', ('noun', 'noun1'), 'noun' ),
 ]
