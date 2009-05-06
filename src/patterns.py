@@ -115,4 +115,5 @@ patterns = [
     ( "To be a {1}, you must have {2}, {2} and {3a}.", ('~man', 'noun'),
             ('noun', 'noun1'), ('noun', '~penis') ),
     ( "Ceiling {1} is watching you {2}", 'noun', ('~fap', 'iverb', 'iverb') ),
+    ( "I {1}, therefore I {2}.", ('iverb', 'iverb', '~think'), 'iverb' ),
 ]
