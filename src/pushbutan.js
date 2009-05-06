@@ -56,7 +56,7 @@ function AutoMeme(tagButton, tagMeme, tagHint)
         if (!req) { return; }
 
         var recd = false;
-        req.open("GET", "moar.html?ts=" + new Date().getTime(), true);
+        req.open("GET", "moar.html?lines=20&ts=" + new Date().getTime(), true);
         req.send(null);
         req.onreadystatechange = function()
         {
