@@ -80,7 +80,7 @@ function AutoMeme(tagButton, tagMeme, tagHint)
         block();
 
         if (first) {
-            tagHint.style.display = 'none';
+            tagHint.style.visibility = 'hidden';
             first = false;
         }
 
@@ -92,6 +92,7 @@ function AutoMeme(tagButton, tagMeme, tagHint)
         }
     }
     tagButton.onclick = function() { meme(); };
+    tagHint.onclick = function() { meme(); };
 }
 
 window.onload = function()

@@ -30,7 +30,6 @@ vocab = {
         'Anonymous',
         'AOL',
         'Battletoads',
-        'Bayutmayun',
         'Bill Gates',
         'Brian Peppers',
         'Burzum',
