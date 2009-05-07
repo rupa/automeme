@@ -5,7 +5,7 @@ ServerSignature Off
 
 RewriteEngine On
 RewriteBase /
-RewriteRule ^$ index.cgi [L]
+RewriteRule ^$ index.cgi [QSA,L]
 RewriteRule ^moar.(txt|html)$ raw.cgi?format=$1 [QSA,L]
 RewriteRule ^moar.(txt|html).json$ raw.cgi?format=$1&json=1 [QSA,L]
 RewriteRule \.py - [F,L]

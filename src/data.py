@@ -56,6 +56,8 @@ a,img { border: none !important; }
 .hide { display: none; }
 """.replace('\n\n','\n').strip()
 
+easter_eggs = ('katara',)
+
 html_template = u"""\
 Content-type: text/html; charset=UTF-8
 X-Meme: %s
