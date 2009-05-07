@@ -107,7 +107,8 @@ def generate(format = 'html', pattern = ''):
 
 def html():
     from data import css, html_template, footer
-    return html_template % (title, css, generate(), '\n'.join(footer))
+    m = generate()
+    return html_template % (m, title, css, m, '\n'.join(footer))
 
 if __name__ == '__main__':
     print html()

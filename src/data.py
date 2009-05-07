@@ -28,7 +28,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 css = """
 html { font-size: 100.01%; text-transform: uppercase; }
 body { background: #fff; font: 1em/1 'Helvetica Neue', 'DejaVu Sans', 'Helvetica', sans-serif; }
-div,p,body { margin:0; padding:0; }
+h1,div,p,body { margin:0; padding:0; }
 a { color: #444; text-decoration:none; }
 a:hover { color: #C00 !important; text-decoration:underline; }
 a,img { border: none !important; }
@@ -47,7 +47,8 @@ a,img { border: none !important; }
          overflow: hidden; background: url(butan.png) 0 1px no-repeat;
          cursor: pointer; }
 #butan:hover { background-position: 0 -150px; }
-#hint { text-align: center; color: #888; font-size: 0.8em; line-height: 1.25; }
+#hint { text-align: center; color: #888; font-size: 0.8em; line-height: 1.25;
+        font-weight: normal; }
 #footer { color: #888; clear: both; overflow: visible; text-align: center;
           font-size: 0.8em; width: 728px; margin: 0 auto; padding-top: 3em; }
 #footer p { text-align: center; margin: 0.75em; line-height: 1.5; }
@@ -55,8 +56,9 @@ a,img { border: none !important; }
 .hide { display: none; }
 """.replace('\n\n','\n').strip()
 
-html_template = u"""
+html_template = u"""\
 Content-type: text/html; charset=UTF-8
+X-Meme: %s
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -70,8 +72,6 @@ Content-type: text/html; charset=UTF-8
 <link rel="apple-touch-icon" href="/icon.png"/>
 <meta name="viewport" content="width=800"/>
 <style type="text/css">%s</style>
-<script type="text/javascript" src="pushbutan.js"></script>
-<meta name="microid" content="mailto+http:sha1:76913cf666bba15787e5936fb332bb8779bffe5e"/>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds2.feedburner.com/automeme"/>
 </head><body><div id="body">
 <div id="meme-w1"><div id="meme-w2"><div><p id="meme">
@@ -79,8 +79,9 @@ Content-type: text/html; charset=UTF-8
 </p><span class="arrow"/></div></div></div>
 <div id="push">
 <div id="butan">&nbsp;</div>
-<div id="hint">push butan<br/>receive meme</div>
+<h1 id="hint">push butan <br/> receive meme</h1>
 </div>
 <div id="footer">%s</div>
-</div></body></html>
-""".strip()
+</div>
+<script type="text/javascript" src="pushbutan.js"></script>
+</body></html>"""
