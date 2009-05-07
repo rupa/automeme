@@ -10,6 +10,6 @@ outputdir=../html
 # copy source files to the output directory
 cp -p \
     ../src/.htaccess \
-    ../src/*.{py,cgi,html,js} \
+    ../src/*.{py,cgi,html,js,txt} \
     ../images/{tumblr_background.jpg,click.png} \
     $outputdir/
