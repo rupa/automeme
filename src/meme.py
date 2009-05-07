@@ -61,7 +61,7 @@ def randword(category):
 def a_word(word):
     """Prepend 'a' or 'an' to a word."""
     w = word.lower()
-    if w[0] in 'aeiou' or w == 'hero' or w.startswith('mp3'):
+    if w[0] in 'aeiou' or w in ('hero', 'xbox') or w.startswith('mp3'):
         return 'an ' + word
     else:
         return 'a ' + word
