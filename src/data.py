@@ -44,7 +44,7 @@ a,img { border: none !important; }
 
 #push { width: 250px; float: left; }
 #butan { width: 150px; height: 0; padding-top: 150px; margin: 80px 0 20px 50px;
-         overflow: hidden; background: url(butan.png) 0 1px no-repeat;
+         overflow: hidden; background: url(butan.png) 0 0px no-repeat;
          cursor: pointer; }
 #butan:hover { background-position: 0 -150px; }
 #hint { text-align: center; color: #888; font-size: 0.8em; line-height: 1.25;

@@ -5,6 +5,8 @@
 
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
+from random import randint
+
 from common import *
 from patterns import patterns
 from vocab import vocab
@@ -108,6 +110,10 @@ def generate(format = 'html', pattern = ''):
 def html():
     from data import css, html_template, footer
     m = generate()
+
+    if not randint(0, 20):
+        css = css.replace('butan.png', 'butan-katara.png')
+
     return html_template % (m, title, css, m, '\n'.join(footer))
 
 if __name__ == '__main__':
