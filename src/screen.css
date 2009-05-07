@@ -1,0 +1,28 @@
+html { font-size: 100.01%; text-transform: uppercase; }
+body { background: #fff; font: 1em/1 'Helvetica Neue', 'DejaVu Sans', 'Helvetica', sans-serif; }
+h1,div,p,body { margin:0; padding:0; }
+a { color: #444; text-decoration:none; }
+a:hover { color: #C00 !important; text-decoration:underline; }
+a,img { border: none !important; }
+#body { padding-top: 50px; }
+#meme-w1 { width: 100%; float: right; color: #C00; margin-left: -250px; }
+#meme-w2 { margin-left: 250px; font-weight: bold; }
+#meme-w2 div { background: #eed; font-size: 3em; letter-spacing: -0.05em; position: relative;
+               word-spacing: 0.1em; margin: 0 40px 0 0; padding: 0.3em 0.4em 0.4em;
+               -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em; float: left; }
+#meme-w2 .arrow { width:0; height:0; line-height:0; position:absolute;
+                  border-right:35px solid #eed; border-top:0.5em solid #fff;
+                  border-bottom:0.1em solid #fff; bottom:0.5em; left:-34px; }
+
+#push { width: 250px; float: left; }
+#butan { width: 150px; height: 0; padding-top: 150px; margin: 80px 0 20px 50px;
+         overflow: hidden; background: url(butan.png) 0 0px no-repeat;
+         cursor: pointer; }
+#butan:hover { background-position: 0 -150px; }
+#hint { text-align: center; color: #888; font-size: 0.8em; line-height: 1.25;
+        font-weight: normal; }
+#footer { color: #888; clear: both; overflow: visible; text-align: center;
+          font-size: 0.8em; width: 728px; margin: 0 auto; padding-top: 3em; }
+#footer p { text-align: center; margin: 0.75em; line-height: 1.5; }
+#sellout { padding-top: 1.5em; }
+.hide { display: none; }

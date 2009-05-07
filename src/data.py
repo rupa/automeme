@@ -74,20 +74,22 @@ X-Meme: %s
 <title>%s</title>
 <meta name="description" content="One very cheeky random nonsense generator. Inspired by the utter insanity of 4chan, and internet memes in general."/>
 <meta name="keywords" content="meme random nonsense generator 4chan lulz snowclone python"/>
-<link rel="icon" type="image/png" href="/icon32.png"/>
-<link rel="apple-touch-icon" href="/icon.png"/>
+<link rel="stylesheet" type="text/css" href="screen.css"/>
+<link rel="icon" type="image/png" href="icon32.png"/>
+<link rel="apple-touch-icon" href="icon.png"/>
 <meta name="viewport" content="width=800"/>
-<style type="text/css">%s</style>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds2.feedburner.com/automeme"/>
-</head><body><div id="body">
-<div id="meme-w1"><div id="meme-w2"><div><p id="meme">
-%s
-</p><span class="arrow"/></div></div></div>
-<div id="push">
-<div id="butan">&nbsp;</div>
-<h1 id="hint">push butan <br/> receive meme</h1>
-</div>
-<div id="footer">%s</div>
+%s</head>
+<body>
+<div id="body">
+ <div id="meme-w1"><div id="meme-w2">
+   <div> <p id="meme">%s</p> <span class="arrow"></span> </div>
+ </div></div>
+ <div id="push">
+  <div id="butan">&nbsp;</div>
+  <h1 id="hint">push butan <br/> receive meme</h1>
+ </div>
+ <div id="footer">%s</div>
 </div>
 <script type="text/javascript" src="pushbutan.js"></script>
 </body></html>"""
