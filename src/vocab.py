@@ -364,6 +364,7 @@ vocab = {
         'crunk',
         'delicious',
         'dizzy',
+        'drunk',
         'emo',
         'epic',
         'flying',
