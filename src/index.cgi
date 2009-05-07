@@ -13,9 +13,11 @@ if __name__ == '__main__':
         t = time.time()
 
         args = cgi.FieldStorage()
-        eegg = args.has_key('imhotep') and args['imhotep'].value == 'invisible'
+        egg = args.has_key('imhotep') and args['imhotep'].value == 'invisible'
+        if not egg and args.has_key('butan'):
+            egg = args['butan'].value
 
-        output = meme.html(eegg)
+        output = meme.html(egg)
         output += '<!-- %.5f s -->' % (time.time()-t)
     except:
         output = "HTTP/1.0 500 Internal Server Error\n"

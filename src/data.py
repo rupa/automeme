@@ -25,6 +25,10 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 """.strip())
 
+
+easter_eggs = ('katara', 'milkips')
+
+
 css = """
 html { font-size: 100.01%; text-transform: uppercase; }
 body { background: #fff; font: 1em/1 'Helvetica Neue', 'DejaVu Sans', 'Helvetica', sans-serif; }
@@ -56,7 +60,6 @@ a,img { border: none !important; }
 .hide { display: none; }
 """.replace('\n\n','\n').strip()
 
-easter_eggs = ('katara',)
 
 html_template = u"""\
 Content-type: text/html; charset=UTF-8

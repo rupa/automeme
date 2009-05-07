@@ -107,12 +107,14 @@ def generate(format = 'html', pattern = ''):
         meme = re_sub(r'\.\.\.', u'\u2026', meme)
     return meme
 
-def html(eegg=False):
+def html(egg=False):
     from data import css, easter_eggs, html_template, footer
     m = generate()
 
-    if eegg or not randint(0, 20):
-        css = css.replace('butan.png', 'butan-%s.png' % randel(easter_eggs))
+    if egg or not randint(0, 20):
+        if egg not in easter_eggs:
+            egg = randel(easter_eggs)
+        css = css.replace('butan.png', 'butan-%s.png' % egg)
 
     return html_template % (m, title, css, m, '\n'.join(footer))
 
