@@ -16,7 +16,7 @@ a,img { border: none !important; }
 
 #push { width: 250px; float: left; }
 #butan { width: 150px; height: 0; padding-top: 150px; margin: 80px 0 20px 50px;
-         overflow: hidden; background: url(butan.png) 0 0px no-repeat;
+         overflow: hidden; background: url(butan-hurrrr.png) 0 0px no-repeat;
          cursor: pointer; }
 #butan:hover { background-position: 0 -150px; }
 #hint { text-align: center; color: #888; font-size: 0.8em; line-height: 1.25;
@@ -24,5 +24,5 @@ a,img { border: none !important; }
 #footer { color: #888; clear: both; overflow: visible; text-align: center;
           font-size: 0.8em; width: 728px; margin: 0 auto; padding-top: 3em; }
 #footer p { text-align: center; margin: 0.75em; line-height: 1.5; }
-#sellout { padding-top: 1.5em; }
+#sellout { padding: 1.5em 0; }
 .hide { display: none; }

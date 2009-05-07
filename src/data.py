@@ -3,7 +3,6 @@
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 footer = []
-footer.append('<p><a href="/?imhotep=invisible">Random button</a></p>')
 footer.append('<p>%s</p>' % '\n&nbsp;&middot;&nbsp; '.join((
     '<a href="http://automeme.tumblr.com/">Blog</a>',
     '<a href="api.html">API</a>',
@@ -27,7 +26,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 """.strip())
 
 
-easter_eggs = ('awesome', 'datass', 'eyebrow', 'hurrrr', 'katara', 'milkips')
+easter_eggs = ('awesome', 'datass', 'eyebrow', 'hurrrr', 'katara', 'milkips',
+               'original')
 
 
 css = """

@@ -2,6 +2,7 @@
 *.pyc
 html
 conversation.py
+omg*.cgi
 json.py
 _tumblr
 .old

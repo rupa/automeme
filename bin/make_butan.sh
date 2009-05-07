@@ -17,7 +17,7 @@ convert ../images/awesome.png \
     -resize 150 \
     /tmp/b2.png
 convert /tmp/b{1,2}.png \
-    -append $outputdir/butan.png
+    -append $outputdir/butan-original.png
 
 
 # bonus buttons
