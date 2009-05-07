@@ -26,7 +26,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 """.strip())
 
 
-easter_eggs = ('katara', 'milkips')
+easter_eggs = ('awesome', 'datass', 'katara', 'milkips')
 
 
 css = """

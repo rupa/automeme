@@ -9,41 +9,47 @@ mkdir -p $outputdir
 # make :awesome: button
 
 convert ../images/awesome.png \
-    -bordercolor transparent -border 20x20 \
-    -resize 300 \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
     /tmp/b1.png
 convert ../images/awesome.png \
-    -bordercolor transparent -border 4x4 \
     -swirl 25 \
-    -resize 300 \
+    -resize 150 \
     /tmp/b2.png
 convert /tmp/b{1,2}.png \
-    -append -resize 150 \
-    $outputdir/butan.png
+    -append $outputdir/butan.png
 
 
 # bonus buttons
 
+convert ../images/awesome.gif \
+    -filter box -resize 150 \
+    /tmp/emot.png
+convert ../images/awesome-datass.png \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
+    /tmp/datass.png
 convert ../images/awesome-katara.png \
-    -bordercolor transparent -border 20x20 \
-    -resize 300 \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
     /tmp/katara.png
 convert ../images/milkips.png \
-    -bordercolor transparent -border 20x20 \
-    -resize 300 \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
     /tmp/milkips1.png
 convert ../images/milkips.png \
-    -bordercolor transparent -border 4x4 \
     -swirl -50 \
-    -resize 300 \
+    -resize 150 \
     /tmp/milkips2.png
 
+convert /tmp/{b1,emot}.png \
+    -append $outputdir/butan-awesome.png
+convert /tmp/{b1,datass}.png \
+    -append $outputdir/butan-datass.png
 convert /tmp/{b1,katara}.png \
-    -append -resize 150 \
-    $outputdir/butan-katara.png
+    -append $outputdir/butan-katara.png
 convert /tmp/milkips{1,2}.png \
-    -append -resize 150 \
-    $outputdir/butan-milkips.png
+    -append $outputdir/butan-milkips.png
 
 
 # icons (favicon, iphone, etc)
