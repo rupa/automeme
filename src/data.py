@@ -72,7 +72,7 @@ Content-type: text/html; charset=UTF-8
 <style type="text/css">%s</style>
 <script type="text/javascript" src="pushbutan.js"></script>
 <meta name="microid" content="mailto+http:sha1:76913cf666bba15787e5936fb332bb8779bffe5e"/>
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://mongs.tumblr.com/rss"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds2.feedburner.com/automeme"/>
 </head><body><div id="body">
 <div id="meme-w1"><div id="meme-w2"><div><p id="meme">
 %s
