@@ -29,6 +29,14 @@ convert ../images/awesome-datass.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/datass.png
+convert ../images/awesome-eyebrow.png \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
+    /tmp/eyebrow.png
+convert ../images/awesome-hurrrr.png \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
+    /tmp/hurrrr.png
 convert ../images/awesome-katara.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
@@ -46,6 +54,10 @@ convert /tmp/{b1,emot}.png \
     -append $outputdir/butan-awesome.png
 convert /tmp/{b1,datass}.png \
     -append $outputdir/butan-datass.png
+convert /tmp/{b1,eyebrow}.png \
+    -append $outputdir/butan-eyebrow.png
+convert /tmp/{b1,hurrrr}.png \
+    -append $outputdir/butan-hurrrr.png
 convert /tmp/{b1,katara}.png \
     -append $outputdir/butan-katara.png
 convert /tmp/milkips{1,2}.png \

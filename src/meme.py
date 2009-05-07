@@ -111,7 +111,7 @@ def html(egg=False):
     from data import css, easter_eggs, html_template, footer
     m = generate()
 
-    if egg or not randint(0, 20):
+    if egg or not randint(0, 12):
         if egg not in easter_eggs:
             egg = randel(easter_eggs)
         css = css.replace('butan.png', 'butan-%s.png' % egg)
