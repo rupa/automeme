@@ -13,7 +13,7 @@ def dumb_debug(grep):
         while True:
             if not memes:
                 memes = filter(lambda s: grep in s,
-                               (meme.generate('plain') for x in xrange(50)))
+                               (meme.generate('txt') for x in xrange(50)))
             if memes:
                 print memes.pop()
                 time.sleep(1)

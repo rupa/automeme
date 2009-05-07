@@ -122,4 +122,5 @@ patterns = [
         ('~worrying', 'iverb4', 'iverb4'), ('~love', 'verb'), ('noun', 'noun1') ),
     ( "We've secretly replaced {1}'s {2} with {3a}. Let's see if he notices...",
         'name', ('noun', 'noun1'), 'noun' ),
+    ( "What _are_ {1}? We just don't know.", 'noun1' ),
 ]
