@@ -103,14 +103,14 @@ function AutoMeme(tagButton, tagMeme)
     $('#wut').click(toggleHalp);
     $('#dismiss').click(toggleHalp);
 
-    $('body').keypress(function(e) {
+    window.onkeypress = function(e) {
         if (e.which == 32) {
             meme();
         } else if (e.which == 27 && halp) {  // Esc
             $('#halp').slideUp('normal');
             halp = false;
         }
-    });
+    };
 }
 
 window.onload = function()
