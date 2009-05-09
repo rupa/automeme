@@ -80,5 +80,5 @@ X-Meme: %s
  <div id="footer">%s</div>
 </div>
 <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
-<script type="text/javascript" src="pushbutan.js?20090509b"></script>
+<script type="text/javascript" src="pushbutan.js?20090509c"></script>
 </body></html>"""

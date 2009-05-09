@@ -5,6 +5,7 @@ function AutoMeme(tagButton, tagMeme)
 {
     var memes = new Array();
     var blocked = false;
+    var max = 10;
 
     unblock();
 
@@ -54,7 +55,8 @@ function AutoMeme(tagButton, tagMeme)
 
         var recd = false;
         $('#loading span').fadeIn('fast');
-        req.open("GET", "moar.html?lines=20&ts=" + new Date().getTime(), true);
+        req.open("GET", "moar.html?lines="+max+"&ts="+new Date().getTime(), true);
+        if (max < 100) max += max;
         req.send(null);
         req.onreadystatechange = function()
         {
