@@ -51,17 +51,25 @@ X-Meme: %s
 <body>
 <div id="halp">
  <h1>INTERNET MEME MACHINE</h1>
+ <!-- google_ad_section_start -->
  <p>AUTO-MEME is a random nonsense generator, inspired by
     <a href="http://en.wikipedia.org/wiki/Mad_Libs">Mad Libs</a>,
     <a href="http://en.wikipedia.org/wiki/Snowclone">snowclones</a>,
     and the utterly insane world of
     <a href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>.
-    Not&nbsp;safe&nbsp;for&nbsp;work.</p>
+    <span class="warning">Not safe for work.</span>
+ </p>
+ <p><img src="awesome.gif" alt=":razz:" title=":razz:"/> originates from <a
+    href="http://forums.somethingawful.com/misc.php?action=showsmilies">Something
+    Awful</a>.</p>
+ <!-- google_ad_section_end -->
  <p><a id="dismiss" href="#">okay</a></p>
 </div>
 <div id="body">
  <div id="meme-w1"><div id="meme-w2">
+   <!-- google_ad_section_start(weight=ignore) -->
    <div> <p id="meme">%s</p> <span class="arrow"></span> </div>
+   <!-- google_ad_section_end -->
  </div></div>
  <div id="push">
   <div id="butan">&nbsp;</div>

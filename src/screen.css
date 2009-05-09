@@ -8,6 +8,8 @@ a,img { border: none !important; }
        border-bottom:4px solid #772245; z-index:0; visibility:hidden;}
 #halp p {padding-bottom:1em; max-width:30em;}
 #halp a {color:#C00;}
+#halp img {vertical-align:text-bottom;}
+#halp .warning {white-space:nowrap;}
 #body { margin-top: 40px; }
 #meme-w1 { width: 100%; float: right; color: #C00; margin-left: -250px; }
 #meme-w2 { margin-left: 250px; font-weight: bold; }
