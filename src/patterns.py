@@ -29,7 +29,7 @@ patterns = [
     ( 'This is {1}. I can tell by the {2}, and from having seen '\
       'a lot of {3} in my day.', ('~photoshopped', 'adj'), 'noun1', 'noun1' ),
     ( 'Maximum {1} yields maximum {2}', ('~volume', 'noun1'), 'noun1' ),
-    ( "i think {1} is a pretty cool guy. eh {2} {3} and doesn't afraid of anything.",
+    ( "i think {1} is a pretty cool guy. eh {2} {3} and doesn't afraid of anything",
             ('name', 'noun', 'noun1'), 'verb1', 'noun1' ),
     lambda: randel(( ( '{1}cat is {1}', 'adj0' ),  ( '{1}cat is {1a}', 'noun0' ) )),
     ( '{1} is the {2} that is killing {3}', ('name', 'noun1'),
@@ -39,12 +39,12 @@ patterns = [
     ( 'I have reported you to {1} for {2} {3} as it is a crime.',
         'name', ('~stealing', 'verb4'), 'noun1' ),
     ( 'Imma {1} mah {2}', ('~chargin','~firin'), ('noun','noun1') ),
-    ( "I really do hope you're {1} and not actually that fucking {2}.",
+    ( "I really do hope you're {1} and not actually that fucking {2}",
             'iverb4', 'adj' ),
     ( 'Your {1} is not {2}', 'noun', ('~cool','adj') ),  #tumblrs represent
     ( 'is it can be {1} tiem nao plees?', ('noun','noun','noun1','adj') ),
     ( "It's over. {1} is finished.", ('name','noun') ),
-    ( 'The {1} is a lie.', 'noun' ),
+    ( 'The {1} is a lie', 'noun' ),
     ( 'BECAUSE YOU ARE _{1} {2}_', ('~headcrab','adj','noun'), 'noun' ),
     ( 'No, {1}. You are the {2}.', (['name', no_article], 'noun'), 'noun1' ),
     # http://lurkmore.com/wiki/DOOM:_Repercussions_of_Evil

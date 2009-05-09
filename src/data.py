@@ -49,20 +49,20 @@ Content-type: text/html; charset=UTF-8
 <body>
 <div id="halp">
  <!-- google_ad_section_start -->
- <h1>INTERNET MEME MACHINE</h1>
+ <h1>INTERNET LULZ MACHINE</h1>
  <p>Auto-Meme churns out random nonsense, inspired by
     <a href="http://en.wikipedia.org/wiki/Mad_Libs">Mad Libs</a>,
     <a href="http://en.wikipedia.org/wiki/Snowclone">snowclones</a>,
     <a href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>
     and the utter insanity of
     <a href="http://en.wikipedia.org/wiki/4chan">4chan</a>.
-    Click the face or hit the spacebar for more lulz.
+    Click the face or hit the spacebar for more.
     <span class="warning">Not safe for work.</span></p>
  <!-- google_ad_section_end -->
  <p>The <img src="awesome.gif" alt=":razz:" title=":razz:"/> smiley originates from <a
     href="http://forums.somethingawful.com/misc.php?action=showsmilies">Something
     Awful</a>.</p>
- <p>Created with <a href="http://www.python.org/">Python</a>
+ <p>Made with <a href="http://www.python.org/">Python</a>
     by <a href="http://boxofjunk.ws/">a hairy Irishman</a>.</p>
  <p><a id="dismiss" href="#">okay</a></p>
 </div>
