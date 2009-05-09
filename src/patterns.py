@@ -85,7 +85,7 @@ patterns = [
             ('~ur','~your'), ('noun','noun1',['name', no_article]) ),
     ( '{1} is pig disgusting', ('name','noun','noun1') ),
     [( 'They see me {1}, they {2}', 'verb4', ('~hatin', 'verb4') ), ing_in],
-    ( 'i made you {1a} but i {2} it', ('noun', 'noun', 'noun1', 'name'), 'verb2' ),
+    ( 'i made you {1a} but i {2} it', ('noun', 'noun', ['name', no_article]), 'verb2' ),
     ( 'This is {1a} {2}. It is made of {3} and {4}.', 'adj', ('~sandwich', 'noun'),
             ('adj', 'noun1', 'name'), ('adj', 'noun1', 'name') ),
     lambda: randel(( ('my {1}, let me show you it', (['name', no_article], 'noun')),

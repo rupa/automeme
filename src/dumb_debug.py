@@ -18,7 +18,8 @@ def dumb_debug(grep):
             else:
                 memes = filter(lambda s: grep in s,
                                (meme.generate('txt') for x in xrange(lines)))
-                lines += lines
+                if lines < 1000:
+                    lines += lines
     except KeyboardInterrupt:
         print
 
