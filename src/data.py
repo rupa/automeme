@@ -7,12 +7,10 @@ footer.append('<p>%s</p>' % '\n&middot; '.join((
     '<a href="#" id="wut">wut?</a>',
     '<a href="http://automeme.tumblr.com/">Blog</a>',
     '<a href="api.html">API</a>',
-    '<a href="http://mongs.tumblr.com/">Tumblr</a>',
-    '<a href="http://github.com/inky/automeme/tree/master">Source</a>',
+    '<a href="stuff.html">Moar stuff</a>',
     )) )
 footer.append("""
 <div id="sellout">
-<div>
 <script type="text/javascript"><!--
 google_ad_client = "pub-6989159164128459";
 google_ad_slot = "8356229727";
@@ -23,20 +21,6 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-</div>
-<div>
-<script type="text/javascript"><!--
-google_ad_client = "pub-6989159164128459";
-/* Auto-Meme linkbar */
-google_ad_slot = "4303972837";
-google_ad_width = 728;
-google_ad_height = 15;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
 </div>
 """.strip())
 
@@ -56,7 +40,7 @@ Content-type: text/html; charset=UTF-8
 <title>%s &bull; push button, receive lulz</title>
 <meta name="description" content="One very cheeky random nonsense generator. Inspired by snowclones, the utter insanity of 4chan, and internet memes in general. Not safe for work."/>
 <meta name="keywords" content="meme random nonsense generator 4chan lulz snowclone madlibs python"/>
-<link rel="stylesheet" type="text/css" href="screen.css?20090509d"/>
+<link rel="stylesheet" type="text/css" href="main.css?20090509"/>
 <link rel="icon" type="image/png" href="icon32.png"/>
 <link rel="apple-touch-icon" href="icon.png"/>
 <meta name="viewport" content="width=800"/>

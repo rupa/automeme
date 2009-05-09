@@ -4,47 +4,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>OFFICIAL AUTO-MEME API VERY VERY NICE</title>
-    <style type="text/css">
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, b, cite, code,
-del, dfn, em, i, img, ins, kbd, q, samp,
-strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td
-    {margin:0; padding:0; border:0; outline:0; font-size:100%;
-     vertical-align:baseline; background:transparent;}
-html {font-size:100.01%;}
-caption, cite, code, dfn, th, var {font-style:normal; font-weight:normal;}
-h1, h2, h3, h4, h5, h6 {font-weight:normal;}
-blockquote, q {quotes:none;}
-blockquote:before, blockquote:after, q:before, q:after {content:''; content:none;}
-:focus {outline:0;}
-ins {text-decoration:underline;}
-del {text-decoration:line-through;}
-table {border-collapse:collapse; border-spacing:0;}
-
-body {background:#eed; color:#A00;
-      font:12pt/1.5 'Helvetica Neue','DejaVu Sans','Helvetica',sans-serif;}
-#body {margin:3em 4em; max-width:40em;}
-h1 {font-weight:bold; font-size:3em; margin-bottom:0.5em; line-height:1;
-    text-shadow:1px 2px 1px #fff;}
-h2 {font-size:1.5em; margin:2em 0 1em; line-height:1;}
-h3 {font-weight:bold; font-size:1.25em; line-height:1.2;}
-p, pre {margin-bottom:1.5em;}
-pre, code {font-size:1em;}
-ul {margin:0 2em 1.5em; list-style:square;}
-li {line-height:1.5; color:#A88;}
-li code {color:#A00;}
-table {margin:0 2em 1.5em;}
-thead tr {border-bottom:1px solid #CAA;}
-thead code {font-weight:bold;}
-td {padding-right:2em;}
-a {color:#C00 !important;}
-abbr, .caps {font-size:0.9em;}
-.hurr {color:#A88;}
-    </style>
+    <link rel="stylesheet" type="text/css" href="page.css"/>
+    <link rel="icon" type="image/png" href="icon32.png"/>
   </head>
   <body>
     <div id="body">
@@ -54,7 +15,7 @@ abbr, .caps {font-size:0.9em;}
 <p>All you have to do is <span class="caps">GET</span>
 one of the following <abbr>URL</abbr>s:</p>
 
-<ul>
+<ul class="urls">
   <li><code>http://meme.boxofjunk.ws/<a
     href="http://meme.boxofjunk.ws/moar.txt">moar.txt</a></code></li>
   <li><code>http://meme.boxofjunk.ws/moar.html</code></li>
@@ -92,6 +53,7 @@ change the number of memes, append <code>?lines=<em>n</em></code> to the
 
 <p>Don't hammer the server plz thx.</p>
 
+
 <h2>Diving in</h2>
 
 <h3>From a shell</h3>
@@ -113,11 +75,16 @@ change the number of memes, append <code>?lines=<em>n</em></code> to the
 <pre><code>use LWP::Simple;
 getprint 'http://meme.boxofjunk.ws/moar.txt?lines=1';</code></pre>
 
+
 <h2>Credits</h2>
 <p>
 Ruby example by <a href="http://github.com/jamiew/">jamiew</a>.
 Perl example by <a href="http://github.com/perigrin/">perigrin</a>.
 </p>
+
+
+<hr/>
+<p>&laquo; <a href="/">Return</a></p>
     </div>
   </body>
 </html>
