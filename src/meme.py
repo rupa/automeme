@@ -102,6 +102,7 @@ def generate(format = 'html', pattern = ''):
         meme = re_sub(r'(^|\W) -- (\W|$)', r'\1&#8212;\2', meme)
         meme = re_sub(r'\.\.\.', r'&#8230;', meme)
         meme = re_sub(r'(^|\W) _([^_]*)_ (\W|$)', r'\1<em>\2</em>\3', meme)
+        meme = re_sub(r'SNOWM[AE]N', r'&#9731;', meme)
     if format in ('twitter', ):
         meme = re_sub(r'(^|\W) -- (\W|$)', ur'\1\u2014\2', meme)
         meme = re_sub(r'\.\.\.', u'\u2026', meme)
@@ -109,7 +110,6 @@ def generate(format = 'html', pattern = ''):
 
 def html(egg=False):
     from data import easter_eggs, html_template, footer
-    m = generate()
 
     css = ''
     if egg or not randint(0, 12):
@@ -119,7 +119,7 @@ def html(egg=False):
             <style type="text/css">#butan{background-image:url(butan-%s.png)}</style>
             """.strip() % egg
 
-    return html_template % (m, title, css, m, '\n'.join(footer))
+    return html_template % (title, css, '\n'.join(footer))
 
 if __name__ == '__main__':
     print html()

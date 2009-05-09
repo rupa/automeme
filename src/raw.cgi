@@ -34,7 +34,7 @@ def main():
     try:
         if args.has_key('lines'):
             if args['lines'].value.isdigit():
-                lines = min(100, int(args['lines'].value)) or lines
+                lines = min(80, int(args['lines'].value)) or lines
 
         memes = (meme.generate(format) for x in xrange(lines))
         if ctype.endswith('json'):

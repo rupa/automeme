@@ -35,4 +35,5 @@ a,img {border:none !important;}
 #footer a {padding:0.2em 0.4em;}
 #wut {font-weight:bold;}
 #sellout {padding:1.5em 0;}
+#sellout div {padding-bottom:0.5em;}
 .hide {display:none;}

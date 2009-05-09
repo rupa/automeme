@@ -273,6 +273,7 @@ vocab = {
         'script-kiddie; ~z',
         'skittle; ~s',
         'snake; ~s',
+        'snowman; snowmen',
         'song; ~s',
         'spoon; ~s',
         'stalker; ~s',

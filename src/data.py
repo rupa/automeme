@@ -12,6 +12,7 @@ footer.append('<p>%s</p>' % '\n&middot; '.join((
     )) )
 footer.append("""
 <div id="sellout">
+<div>
 <script type="text/javascript"><!--
 google_ad_client = "pub-6989159164128459";
 google_ad_slot = "8356229727";
@@ -23,6 +24,20 @@ google_ad_height = 90;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div>
+<div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-6989159164128459";
+/* Auto-Meme linkbar */
+google_ad_slot = "4303972837";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
 """.strip())
 
 
@@ -32,7 +47,6 @@ easter_eggs = ('awesome', 'datass', 'eyebrow', 'hurrrr', 'katara', 'milkips',
 
 html_template = u"""\
 Content-type: text/html; charset=UTF-8
-X-Meme: %s
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -42,7 +56,7 @@ X-Meme: %s
 <title>%s &bull; push button, receive lulz</title>
 <meta name="description" content="One very cheeky random nonsense generator. Inspired by snowclones, the utter insanity of 4chan, and internet memes in general. Not safe for work."/>
 <meta name="keywords" content="meme random nonsense generator 4chan lulz snowclone madlibs python"/>
-<link rel="stylesheet" type="text/css" href="screen.css?20090509c"/>
+<link rel="stylesheet" type="text/css" href="screen.css?20090509d"/>
 <link rel="icon" type="image/png" href="icon32.png"/>
 <link rel="apple-touch-icon" href="icon.png"/>
 <meta name="viewport" content="width=800"/>
@@ -72,7 +86,7 @@ X-Meme: %s
  <div id="meme-w1"><div id="meme-w2">
   <!-- google_ad_section_start(weight=ignore) -->
   <div>
-    <p id="meme">Click face, receive meme<!-- %s --></p>
+    <p id="meme">Click face, receive meme</p>
     <span class="arrow"></span>
   </div>
   <!-- google_ad_section_end -->
@@ -81,8 +95,8 @@ X-Meme: %s
   <div id="butan">&nbsp;</div>
   <div id="loading"><span>&nbsp;</span></div>
  </div>
+ <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+ <script type="text/javascript" src="pushbutan.js?20090509d"></script>
  <div id="footer">%s</div>
 </div>
-<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
-<script type="text/javascript" src="pushbutan.js?20090509c"></script>
 </body></html>"""
