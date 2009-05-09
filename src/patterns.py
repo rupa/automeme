@@ -125,4 +125,6 @@ patterns = [
     ( "What _are_ {1}? We just don't know.", 'noun1' ),
     ( "{1} the {2}... with your {3}", ('~crush', 'verb'), 'noun1',
         ('~mind', 'noun', 'noun1') ),
+    ( "oh god how did {1} get here I am not good with {2}",
+        ('~this', '~this', 'name', 'noun1'), ('noun', 'noun1', 'name') ),
 ]
