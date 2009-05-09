@@ -3,7 +3,7 @@
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 footer = []
-footer.append('<p>%s</p>' % '\n&nbsp;&middot;&nbsp; '.join((
+footer.append('<p>%s</p>' % '\n&middot; '.join((
     '<a href="#" id="wut">wut?</a>',
     '<a href="http://automeme.tumblr.com/">Blog</a>',
     '<a href="api.html">API</a>',
@@ -57,13 +57,12 @@ X-Meme: %s
     <a href="http://en.wikipedia.org/wiki/Snowclone">snowclones</a>,
     and the utterly insane world of
     <a href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>.
-    Click the face to see more silliness.
+    Click the face or hit the spacebar to see more silliness.
     <span class="warning">Not safe for work.</span></p>
  <p><img src="awesome.gif" alt=":razz:" title=":razz:"/> originates from <a
     href="http://forums.somethingawful.com/misc.php?action=showsmilies">Something
     Awful</a>.</p>
- <p>Handcrafted with <a
-    href="http://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>
+ <p>Created with <a href="http://www.python.org/">Python</a>
     by <a href="http://boxofjunk.ws/">a hairy Irishman</a>.</p>
  <!-- google_ad_section_end -->
  <p><a id="dismiss" href="#">okay</a></p>

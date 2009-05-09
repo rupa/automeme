@@ -32,5 +32,7 @@ a,img {border:none !important;}
 #footer {color:#888; clear:both; overflow:visible; text-align:center;
          font-size:0.8em; width:728px; margin:0 auto; padding-top:3em;}
 #footer p {text-align:center; margin:0.75em; line-height:1.5;}
+#footer a {padding:0.2em 0.4em;}
+#wut {font-weight:bold;}
 #sellout {padding:1.5em 0;}
 .hide {display:none;}

@@ -85,7 +85,11 @@ function AutoMeme(tagButton, tagMeme)
             fetch();
         }
     }
+
     tagButton.onclick = function() { meme(); };
+    $('body').keypress(function(e) {
+        if (e.which == 32) meme();
+    });
 }
 
 window.onload = function()
