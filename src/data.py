@@ -60,7 +60,7 @@ X-Meme: %s
     <a href="http://en.wikipedia.org/wiki/4chan">4chan</a>.
     Click the face or hit the spacebar for more lulz.
     <span class="warning">Not safe for work.</span></p>
- <p><img src="awesome.gif" alt=":razz:" title=":razz:"/> originates from <a
+ <p>The <img src="awesome.gif" alt=":razz:" title=":razz:"/> smiley originates from <a
     href="http://forums.somethingawful.com/misc.php?action=showsmilies">Something
     Awful</a>.</p>
  <p>Created with <a href="http://www.python.org/">Python</a>
@@ -70,9 +70,12 @@ X-Meme: %s
 </div>
 <div id="body">
  <div id="meme-w1"><div id="meme-w2">
-   <!-- google_ad_section_start(weight=ignore) -->
-   <div> <p id="meme">%s</p> <span class="arrow"></span> </div>
-   <!-- google_ad_section_end -->
+  <!-- google_ad_section_start(weight=ignore) -->
+  <div>
+    <p id="meme">Click face, receive meme<!-- %s --></p>
+    <span class="arrow"></span>
+  </div>
+  <!-- google_ad_section_end -->
  </div></div>
  <div id="push">
   <div id="butan">&nbsp;</div>

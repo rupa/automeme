@@ -119,6 +119,7 @@ vocab = {
         'Woll Smoth',
         'Xenu',
         'Xzibit',
+        'Yotsuba',
         'YouTube',
         'Za Warudo',
         'Zero Cool',
