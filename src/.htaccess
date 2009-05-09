@@ -2,6 +2,7 @@ AddHandler fastcgi-script .py
 Options +ExecCGI -Indexes
 AddDefaultCharset utf-8
 ServerSignature Off
+ErrorDocument 404 /404.html
 
 RewriteEngine On
 RewriteBase /
