@@ -1,6 +1,7 @@
 .DS_Store
 *.pyc
 html
+src/jquery*.js
 conversation.py
 omg*.cgi
 json.py

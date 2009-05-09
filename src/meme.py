@@ -108,7 +108,7 @@ def generate(format = 'html', pattern = ''):
     return meme
 
 def html(egg=False):
-    from data import css, easter_eggs, html_template, footer
+    from data import easter_eggs, html_template, footer
     m = generate()
 
     css = ''

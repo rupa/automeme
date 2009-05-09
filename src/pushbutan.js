@@ -1,11 +1,10 @@
 if (top !== self)
     top.location.href = self.location.href;
 
-function AutoMeme(tagButton, tagMeme, tagHint)
+function AutoMeme(tagButton, tagMeme)
 {
     var memes = new Array();
     var blocked = false;
-    var first = true;
 
     unblock();
 
@@ -27,12 +26,10 @@ function AutoMeme(tagButton, tagMeme, tagHint)
     function block()
     {
         blocked = true;
-        //tagButton.style.cursor = 'wait';
     }
     function unblock()
     {
         blocked = false;
-        //tagButton.style.cursor = 'pointer';
     }
 
     function queue(items)
@@ -79,11 +76,6 @@ function AutoMeme(tagButton, tagMeme, tagHint)
         if (blocked) return;
         block();
 
-        if (first) {
-            tagHint.style.visibility = 'hidden';
-            first = false;
-        }
-
         if (memes.length > 0) {
             pop();
             setTimeout(function(){unblock();}, 250);
@@ -92,12 +84,22 @@ function AutoMeme(tagButton, tagMeme, tagHint)
         }
     }
     tagButton.onclick = function() { meme(); };
-    tagHint.onclick = function() { meme(); };
 }
 
 window.onload = function()
 {
+    var halp = false;
+    var toggle = function(e) {
+        e.preventDefault();
+        (halp)
+            ? $('#halp').slideUp('normal')
+            : $('#halp').slideDown('normal');
+        halp = !halp;
+    };
+    $('#wut').click(toggle);
+    $('#dismiss').click(toggle);
+    $('#halp').hide().css({'z-index':'9001','visibility':'visible'});
+
     var automeme = new AutoMeme(document.getElementById('butan'),
-                                document.getElementById('meme'),
-                                document.getElementById('hint'));
+                                document.getElementById('meme'));
 };
