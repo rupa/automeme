@@ -40,8 +40,8 @@ X-Meme: %s
 <head profile="http://www.w3.org/2005/10/profile">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>%s &bull; push button, receive lulz</title>
-<meta name="description" content="One very cheeky random nonsense generator. Inspired by the utter insanity of 4chan, and internet memes in general."/>
-<meta name="keywords" content="meme random nonsense generator 4chan lulz snowclone python"/>
+<meta name="description" content="One very cheeky random nonsense generator. Inspired by snowclones, the utter insanity of 4chan, and internet memes in general. Not safe for work."/>
+<meta name="keywords" content="meme random nonsense generator 4chan lulz snowclone madlibs python"/>
 <link rel="stylesheet" type="text/css" href="screen.css?20090509c"/>
 <link rel="icon" type="image/png" href="icon32.png"/>
 <link rel="apple-touch-icon" href="icon.png"/>

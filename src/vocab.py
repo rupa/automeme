@@ -50,6 +50,7 @@ vocab = {
     'The Fresh Prince of Bel-Air',
         'George Bush',
         'G.I. Joe',
+        'GIRUGAMESH',
         'goatse',
         'God',
         'Google',
@@ -63,7 +64,9 @@ vocab = {
         'Jesus',
         'John Freeman',
         'John Romero',
+        'Keyboard Cat',
         'KOMPRESSOR',
+        'Kotaku',  # Thanks, Kotaku. Thotaku.
         'Lars Ulrich',
         'Lil Jon',
         'Longcat',
@@ -177,6 +180,7 @@ vocab = {
         'furry; furries',
         'gamer; ~s',
         'garbage file; ~s',
+        'German; ~s',
         'gibson; ~s',
         'girl; ~s',
         'girl gamer; ~s',
@@ -203,6 +207,7 @@ vocab = {
         'iPod; ~s',
         'Irishman; Irishmen',
         'junk',
+        'keyboard; ~s',
         'kitten; ~s',
         'large hadron collider; ~s',
         'lawyer; ~s',
@@ -346,6 +351,7 @@ vocab = {
     'iverb': [
         # I write; He writes; I wrote; I have/had written; I am/was writing
         'blog; ~s; blogged; ~; blogging',
+        'dance; ~s; danced; ~; dancing',
         'do a barrel roll; does a barrel roll; did a barrel roll; '\
                 'done a barrel roll; doing a barrel roll',
         'download mp3s; downloads mp3s; downloaded mp3s; ~; downloading mp3s',

@@ -90,22 +90,31 @@ function AutoMeme(tagButton, tagMeme)
 
     tagButton.onclick = function() { meme(); };
     $('body').keypress(function(e) {
-        if (e.which == 32) meme();
     });
-}
 
-window.onload = function()
-{
     var halp = false;
-    var toggle = function(e) {
+    var toggleHalp = function(e) {
         e.preventDefault();
         (halp)
             ? $('#halp').slideUp('normal')
             : $('#halp').slideDown('normal');
         halp = !halp;
     };
-    $('#wut').click(toggle);
-    $('#dismiss').click(toggle);
+    $('#wut').click(toggleHalp);
+    $('#dismiss').click(toggleHalp);
+
+    $('body').keypress(function(e) {
+        if (e.which == 32) {
+            meme();
+        } else if (e.which == 27 && halp) {  // Esc
+            $('#halp').slideUp('normal');
+            halp = false;
+        }
+    });
+}
+
+window.onload = function()
+{
     $('#halp').hide().css({'z-index':'9001','visibility':'visible'});
     $('#loading span').hide().css({'visibility':'visible'});
 

@@ -9,14 +9,16 @@ import meme
 
 def dumb_debug(grep):
     memes = []
+    lines = 20
     try:
         while True:
-            if not memes:
-                memes = filter(lambda s: grep in s,
-                               (meme.generate('txt') for x in xrange(50)))
             if memes:
                 print memes.pop()
                 time.sleep(1)
+            else:
+                memes = filter(lambda s: grep in s,
+                               (meme.generate('txt') for x in xrange(lines)))
+                lines += lines
     except KeyboardInterrupt:
         print
 
