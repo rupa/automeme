@@ -74,12 +74,12 @@ Content-type: text/html; charset=UTF-8
     <a href="http://en.wikipedia.org/wiki/4chan">4chan</a>.
     Click the face or hit the spacebar for more lulz.
     <span class="warning">Not safe for work.</span></p>
+ <!-- google_ad_section_end -->
  <p>The <img src="awesome.gif" alt=":razz:" title=":razz:"/> smiley originates from <a
     href="http://forums.somethingawful.com/misc.php?action=showsmilies">Something
     Awful</a>.</p>
  <p>Created with <a href="http://www.python.org/">Python</a>
     by <a href="http://boxofjunk.ws/">a hairy Irishman</a>.</p>
- <!-- google_ad_section_end -->
  <p><a id="dismiss" href="#">okay</a></p>
 </div>
 <div id="body">
