@@ -50,14 +50,14 @@ X-Meme: %s
 %s</head>
 <body>
 <div id="halp">
- <h1>INTERNET MEME MACHINE</h1>
  <!-- google_ad_section_start -->
- <p>AUTO-MEME is a random nonsense generator, inspired by
+ <h1>INTERNET LULZ MACHINE</h1>
+ <p>Auto-Meme is a random nonsense generator, inspired by
     <a href="http://en.wikipedia.org/wiki/Mad_Libs">Mad Libs</a>,
     <a href="http://en.wikipedia.org/wiki/Snowclone">snowclones</a>,
-    and the utterly insane world of
+    4chan, and the utterly insane world of
     <a href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>.
-    Click the face or hit the spacebar to see more silliness.
+    Click the face or hit the spacebar for more lulz.
     <span class="warning">Not safe for work.</span></p>
  <p><img src="awesome.gif" alt=":razz:" title=":razz:"/> originates from <a
     href="http://forums.somethingawful.com/misc.php?action=showsmilies">Something

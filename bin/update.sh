@@ -5,7 +5,7 @@ set -e
 outputdir=../html
 
 # generate button image if it doesn't exist
-([ -e $outputdir/butan.png ] && [ -e $outputdir/icon.png ]) || ./make_butan.sh
+([ -e $outputdir/butan-original.png ] && [ -e $outputdir/icon.png ]) || ./make_butan.sh
 
 # copy source files to the output directory
 cp -p \
