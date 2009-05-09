@@ -42,7 +42,7 @@ X-Meme: %s
 <title>%s &bull; push button, receive lulz</title>
 <meta name="description" content="One very cheeky random nonsense generator. Inspired by the utter insanity of 4chan, and internet memes in general."/>
 <meta name="keywords" content="meme random nonsense generator 4chan lulz snowclone python"/>
-<link rel="stylesheet" type="text/css" href="screen.css?20090509"/>
+<link rel="stylesheet" type="text/css" href="screen.css?20090509c"/>
 <link rel="icon" type="image/png" href="icon32.png"/>
 <link rel="apple-touch-icon" href="icon.png"/>
 <meta name="viewport" content="width=800"/>
@@ -57,11 +57,14 @@ X-Meme: %s
     <a href="http://en.wikipedia.org/wiki/Snowclone">snowclones</a>,
     and the utterly insane world of
     <a href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>.
-    <span class="warning">Not safe for work.</span>
- </p>
+    Click the face to see more silliness.
+    <span class="warning">Not safe for work.</span></p>
  <p><img src="awesome.gif" alt=":razz:" title=":razz:"/> originates from <a
     href="http://forums.somethingawful.com/misc.php?action=showsmilies">Something
     Awful</a>.</p>
+ <p>Handcrafted with <a
+    href="http://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>
+    by <a href="http://boxofjunk.ws/">a hairy Irishman</a>.</p>
  <!-- google_ad_section_end -->
  <p><a id="dismiss" href="#">okay</a></p>
 </div>
@@ -78,5 +81,5 @@ X-Meme: %s
  <div id="footer">%s</div>
 </div>
 <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
-<script type="text/javascript" src="pushbutan.js?20090509"></script>
+<script type="text/javascript" src="pushbutan.js?20090509b"></script>
 </body></html>"""
