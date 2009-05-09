@@ -53,6 +53,7 @@ function AutoMeme(tagButton, tagMeme)
         if (!req) { return; }
 
         var recd = false;
+        $('#loading span').fadeIn('fast');
         req.open("GET", "moar.html?lines=20&ts=" + new Date().getTime(), true);
         req.send(null);
         req.onreadystatechange = function()
@@ -67,6 +68,7 @@ function AutoMeme(tagButton, tagMeme)
             } else {
                 tagMeme.innerHTML = 'Try again :(';
             }
+            $('#loading span').fadeOut('fast');
             unblock();
         }
     }
@@ -99,6 +101,7 @@ window.onload = function()
     $('#wut').click(toggle);
     $('#dismiss').click(toggle);
     $('#halp').hide().css({'z-index':'9001','visibility':'visible'});
+    $('#loading span').hide().css({'visibility':'visible'});
 
     var automeme = new AutoMeme(document.getElementById('butan'),
                                 document.getElementById('meme'));

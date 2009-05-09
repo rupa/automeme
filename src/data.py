@@ -52,9 +52,11 @@ X-Meme: %s
 <div id="halp">
  <h1>INTERNET MEME MACHINE</h1>
  <p>AUTO-MEME is a random nonsense generator, inspired by
-    the utter insanity of 4chan, and <a
-    href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>
-    in general. Not&nbsp;safe&nbsp;for&nbsp;work.</p>
+    <a href="http://en.wikipedia.org/wiki/Mad_Libs">Mad Libs</a>,
+    <a href="http://en.wikipedia.org/wiki/Snowclone">snowclones</a>,
+    and the utterly insane world of
+    <a href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>.
+    Not&nbsp;safe&nbsp;for&nbsp;work.</p>
  <p><a id="dismiss" href="#">okay</a></p>
 </div>
 <div id="body">
@@ -63,6 +65,7 @@ X-Meme: %s
  </div></div>
  <div id="push">
   <div id="butan">&nbsp;</div>
+  <div id="loading"><span>&nbsp;</span></div>
  </div>
  <div id="footer">%s</div>
 </div>
