@@ -5,7 +5,7 @@ from common import *
 ing_in = lambda s: re_sub(r'(IN)G(\W|$)', r'\1\2', s)
 no_the = lambda s: re_sub(r'(^|\s) THE (\W|S)', r'\2',
                           s).strip().replace('[THE]','THE')
-no_article = lambda s: re_isub(r'^(AN?|THE|YOUR)\s', '', s)
+no_article = lambda s: re_isub(r'^(AN?|THE|YOUR|DAT)\s', '', s)
 thants = lambda s: re_isub(r'<(TH|BL) [^AEIOU4]*([^>]*)>', r'\1\2', s)
 
 patterns = [
