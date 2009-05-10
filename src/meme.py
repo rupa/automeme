@@ -99,13 +99,14 @@ def generate(format = 'html', pattern = ''):
     if format in ('plain', 'twitter'):
         meme = re_sub(r'(^|\W) _([^_]*)_ (\W|$)', r'\1\2\3', meme)
     if format in ('html', ):
-        meme = re_sub(r'(^|\W) -- (\W|$)', r'\1&#8212;\2', meme)
-        meme = re_sub(r'\.\.\.', r'&#8230;', meme)
+        meme = re_sub(r'(^|\W) -- (\W|$)', r'\1&mdash;\2', meme)
         meme = re_sub(r'(^|\W) _([^_]*)_ (\W|$)', r'\1<em>\2</em>\3', meme)
         meme = re_sub(r'SNOWM[AE]N', r'&#9731;', meme)
+        meme = meme.replace('...', '&#8230;')
+        meme = meme.replace("'", '&rsquo;')
     if format in ('twitter', ):
         meme = re_sub(r'(^|\W) -- (\W|$)', ur'\1\u2014\2', meme)
-        meme = re_sub(r'\.\.\.', u'\u2026', meme)
+        meme = meme.replace('...', u'\u2026')
     return meme
 
 def html(egg=False):
