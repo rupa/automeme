@@ -93,15 +93,18 @@ function AutoMeme(tagButton, tagMeme)
     });
 
     var halp = false;
-    var toggleHalp = function(e) {
-        e.preventDefault();
+    var toggleHalp = function() {
         (halp)
             ? $('#halp').slideUp('normal')
             : $('#halp').slideDown('normal');
         halp = !halp;
     };
-    $('#wut').click(toggleHalp);
-    $('#dismiss').click(toggleHalp);
+    var clickHalp = function(e) {
+        e.preventDefault();
+        toggleHalp();
+    }
+    $('#wut').click(clickHalp);
+    $('#dismiss').click(clickHalp);
 
     window.onkeypress = function(e) {
         if (e.which == 32) {
@@ -109,6 +112,8 @@ function AutoMeme(tagButton, tagMeme)
         } else if (e.which == 27 && halp) {  // Esc
             $('#halp').slideUp('normal');
             halp = false;
+        } else if (e.which == 63) {  // ?
+            toggleHalp();
         }
     };
 }
