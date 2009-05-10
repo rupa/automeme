@@ -6,7 +6,7 @@ a:hover {color:#C00 !important; text-decoration:underline;}
 a,img {border:none !important;}
 #halp {padding:1em 1em 0; background:#FFF; position:fixed; left:0; top:0; right:0;
        border-bottom:4px solid #772245; z-index:0; visibility:hidden;
-       line-height:1.25;}
+       line-height:1.25; opacity:0.95;}
 #halp h1 {font-size:1.5em;}
 #halp p {padding-bottom:1em; max-width:32em;}
 #halp a {color:#C00;}
