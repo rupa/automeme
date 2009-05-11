@@ -382,6 +382,7 @@ vocab = {
         'eat; eats; ate; eaten; eating',
         'fap; faps; fapped; ~; fapping',
         'frigth back; frigths back; frigth back; ~; frigthing back',
+        'gargle my balls; gargles my balls; gargled my balls; ~; gargling my balls',
         'get laid; gets laid; got laid; gotten laid; getting laid',
         'get low; gets low; got low; gotten low; getting low',
         'hack; hacks; hacked; ~; hacking',
