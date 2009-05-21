@@ -19,8 +19,8 @@ a,img {border:none !important;}
               word-spacing:0.1em; margin:0 40px 0 0; padding:0.3em 0.4em 0.4em;
               -moz-border-radius:0.25em; -webkit-border-radius:0.25em; float:left; }
 #meme-w2 .arrow {width:0; height:0; line-height:0; position:absolute;
-                 border-right:35px solid #eed; border-top:0.5em solid #fff;
-                 border-bottom:0.1em solid #fff; bottom:0.5em; left:-34px;}
+                 border-right:35px solid #eed; border-top:0.5em solid transparent;
+                 border-bottom:0.1em solid transparent; bottom:0.5em; left:-34px;}
 #push {width:250px; float:left;}
 #butan {width:150px; height:0; padding-top:150px; margin:80px 0 20px 50px;
         overflow:hidden; background:url(butan-original.png) 0 0px no-repeat;

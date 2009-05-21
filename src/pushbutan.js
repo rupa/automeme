@@ -89,7 +89,14 @@ function AutoMeme(tagButton, tagMeme)
     }
 
     tagButton.onclick = function() { meme(); };
-    $('body').keypress(function(e) {
+    $('body').upUpDownDown({
+        watchFor: [38,38,40,40,37,39,37,39,66,65],
+        callback: function() {
+            $('body').css({backgroundImage:'url(/bling.gif)'});
+            $('#butan').css({backgroundImage:'url(/awesome-bling.gif)'});
+            $('#meme-w2 div').css({background:'#F0F', color:'#000'});
+            $('#meme-w2 .arrow').css({borderRightColor:'#F0F'});
+        }
     });
 
     var halp = false;
