@@ -3,6 +3,9 @@
 This code is an absolute mess.
 """
 
+import cgi
+import sys
+
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 def main():
@@ -11,9 +14,9 @@ def main():
     format, ctype = 'html', 'text/html'
 
     try:
-        import meme, cgi
-        args = cgi.FieldStorage()
+        import meme
 
+        args = cgi.FieldStorage()
         if args.has_key('format'):
             if args['format'].value in meme.CONTENT_TYPES.keys():
                 format = args['format'].value
@@ -24,9 +27,10 @@ def main():
                 ctype = 'application/json'
             except ImportError:
                 pass
-    except:
+    except Exception, err:
         print header % ctype
         print 'SOMEONE DIVIDED BY ZERO. OH SH-'
+        sys.stderr.write('Error: %s\n' % str(err))
         return
 
     print header % ctype
