@@ -127,4 +127,5 @@ patterns = [
         ('~mind', 'noun', 'noun1') ),
     ( "oh god how did {1} get here I am not good with {2}",
         ('~this', '~this', 'name', 'noun1'), ('noun', 'noun1', 'name') ),
+    ( "This is your brain on {1}", 'noun1' ),
 ]
