@@ -26,6 +26,7 @@ vocab = {
     'name': [
         '4chan',
         'Abbath',
+        'Abe Vigoda',
         'Acid Burn',
         'an hero',
         'Anonymous',
@@ -85,6 +86,7 @@ vocab = {
         'Mario',
         'Metallica',
         'Mexico',
+        'Michael Jackson',
         'Microsoft',
         'Milhouse',
    'your mom',
