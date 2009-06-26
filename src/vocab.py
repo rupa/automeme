@@ -395,6 +395,7 @@ vocab = {
         'get low; gets low; got low; gotten low; getting low',
         'hack; hacks; hacked; ~; hacking',
         "lol; ~s; lol'd; ~; lollin",
+        'moonwalk; ~s; moonwalked; ~; moonwalking',
         'roar; ~s; roared; ~; roaring',
         'run; runs; ran; run; running',
         'scream; ~s; screamed; ~; screaming',
