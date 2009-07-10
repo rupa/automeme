@@ -8,11 +8,17 @@ __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 from random import randint
 
 from common import *
-from patterns import patterns
-from vocab import vocab
+from patterns import patterns, nsfw_patterns
+from vocab import vocab, nsfw
 
 CONTENT_TYPES = {'html': 'text/html', 'txt': 'text/plain', 'plain': 'text/plain'}
 title = 'AUTO-MEME'
+
+def use_nsfw():
+    global vocab, patterns
+    for key in nsfw.keys():
+        vocab[key].extend(nsfw[key])
+    patterns.extend(nsfw_patterns)
 
 def get_word(words, index):
     """Return a word from a list of words. If the word contains
@@ -119,7 +125,7 @@ def html(egg=False):
         if egg not in easter_eggs:
             egg = randel(easter_eggs)
         css = """
-            <style type="text/css">#butan{background-image:url(butan-%s.png)}</style>
+            <style type="text/css">#butan{background-image:url(/butan-%s.png)}</style>
             """.strip() % egg
 
     return html_template % (title, css, '\n'.join(footer))

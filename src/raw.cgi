@@ -4,6 +4,7 @@ This code is an absolute mess.
 """
 
 import cgi
+import re
 import sys
 
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
@@ -15,6 +16,10 @@ def main():
 
     try:
         import meme
+
+        ref = cgi.os.environ.get('HTTP_REFERER', '')
+        if not re.match('^http://meme.boxofjunk.ws/pc', ref):
+            meme.use_nsfw()
 
         args = cgi.FieldStorage()
         if args.has_key('format'):

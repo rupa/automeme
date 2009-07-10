@@ -13,6 +13,7 @@ if __name__ == '__main__':
 
     try:
         import meme
+        #meme.use_nsfw()
 
         t = time.time()
         args = cgi.FieldStorage()

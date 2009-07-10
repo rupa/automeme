@@ -6,8 +6,8 @@ footer = []
 footer.append('<p>%s</p>' % '\n&middot; '.join((
     '<a href="#" id="wut">wut?</a>',
     '<a href="http://automeme.tumblr.com/">Blog</a>',
-    '<a href="api.html">API</a>',
-    '<a href="stuff.html">Moar stuff</a>',
+    '<a href="/api.html">API</a>',
+    '<a href="/stuff.html">Moar stuff</a>',
     '<a href="http://www.mediatemple.net/go/order/?refdom=boxofjunk.ws">Hosting</a>',
     )) )
 footer.append("""
@@ -41,9 +41,9 @@ Content-type: text/html; charset=UTF-8
 <title>%s &bull; push button, receive lulz</title>
 <meta name="description" content="One very cheeky random nonsense generator. Inspired by snowclones, the utter insanity of 4chan, and internet memes in general. Not safe for work."/>
 <meta name="keywords" content="meme random nonsense generator 4chan lulz snowclone madlibs python"/>
-<link rel="stylesheet" type="text/css" href="main.css?20090509"/>
-<link rel="icon" type="image/png" href="icon32.png"/>
-<link rel="apple-touch-icon" href="icon.png"/>
+<link rel="stylesheet" type="text/css" href="/main.css?20090509"/>
+<link rel="icon" type="image/png" href="/icon32.png"/>
+<link rel="apple-touch-icon" href="/icon.png"/>
 <meta name="viewport" content="width=800"/>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds2.feedburner.com/automeme"/>
 %s</head>
@@ -60,7 +60,7 @@ Content-type: text/html; charset=UTF-8
     Click the face or hit the spacebar for more.
     <span class="warning">Not safe for work.</span></p>
  <!-- google_ad_section_end -->
- <p>The <img src="awesome.gif" alt=":razz:" title=":razz:"/> smiley originates from <a
+ <p>The <img src="/awesome.gif" alt=":razz:" title=":razz:"/> smiley originates from <a
     href="http://forums.somethingawful.com/misc.php?action=showsmilies">Something
     Awful</a>.</p>
  <p>Made with <a href="http://www.python.org/">Python</a>
@@ -80,7 +80,7 @@ Content-type: text/html; charset=UTF-8
   <div id="butan">&nbsp;</div>
   <div id="loading"><span>&nbsp;</span></div>
  </div>
- <script type="text/javascript" src="pushbutan.js?20090521b"></script>
+ <script type="text/javascript" src="/pushbutan.js?20090521b"></script>
  <div id="footer">%s</div>
 </div>
 </body></html>"""
