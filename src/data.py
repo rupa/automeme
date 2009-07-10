@@ -7,7 +7,8 @@ footer.append('<p>%s</p>' % '\n&middot; '.join((
     '<a href="#" id="wut">wut?</a>',
     '<a href="http://automeme.tumblr.com/">Blog</a>',
     '<a href="/api.html">API</a>',
-    '<a href="/stuff.html">Moar stuff</a>',
+    '$nsfw_toggle$',
+    '<a href="/stuff.html">Moar</a>',
     '<a href="http://www.mediatemple.net/go/order/?refdom=boxofjunk.ws">Hosting</a>',
     )) )
 footer.append("""

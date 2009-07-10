@@ -14,8 +14,11 @@ from vocab import vocab, nsfw
 CONTENT_TYPES = {'html': 'text/html', 'txt': 'text/plain', 'plain': 'text/plain'}
 title = 'AUTO-MEME'
 
+nsfw_mode = False
+
 def use_nsfw():
-    global vocab, patterns
+    global vocab, patterns, nsfw_mode
+    nsfw_mode = True
     for key in nsfw.keys():
         vocab[key].extend(nsfw[key])
     patterns.extend(nsfw_patterns)
@@ -120,6 +123,10 @@ def generate(format = 'html', pattern = ''):
 def html(egg=False):
     from data import easter_eggs, html_template, footer
 
+    footer = '\n'.join(footer).replace('$nsfw_toggle$', nsfw_mode \
+                   and '<a href="/pc">work-safe mode</a>' \
+                   or '<a href="/">NSFW mode</a>')
+
     css = ''
     if egg or not randint(0, 12):
         if egg not in easter_eggs:
@@ -128,7 +135,7 @@ def html(egg=False):
             <style type="text/css">#butan{background-image:url(/butan-%s.png)}</style>
             """.strip() % egg
 
-    return html_template % (title, css, '\n'.join(footer))
+    return html_template % (title, css, footer)
 
 if __name__ == '__main__':
     print html()

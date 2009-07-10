@@ -343,7 +343,6 @@ vocab = {
         'shoop; ~s; shooped; ~; shooping',
         'shoot; ~s; shot; ~; shooting',
         'steal; ~s; stole; stolen; stealing',
-        'teabag; ~s; teabagged; ~; teabagging',
         'throw; ~s; threw; thrown; throwing',
         'torrent; ~s; torrented; ~; torrenting',
         'troll; ~s; trolled; ~; trolling',
@@ -461,6 +460,7 @@ nsfw = {
         'fap to; faps to; fapped to; ~; fapping to',
         'fist; ~s; fisted; ~; fisting',
         'sex up; sexes up; sexed up; ~; sexing up',
+        'teabag; ~s; teabagged; ~; teabagging',
     ],
 
     'iverb': [
