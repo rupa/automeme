@@ -115,9 +115,6 @@ def generate(format = 'html', pattern = ''):
         meme = re_sub(r'SNOWM[AE]N', r'&#9731;', meme)
         meme = meme.replace('...', '&#8230;')
         meme = meme.replace("'", '&rsquo;')
-    if format in ('twitter', ):
-        meme = re_sub(r'(^|\W) -- (\W|$)', ur'\1\u2014\2', meme)
-        meme = meme.replace('...', u'\u2026')
     return meme
 
 def html(egg=False):
