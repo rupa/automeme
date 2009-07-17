@@ -60,7 +60,11 @@ def len_tweet(text):
 
 def meme():
     req = urllib2.Request('http://meme.boxofjunk.ws/moar.txt')
-    response = urllib2.urlopen(req)
+    try:
+        response = urllib2.urlopen(req)
+    except urllib2.URLError:
+        print 'Could not access meme.boxofjunk.ws'
+        return ''
     memes = response.read().rstrip().split('\n')
     memes = filter(lambda m: len_tweet(m) <= 140,
                    (format_tweet(m) for m in memes))
@@ -71,7 +75,10 @@ def post():
     t = api()
     if not t:
         return
-    status = t.PostUpdate(meme())
+    tweet = meme()
+    if not tweet:
+        return
+    status = t.PostUpdate(tweet)
     print status.text
     try:
         print 'http://twitter.com/%s/status/%d' % (status.user.screen_name, status.id)
@@ -87,7 +94,9 @@ def main():
     elif '--poast' in sys.argv:
         post()
     else:
-        print meme()
+        text = meme()
+        if text:
+            print text
 
 if __name__ == '__main__':
     main()
