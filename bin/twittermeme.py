@@ -87,7 +87,7 @@ def post():
 
 def main():
     if '--cron' in sys.argv:
-        if not randint(0, 15):
+        if not randint(0, 24):
             post()
         else:
             print 'Reroll!'
