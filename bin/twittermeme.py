@@ -28,6 +28,11 @@ cfg_files = [
     '../.automeme',
 ]
 
+def to_unicode(obj):
+    if isinstance(obj, basestring) and not isinstance(obj, unicode):
+        obj = unicode(obj, 'utf-8')
+    return obj
+
 def cred():
     cfg = ConfigParser.ConfigParser()
     cfg.read(cfg_files)
@@ -79,7 +84,7 @@ def post():
     if not tweet:
         return
     status = t.PostUpdate(tweet)
-    print status.text
+    print to_unicode(status.text)
     try:
         print 'http://twitter.com/%s/status/%d' % (status.user.screen_name, status.id)
     except (AttributeError, TypeError):
