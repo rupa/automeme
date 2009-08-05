@@ -193,6 +193,7 @@ vocab = {
         'German; ~s',
         'gibson; ~s',
         'girl; ~s',
+        'girlfriend; ~s',
         'girl gamer; ~s',
         'goat; ~s',
         'goth; ~s',
@@ -457,6 +458,7 @@ nsfw = {
     ],
 
     'verb': [
+        'blow; blows; blew; blown; blowing',
         'fap to; faps to; fapped to; ~; fapping to',
         'fist; ~s; fisted; ~; fisting',
         'sex up; sexes up; sexed up; ~; sexing up',

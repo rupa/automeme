@@ -115,6 +115,7 @@ patterns = [
     ( "oh god how did {1} get here I am not good with {2}",
         ('~this', '~this', 'name', 'noun1'), ('noun', 'noun1', 'name') ),
     ( "This is your brain on {1}", 'noun1' ),
+    ( "My {1} just {2} me; shit was SO {3}", 'noun', 'verb2', ('noun', 'adj', '~cash') ),
 ]
 
 nsfw_patterns = [
