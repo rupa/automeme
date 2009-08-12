@@ -25,6 +25,11 @@ convert /tmp/b{1,2}.png \
 convert ../images/awesome.gif \
     -filter box -resize 150 \
     /tmp/emot.png
+
+convert ../images/awesome-cardcrusher.png \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
+    /tmp/cardcrusher.png
 convert ../images/awesome-datass.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
@@ -48,6 +53,8 @@ convert ../images/awesome-weegee.png \
 
 convert /tmp/{b1,emot}.png \
     -append $outputdir/butan-awesome.png
+convert /tmp/{b1,cardcrusher}.png \
+    -append $outputdir/butan-cardcrusher.png
 convert /tmp/{b1,datass}.png \
     -append $outputdir/butan-datass.png
 convert /tmp/{b1,eyebrow}.png \
