@@ -67,8 +67,8 @@ def meme():
     req = urllib2.Request('http://meme.boxofjunk.ws/moar.txt')
     try:
         response = urllib2.urlopen(req)
-    except urllib2.URLError:
-        print 'Could not access meme.boxofjunk.ws'
+    except (urllib2.URLError, urllib2.HTTPError), e:
+        print e
         return ''
     memes = response.read().rstrip().split('\n')
     memes = filter(lambda m: len_tweet(m) <= 140,
