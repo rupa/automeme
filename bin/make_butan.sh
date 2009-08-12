@@ -41,14 +41,10 @@ convert ../images/awesome-katara.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/katara.png
-convert ../images/milkips.png \
+convert ../images/awesome-weegee.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
-    /tmp/milkips1.png
-convert ../images/milkips.png \
-    -swirl -50 \
-    -resize 150 \
-    /tmp/milkips2.png
+    /tmp/weegee.png
 
 convert /tmp/{b1,emot}.png \
     -append $outputdir/butan-awesome.png
@@ -60,6 +56,17 @@ convert /tmp/{b1,hurrrr}.png \
     -append $outputdir/butan-hurrrr.png
 convert /tmp/{b1,katara}.png \
     -append $outputdir/butan-katara.png
+convert /tmp/{b1,weegee}.png \
+    -append $outputdir/butan-weegee.png
+
+convert ../images/milkips.png \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
+    /tmp/milkips1.png
+convert ../images/milkips.png \
+    -swirl -50 \
+    -resize 150 \
+    /tmp/milkips2.png
 convert /tmp/milkips{1,2}.png \
     -append $outputdir/butan-milkips.png
 
