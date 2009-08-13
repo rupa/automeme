@@ -254,6 +254,7 @@ vocab = {
         'pirate; ~s',
         'pizza; ~s',
         'planet; ~s',
+        'plank; ~s',
         lambda: 'Pokem%sn; Pokemans' % randel('oa'),
         'potato; ~es',
         'purple drank; ~s',
@@ -462,6 +463,7 @@ nsfw = {
         'fap to; faps to; fapped to; ~; fapping to',
         'fist; ~s; fisted; ~; fisting',
         'sex up; sexes up; sexed up; ~; sexing up',
+        'spank; ~s; spanked; ~; spanking',
         'teabag; ~s; teabagged; ~; teabagging',
     ],
 
