@@ -54,7 +54,7 @@ def randword(category):
             category = expand(category[0])
 
     if type(category) == tuple:
-        return randword(randel(category))
+        return randword(choice(category))
 
     if category[0] == '~':  # literal
         return category[1:]
@@ -64,7 +64,7 @@ def randword(category):
         var = int(category[-1])
         category = category[:-1]
 
-    vars = expand( randel(vocab[category]) )
+    vars = expand(choice(vocab[category]))
     vars = '; ' in vars and vars.split('; ') or [vars]
 
     return get_word(vars, var)
@@ -80,7 +80,7 @@ def a_word(word):
         return 'a ' + word
 
 def generate(format = 'html', pattern = ''):
-    p = pattern and expand(pattern) or expand(randel(patterns))
+    p = pattern and expand(pattern) or expand(choice(patterns))
 
     if type(p) == str:
         p = (p,)
@@ -127,7 +127,7 @@ def html(egg=False):
     css = ''
     if egg or not randint(0, 12):
         if egg not in easter_eggs:
-            egg = randel(easter_eggs)
+            egg = choice(easter_eggs)
         css = """
             <style type="text/css">#butan{background-image:url(/butan-%s.png)}</style>
             """.strip() % egg

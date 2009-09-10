@@ -8,7 +8,7 @@ import meme
 
 
 def dumb_debug(grep):
-    #meme.use_nsfw()
+    meme.use_nsfw()
     memes = []
     lines = 20
     try:

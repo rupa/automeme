@@ -4,17 +4,17 @@ __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 from common import *
 
-spengbab = lambda: randel(\
+spengbab = lambda: choice(\
         ['Spange','Speng','Sporg','Splorg','Spang',
         'Spernd','Splort','Spunk','Scram','Spange','Speeng',
         'Splen','Spengj','Spinge','Spong']\
-        ) + randel(\
+        ) + choice(\
         ['bob','bob','bob','bab','bab','beb','blat','berp','bharb',
         'blar','borg'])
-sqarpents = lambda: randel(\
+sqarpents = lambda: choice(\
         ['Sqar','Skur','Sven','Squat','Spleen','Snare','Sklabh',
         'Squere','Dildo']\
-        ) + randel(\
+        ) + choice(\
         ['pents','ponce','porks','peeps','pops','pans','pints',
         'ponts'])
 
@@ -235,7 +235,7 @@ vocab = {
         'mallgoth; ~s',
         'man; men',
         'manga',
-        lambda: 'megah%srtz' % randel('ue'),
+        lambda: 'megah%srtz' % choice('ue'),
         'mom; ~s',
         'moron; ~s',
         'mp3 file; ~s',
@@ -255,7 +255,7 @@ vocab = {
         'pizza; ~s',
         'planet; ~s',
         'plank; ~s',
-        lambda: 'Pokem%sn; Pokemans' % randel('oa'),
+        lambda: 'Pokem%sn; Pokemans' % choice('oa'),
         'potato; ~es',
         'purple drank; ~s',
         'record label; ~s',

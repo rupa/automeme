@@ -29,7 +29,7 @@ patterns = [
     ( 'Maximum {1} yields maximum {2}', ('~volume', 'noun1'), 'noun1' ),
     ( "i think {1} is a pretty cool guy. eh {2} {3} and doesn't afraid of anything",
             ('name', 'noun', 'noun1'), 'verb1', 'noun1' ),
-    lambda: randel(( ( '{1}cat is {1}', 'adj0' ),  ( '{1}cat is {1a}', 'noun0' ) )),
+    lambda: choice(( ( '{1}cat is {1}', 'adj0' ),  ( '{1}cat is {1a}', 'noun0' ) )),
     ( '{1}? In _my_ {2}?', ('name', 'noun1'), 'noun' ),
     ( 'This is {1} {2}, I must {3} it', 'adj0', ('~cake', 'noun'), 'verb' ),
     ( 'I have reported you to {1} for {2} {3} as it is a crime.',
@@ -43,7 +43,7 @@ patterns = [
     ( 'No, {1}. You are the {2}.', (['name', no_article], 'noun'), 'noun1' ),
     # http://lurkmore.com/wiki/DOOM:_Repercussions_of_Evil
     [( 'No! You will be {1} by {2}', 'verb', ('noun1', 'name')), no_the],
-    lambda: randel((
+    lambda: choice((
         ( 'PROTIP: To {1} the {2}, {3} at it until it {4}.', ('~defeat', 'verb'),
             'noun', ('~shoot', 'iverb'), ('~dies', 'iverb1') ),
         ( 'PROTIP: To {1} the {2}, {3} it until it {4}.', ('~defeat', 'verb'),
@@ -76,7 +76,7 @@ patterns = [
     ( 'i made you {1a} but i {2} it', ('noun', 'noun', ['name', no_article]), 'verb2' ),
     ( 'This is {1a} {2}. It is made of {3} and {4}.', 'adj', ('~sandwich', 'noun'),
             ('adj', 'noun1', 'name'), ('adj', 'noun1', 'name') ),
-    lambda: randel(( ('my {1}, let me show you it', (['name', no_article], 'noun')),
+    lambda: choice(( ('my {1}, let me show you it', (['name', no_article], 'noun')),
                      ('my {1}, let me show you them', 'noun1') )),
     ( 'I {1} _all_ the {2}', ('~ate', 'verb2'), 'noun1' ),
     ( '{1} the {2}!', 'verb', ('~harpoons', 'noun1') ),

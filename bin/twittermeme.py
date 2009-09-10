@@ -87,7 +87,7 @@ def post():
     print to_unicode(status.text)
     try:
         print 'http://twitter.com/%s/status/%d' % (status.user.screen_name, status.id)
-    except (AttributeError, TypeError):
+    except (AttributeError, TypeError, urllib2.HTTPError):
         pass
 
 def main():
