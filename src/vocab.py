@@ -83,6 +83,7 @@ vocab = {
         'Magibon',
         'MAI WAIFU',
         'Mario',
+        'Maru',
         'Metallica',
         'Mexico',
         'Michael Jackson',
