@@ -4,6 +4,11 @@ AddDefaultCharset utf-8
 ServerSignature Off
 ErrorDocument 404 /404.html
 
+<FilesMatch "\.py$">
+Order Deny,Allow
+Deny from all
+</FilesMatch>
+
 RewriteEngine On
 RewriteBase /
 RewriteRule ^(pc/?)?$ index.cgi [QSA,L]
