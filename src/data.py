@@ -48,9 +48,9 @@ Content-type: text/html; charset=UTF-8
 <title>%s &bull; push button, receive lulz</title>
 <meta name="description" content="One very cheeky random nonsense generator. Inspired by snowclones, the utter insanity of 4chan, and internet memes in general. Not safe for work."/>
 <meta name="keywords" content="meme random nonsense generator 4chan lulz snowclone madlibs python"/>
-<link rel="stylesheet" type="text/css" href="/main.css?20090509"/>
+<link rel="stylesheet" type="text/css" media="all" href="/main.css?20090509"/>
+<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="iphone.css?20091227"/>
 <link rel="icon" type="image/png" href="/icon32.png"/>
-<link rel="apple-touch-icon" href="/icon.png"/>
 <meta name="viewport" content="width=800"/>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds2.feedburner.com/automeme"/>
 %s</head>
@@ -87,7 +87,7 @@ Content-type: text/html; charset=UTF-8
   <div id="butan">&nbsp;</div>
   <div id="loading"><span>&nbsp;</span></div>
  </div>
- <script type="text/javascript" src="/pushbutan.js?20090916"></script>
+ <script type="text/javascript" src="/pushbutan.js?20091227b"></script>
  <div id="footer">%s</div>
 </div>
 </body></html>"""

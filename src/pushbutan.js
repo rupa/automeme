@@ -130,6 +130,9 @@ window.onload = function()
     $('#halp').hide().css({'z-index':'9001','visibility':'visible'});
     $('#loading span').hide().css({'visibility':'visible'});
 
-    var automeme = new AutoMeme(document.getElementById('butan'),
+    var iPhone = /mobile.*safari/.test(navigator.userAgent.toLowerCase()),
+        automeme = new AutoMeme(document.getElementById('butan'),
                                 document.getElementById('meme'));
+
+    if (iPhone) document.title = 'Auto-Meme';
 };
