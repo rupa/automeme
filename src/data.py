@@ -9,7 +9,6 @@ footer.append('<p>%s</p>' % '\n&middot; '.join((
     '<a href="/api.html">API</a>',
     '$nsfw_toggle$',
     '<a href="/stuff.html">Moar</a>',
-    '<a href="http://www.mediatemple.net/go/order/?refdom=boxofjunk.ws">Hosting</a>',
     )) )
 footer.append("""
 <div id="sellout">
