@@ -84,3 +84,6 @@ cp -p /tmp/b1.png $outputdir/icon.png
 convert $outputdir/icon.png \
     -resize 32x32 \
     $outputdir/icon32.png
+convert $outputdir/icon.png \
+    -resize 16x16 \
+    $outputdir/icon16.png

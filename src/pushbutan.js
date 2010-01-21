@@ -48,7 +48,7 @@ function AutoMeme(tagButton, tagMeme)
             tagMeme.innerHTML = memes.shift();
     }
 
-    function fetch()
+    function fetch(callback)
     {
         var req = makeHttpObject();
         if (!req) { return; }
@@ -72,19 +72,23 @@ function AutoMeme(tagButton, tagMeme)
             }
             $('#loading span').fadeOut('fast');
             unblock();
+            if (typeof callback != 'undefined') callback();
         }
     }
 
-    function meme()
+    function meme(callback)
     {
         if (blocked) return;
         block();
 
         if (memes.length > 0) {
             pop();
-            setTimeout(function(){unblock();}, 250);
+            setTimeout(function() {
+                unblock();
+            }, 250);
+            if (typeof callback != 'undefined') callback();
         } else {
-            fetch();
+            fetch(callback);
         }
     }
 
@@ -123,16 +127,17 @@ function AutoMeme(tagButton, tagMeme)
             toggleHalp();
         }
     };
+
+    if (/mobile.*safari/.test(navigator.userAgent.toLowerCase())) {
+        document.title = 'Auto-Meme';
+    }
 }
 
-window.onload = function()
-{
+$(document).ready(function() {
     $('#halp').hide().css({'z-index':'9001','visibility':'visible'});
     $('#loading span').hide().css({'visibility':'visible'});
 
-    var iPhone = /mobile.*safari/.test(navigator.userAgent.toLowerCase()),
-        automeme = new AutoMeme(document.getElementById('butan'),
+    var automeme = new AutoMeme(document.getElementById('butan'),
                                 document.getElementById('meme'));
 
-    if (iPhone) document.title = 'Auto-Meme';
-};
+});

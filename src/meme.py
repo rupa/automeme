@@ -120,10 +120,7 @@ def generate(format = 'html', pattern = ''):
 def html(egg=False):
     from data import easter_eggs, html_template, footer
 
-    footer = '\n'.join(footer).replace('$nsfw_toggle$', nsfw_mode \
-                   and '<a href="/pc">work-safe?</a>' \
-                   or '<a href="/">not safe for work</a>')
-
+    footer = '\n'.join(footer)
     css = ''
     if egg or not randint(0, 12):
         if egg not in easter_eggs:

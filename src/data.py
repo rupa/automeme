@@ -7,7 +7,6 @@ footer.append('<p>%s</p>' % '\n&middot; '.join((
     '<a href="#" id="wut">wut?</a>',
     '<a href="http://automeme.tumblr.com/">Blog</a>',
     '<a href="/api.html">API</a>',
-    '$nsfw_toggle$',
     '<a href="/stuff.html">Moar</a>',
     )) )
 footer.append("""
@@ -46,19 +45,21 @@ Content-type: text/html; charset=UTF-8
 <head profile="http://www.w3.org/2005/10/profile">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>%s &bull; push button, receive lulz</title>
-<meta name="description" content="One very cheeky random nonsense generator. Inspired by snowclones, the utter insanity of 4chan, and internet memes in general. Not safe for work."/>
-<meta name="keywords" content="meme random nonsense generator 4chan lulz snowclone madlibs python"/>
-<link rel="stylesheet" type="text/css" media="all" href="/main.css?20090509"/>
-<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="iphone.css?20091227"/>
+<meta name="description" content="The meme generator: random nonsense on demand. Inspired by Mad Libs, snowclones, internet memes and the utter insanity of 4chan. Not safe for work."/>
+<meta name="keywords" content="meme generator random nonsense 4chan lulz snowclone madlibs python"/>
+<link rel="stylesheet" type="text/css" media="all" href="/main.css?20091227b"/>
+<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="iphone.css?20091227g"/>
 <link rel="icon" type="image/png" href="/icon32.png"/>
-<meta name="viewport" content="width=800"/>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds2.feedburner.com/automeme"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="viewport" content="width=800"/>
+<meta name="google-site-verification" content="f7s5eHOpjbljxe0cEz_etlYwVNModKW78OFvAKyD4os"/>
 %s</head>
 <body>
 <div id="halp">
  <!-- google_ad_section_start -->
  <h1>INTERNET LULZ MACHINE</h1>
- <p>Auto-Meme churns out random nonsense, inspired by
+ <p>Auto-Meme is a <i>meme generator</i>, churning out random nonsense on demand. Inspired by
     <a href="http://en.wikipedia.org/wiki/Mad_Libs">Mad Libs</a>,
     <a href="http://en.wikipedia.org/wiki/Snowclone">snowclones</a>,
     <a href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>
@@ -87,7 +88,7 @@ Content-type: text/html; charset=UTF-8
   <div id="butan">&nbsp;</div>
   <div id="loading"><span>&nbsp;</span></div>
  </div>
- <script type="text/javascript" src="/pushbutan.js?20091227b"></script>
+ <script type="text/javascript" src="/pushbutan.js?20091227f"></script>
  <div id="footer">%s</div>
 </div>
 </body></html>"""
