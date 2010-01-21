@@ -88,7 +88,7 @@ Content-type: text/html; charset=UTF-8
   <div id="butan">&nbsp;</div>
   <div id="loading"><span>&nbsp;</span></div>
  </div>
- <script type="text/javascript" src="/pushbutan.js?20091227f"></script>
+ <script type="text/javascript" src="/pushbutan.js?20100121-1203"></script>
  <div id="footer">%s</div>
 </div>
 </body></html>"""
