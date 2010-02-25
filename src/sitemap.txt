@@ -1,3 +1,3 @@
-http://meme.boxofjunk.ws/
-http://meme.boxofjunk.ws/stuff.html
-http://meme.boxofjunk.ws/api.html
+http://automeme.net/
+http://automeme.net/stuff.html
+http://automeme.net/api.html

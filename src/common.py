@@ -3,7 +3,7 @@ __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 from random import choice, randint
 import re, sys
 
-USER_AGENT = 'Auto-Meme/9000 +http://meme.boxofjunk.ws/'
+USER_AGENT = 'Auto-Meme/9000 +http://automeme.net/'
 
 # if v is a function, call and replace it with its return value
 expand = lambda v: (callable(v) and [v()] or [v])[0]

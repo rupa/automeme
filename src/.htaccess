@@ -11,6 +11,16 @@ Deny from all
 
 RewriteEngine On
 RewriteBase /
+
+# redirect invalid domain names
+RewriteCond %{HTTP_HOST} !^automeme.net$ [NC]
+RewriteCond %{HTTP_HOST} !^meme\.boxofjunk\.ws$ [NC]
+RewriteRule ^(.*)$ http://automeme.net/$1 [R=301,L]
+
+# redirect the old domain name for the front page only
+RewriteCond %{HTTP_HOST} !^automeme.net$ [NC]
+RewriteRule ^$ http://automeme.net/ [R=301,L]
+
 RewriteRule ^(pc/?)?$ index.cgi [QSA,L]
 RewriteRule ^moar.(txt|html)$ raw.cgi?format=$1 [QSA,L]
 RewriteRule ^moar.(txt|html).json$ raw.cgi?format=$1&json=1 [QSA,L]

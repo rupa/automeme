@@ -19,12 +19,14 @@
 one of the following <abbr>URL</abbr>s:</p>
 
 <ul class="urls">
-  <li><code>http://meme.boxofjunk.ws/<a
-    href="http://meme.boxofjunk.ws/moar.txt">moar.txt</a></code></li>
-  <li><code>http://meme.boxofjunk.ws/moar.html</code></li>
-  <li><code>http://meme.boxofjunk.ws/moar.txt.json</code></li>
-  <li><code>http://meme.boxofjunk.ws/moar.html.json</code></li>
+  <li><code>http://automeme.net/<a
+    href="http://automeme.net/moar.txt">moar.txt</a></code></li>
+  <li><code>http://automeme.net/moar.html</code></li>
+  <li><code>http://automeme.net/moar.txt.json</code></li>
+  <li><code>http://automeme.net/moar.html.json</code></li>
 </ul>
+
+<p>The API may also be accessed from the original domain, <code>meme.boxofjunk.ws</code>.
 
 <p>Differences between <code>.txt</code> and <code>.html</code>:</p>
 
@@ -64,19 +66,19 @@ change the number of memes, append <code>?lines=<em>n</em></code> to the
 
 <h3>Python</h3>
 <pre><code><span class="hurr">&gt;&gt;&gt;</span> import urllib
-<span class="hurr">&gt;&gt;&gt;</span> url = 'http://meme.boxofjunk.ws/moar.txt'
+<span class="hurr">&gt;&gt;&gt;</span> url = 'http://automeme.net/moar.txt'
 <span class="hurr">&gt;&gt;&gt;</span> memes = urllib.urlopen(url).read().rstrip().split("\n")
 <span class="hurr">&gt;&gt;&gt;</span> print memes.pop()</code></pre>
 
 <h3>Ruby</h3>
 <pre><code><span class="hurr">&gt;&gt;</span> require "open-uri"
-<span class="hurr">&gt;&gt;</span> url = "http://meme.boxofjunk.ws/moar.txt"
+<span class="hurr">&gt;&gt;</span> url = "http://automeme.net/moar.txt"
 <span class="hurr">&gt;&gt;</span> memes = open(url).read.split("\n")
 <span class="hurr">&gt;&gt;</span> puts memes.pop</code></pre>
 
 <h3>Perl</h3>
 <pre><code>use LWP::Simple;
-getprint 'http://meme.boxofjunk.ws/moar.txt?lines=1';</code></pre>
+getprint 'http://automeme.net/moar.txt?lines=1';</code></pre>
 
 
 <h2>Credits</h2>
