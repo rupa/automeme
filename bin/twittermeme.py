@@ -28,6 +28,11 @@ cfg_files = [
     '../.automeme',
 ]
 
+def to_unicode(obj):
+    if isinstance(obj, basestring) and not isinstance(obj, unicode):
+        obj = unicode(obj, 'utf-8')
+    return obj
+
 def cred():
     cfg = ConfigParser.ConfigParser()
     cfg.read(cfg_files)
@@ -78,10 +83,13 @@ def post():
     tweet = meme()
     if not tweet:
         return
+    if not randint(0, 20) and len(tweet) <= 135:
+        tweet += ' #red'
     status = t.PostUpdate(tweet)
+    print to_unicode(status.text)
     try:
         print 'http://twitter.com/%s/status/%d' % (status.user.screen_name, status.id)
-    except (AttributeError, TypeError):
+    except (AttributeError, TypeError, urllib2.HTTPError):
         pass
 
 def main():
@@ -98,7 +106,4 @@ def main():
             print text
 
 if __name__ == '__main__':
-    try:
-        main()
-    except urllib2.HTTPError:
-        pass
+    main()
