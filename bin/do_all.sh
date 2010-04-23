@@ -5,7 +5,7 @@ set -e
 
 outputdir=../html
 server=boxofjunk
-uploadto=domains/meme.boxofjunk.ws/html
+uploadto=domains/automeme.net/html
 
 [ "$1" = "--clean" ] && rm -rfv $outputdir && mkdir $outputdir
 

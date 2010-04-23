@@ -10,12 +10,17 @@ footer.append('<p>%s</p>' % '\n&middot; '.join((
     '<a href="/stuff.html">Moar</a>',
     )) )
 footer.append("""
+<div id="failbook">
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fautomeme.net%2F&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=lucida+grande&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:20px"></iframe>
+</div>
+""".strip())
+footer.append("""
 <div id="sellout">
 <script type="text/javascript"><!--
 google_ad_client = "pub-6989159164128459";
-google_ad_slot = "8356229727";
-google_ad_width = 728;
-google_ad_height = 90;
+google_ad_slot = "0822990148";
+google_ad_width = 468;
+google_ad_height = 60;
 //-->
 </script>
 <script type="text/javascript"
@@ -44,16 +49,17 @@ Content-type: text/html; charset=UTF-8
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://www.w3.org/2005/10/profile">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>%s &bull; push button, receive lulz</title>
+<title>%s</title>
 <meta name="description" content="The meme generator: random nonsense on demand. Inspired by Mad Libs, snowclones, internet memes and the utter insanity of 4chan. Not safe for work."/>
 <meta name="keywords" content="meme generator random nonsense 4chan lulz snowclone madlibs python"/>
-<link rel="stylesheet" type="text/css" media="all" href="/main.css?20091227b"/>
+<link rel="stylesheet" type="text/css" media="all" href="/main.css?201004230"/>
 <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="iphone.css?20091227g"/>
 <link rel="icon" type="image/png" href="/icon32.png"/>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds2.feedburner.com/automeme"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="viewport" content="width=800"/>
 <meta name="google-site-verification" content="f7s5eHOpjbljxe0cEz_etlYwVNModKW78OFvAKyD4os"/>
+<meta name="og:image" content="http://automeme.net/icon.png"/>
 %s</head>
 <body>
 <div id="halp">
@@ -89,6 +95,6 @@ Content-type: text/html; charset=UTF-8
   <div id="loading"><span>&nbsp;</span></div>
  </div>
  <script type="text/javascript" src="/pushbutan.js?20100121-1203"></script>
- <div id="footer">%s</div>
+ <div id="footer-wrap"><div id="footer">%s</div></div>
 </div>
 </body></html>"""
