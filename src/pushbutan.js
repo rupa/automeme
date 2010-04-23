@@ -115,6 +115,7 @@ function AutoMeme(tagButton, tagMeme)
         toggleHalp();
     }
     $('#wut').click(clickHalp);
+    $('<p><a id="dismiss" href="#">okay</a></p>').appendTo($('#halp'));
     $('#dismiss').click(clickHalp);
 
     window.onkeypress = function(e) {

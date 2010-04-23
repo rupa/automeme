@@ -4,11 +4,20 @@ h1,div,p,body {margin:0; padding:0;}
 a {color:#444; text-decoration:none;}
 a:hover {color:#C00 !important; text-decoration:underline;}
 a,img {border:none !important;}
-#halp {padding:1em 1em 0; background:#FFF; position:fixed; left:0; top:0; right:0;
-       border-bottom:4px solid #772245; z-index:0; visibility:hidden;
-       line-height:1.25; opacity:0.95;}
+#halp {
+    background: #fff;
+    border: 5px solid #eed;
+    padding: 1.5em;
+    position: fixed;
+    left: 1.5em; top: 1.5em;
+    max-width: 32em;
+    visibility: hidden;
+    z-index: 0;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
 #halp h1 {font-size:1.5em;}
-#halp p {padding-bottom:1em; max-width:32em;}
+#halp p {padding-bottom:1em;}
 #halp a {color:#C00;}
 #halp img {vertical-align:text-bottom;}
 #halp .warning {white-space:nowrap; font-weight:bold;}
@@ -30,7 +39,7 @@ a,img {border:none !important;}
 #loading span {background:url(loading.gif) 50% 0 no-repeat; visibility:hidden;
                display:block;}
 #footer-wrap {padding: 3em 0; clear: both;}
-#footer {border-top: 1px solid #ccc; color: #888; font-size: 0.8em;
+#footer {border-top: 5px solid #eed; color: #888; font-size: 0.8em;
          margin: 0 3em 0 250px; padding: 1.5em 0;}
 #footer p {margin:0 -0.4em 0.75em; line-height:1.5;}
 #footer a {padding:0.2em 0.4em;}

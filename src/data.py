@@ -79,7 +79,6 @@ Content-type: text/html; charset=UTF-8
     Awful</a>.</p>
  <p>Made with <a href="http://www.python.org/">Python</a>
     by <a href="http://boxofjunk.ws/">a hairy Irishman</a>.</p>
- <p><a id="dismiss" href="#">okay</a></p>
 </div>
 <div id="body">
  <div id="meme-w1"><div id="meme-w2">
