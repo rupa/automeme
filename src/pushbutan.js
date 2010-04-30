@@ -114,6 +114,7 @@ function AutoMeme(tagButton, tagMeme)
         e.preventDefault();
         toggleHalp();
     }
+    $('<span><a href="#" id="wut">wut?</a> &middot;&nbsp;</span>').prependTo($('#footer-links'));
     $('#wut').click(clickHalp);
     $('<p><a id="dismiss" href="#">okay</a></p>').appendTo($('#halp'));
     $('#dismiss').click(clickHalp);
