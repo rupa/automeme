@@ -4,7 +4,7 @@ __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 footer = []
 footer.append('<p id="footer-links">%s</p>' % '\n&middot; '.join((
-    '<a href="/stuff.html">Moar</a>',
+    '<a href="/goodies.html">Goodies</a>',
     '<a href="/api.html">API</a>',
     '<a href="http://blog.automeme.net/">Blog</a>',
     )) )
