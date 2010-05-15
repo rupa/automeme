@@ -64,7 +64,7 @@ def len_tweet(text):
     return len(text.encode('utf-8'))
 
 def meme():
-    req = urllib2.Request('http://meme.boxofjunk.ws/moar.txt')
+    req = urllib2.Request('http://automeme.net/moar.txt')
     try:
         response = urllib2.urlopen(req)
     except (urllib2.URLError, urllib2.HTTPError), e:

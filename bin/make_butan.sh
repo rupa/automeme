@@ -26,6 +26,10 @@ convert ../images/awesome.gif \
     -filter box -resize 150 \
     /tmp/emot.png
 
+convert ../images/awesome-brains.png \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
+    /tmp/brains.png
 convert ../images/awesome-cardcrusher.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
@@ -46,6 +50,10 @@ convert ../images/awesome-katara.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/katara.png
+convert ../images/awesome-toast.png \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
+    /tmp/toast.png
 convert ../images/awesome-weegee.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
@@ -53,6 +61,8 @@ convert ../images/awesome-weegee.png \
 
 convert /tmp/{b1,emot}.png \
     -append $outputdir/butan-awesome.png
+convert /tmp/{b1,brains}.png \
+    -append $outputdir/butan-brains.png
 convert /tmp/{b1,cardcrusher}.png \
     -append $outputdir/butan-cardcrusher.png
 convert /tmp/{b1,datass}.png \
@@ -63,6 +73,8 @@ convert /tmp/{b1,hurrrr}.png \
     -append $outputdir/butan-hurrrr.png
 convert /tmp/{b1,katara}.png \
     -append $outputdir/butan-katara.png
+convert /tmp/{b1,toast}.png \
+    -append $outputdir/butan-toast.png
 convert /tmp/{b1,weegee}.png \
     -append $outputdir/butan-weegee.png
 

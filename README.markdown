@@ -1,7 +1,7 @@
 Auto-Meme
 =========
 
-Here is the source code for [Auto-Meme](http://meme.boxofjunk.ws/).
+Here is the source code for [Auto-Meme](http://automeme.net/).
 
 Auto-Meme is one very cheeky random nonsense generator. It's inspired by the
 utter insanity of 4chan, and internet memes in general. Sometimes it's cute;
@@ -35,7 +35,7 @@ A quick overview of the folder structure:
 
 * `src` &mdash; All the essential stuff.
 
-* `bin` &mdash; Some scripts for updating `meme.boxofjunk.ws`. You'll need to
+* `bin` &mdash; Some scripts for updating `automeme.net`. You'll need to
   edit some variables if you want to use these.
 
 * `images` &mdash; Image files used by scripts in the `bin` folder.

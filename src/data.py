@@ -25,12 +25,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 easter_eggs = ('awesome',
+               'brains',
                'cardcrusher',
                'datass',
                'eyebrow',
                'hurrrr',
                'katara',
                'milkips',
+               'toast',
                'weegee',
                'original')
 
