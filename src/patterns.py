@@ -134,4 +134,5 @@ nsfw_patterns = [
     ( '{1} YOUR FUCKING {2}. {1} THEM.', ('~eat','verb'), 'noun1' ),
     ( 'WHAT THE FUCK? YOU ARE {1}! AND {2}', ('adj','name','noun'), 'adj' ),
     ( "Ceiling {1} is watching you {2}", 'noun', ('~fap', 'iverb', 'iverb') ),
+    ( 'Fucking {1}, how do they work?', 'noun1' ),
 ]

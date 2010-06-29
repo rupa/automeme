@@ -226,6 +226,7 @@ vocab = {
         'interior crocodile alligator; ~s',
         'internet; ~s',
         'IPHONE; ~s',
+        'iPad; ~s',
         'iPod; ~s',
         'Irishman; Irishmen',
         'jedi; ~s',

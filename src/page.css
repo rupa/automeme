@@ -18,7 +18,7 @@ ins {text-decoration:underline;}
 del {text-decoration:line-through;}
 table {border-collapse:collapse; border-spacing:0;}
 
-body {background:#eed; color:#A00;
+body {background:#eed; color:#A00; text-rendering:optimizeLegibility;
       font:12pt/1.5 'Helvetica Neue','DejaVu Sans','Helvetica',sans-serif;}
 #body {margin:3em 4em; max-width:40em;}
 h1 {font-weight:bold; font-size:3em; margin-bottom:0.5em; line-height:1;
