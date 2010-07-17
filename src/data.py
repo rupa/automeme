@@ -73,8 +73,6 @@ Content-type: text/html; charset=UTF-8
  <p>The <img src="/awesome.gif" alt=":razz:" title=":razz:"/> smiley originates from <a
     href="http://forums.somethingawful.com/misc.php?action=showsmilies">Something
     Awful</a>.</p>
- <p>Made with <a href="http://www.python.org/">Python</a>
-    by <a href="http://boxofjunk.ws/">a hairy Irishman</a>.</p>
 </div>
 <div id="body">
  <div id="meme-w1"><div id="meme-w2">
@@ -89,7 +87,7 @@ Content-type: text/html; charset=UTF-8
   <div id="butan">&nbsp;</div>
   <div id="loading"><span>&nbsp;</span></div>
  </div>
- <script type="text/javascript" src="/pushbutan.js?20100121-1203"></script>
+ <script type="text/javascript" src="/pushbutan.js?20100717-1100"></script>
  <div id="footer-wrap"><div id="footer">%s</div></div>
 </div>
 </body></html>"""

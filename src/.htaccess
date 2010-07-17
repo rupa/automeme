@@ -13,7 +13,7 @@ RewriteEngine On
 RewriteBase /
 
 # redirect invalid domain names
-RewriteCond %{HTTP_HOST} !^automeme.net$ [NC]
+RewriteCond %{HTTP_HOST} !^(moar\.)?automeme.net$ [NC]
 RewriteCond %{HTTP_HOST} !^meme\.boxofjunk\.ws$ [NC]
 RewriteRule ^(.*)$ http://automeme.net/$1 [R=301,L]
 

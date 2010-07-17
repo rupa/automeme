@@ -17,7 +17,8 @@ a,img {border:none !important;}
     -webkit-border-radius: 10px;
 }
 #halp h1 {font-size:1.5em;}
-#halp p {padding-bottom:1em;}
+#halp p {margin-bottom:1em;}
+#halp p:last-child {margin:2em 0 0;}
 #halp a {color:#C00;}
 #halp img {vertical-align:text-bottom;}
 #halp .warning {white-space:nowrap; font-weight:bold;}
