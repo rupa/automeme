@@ -46,7 +46,7 @@ Content-type: text/html; charset=UTF-8
 <head profile="http://www.w3.org/2005/10/profile">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>%s</title>
-<meta name="description" content="The meme generator: random nonsense on demand. Inspired by Mad Libs, snowclones, internet memes and the utter insanity of 4chan. Not safe for work."/>
+<meta name="description" content="The automatic meme generator: random nonsense on demand. Inspired by Mad Libs, snowclones, internet memes and the utter insanity of 4chan. Not safe for work."/>
 <meta name="keywords" content="meme generator random nonsense 4chan lulz snowclone madlibs python"/>
 <link rel="stylesheet" type="text/css" media="all" href="/main.css?201004231"/>
 <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="iphone.css?20091227g"/>
@@ -62,7 +62,7 @@ Content-type: text/html; charset=UTF-8
 <div id="halp">
  <!-- google_ad_section_start -->
  <h1>INTERNET LULZ MACHINE</h1>
- <p>Auto-Meme is a <i>meme generator</i>, churning out random nonsense on demand. Inspired by
+ <p>Auto-Meme is an automated <i>meme generator</i>, churning out random nonsense on demand. Inspired by
     <a href="http://en.wikipedia.org/wiki/Mad_Libs">Mad Libs</a>,
     <a href="http://en.wikipedia.org/wiki/Snowclone">snowclones</a>,
     <a href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>
