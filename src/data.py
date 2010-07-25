@@ -56,6 +56,7 @@ Content-type: text/html; charset=UTF-8
 <meta name="viewport" content="width=800"/>
 <meta name="google-site-verification" content="f7s5eHOpjbljxe0cEz_etlYwVNModKW78OFvAKyD4os"/>
 <meta name="og:image" content="http://automeme.net/icon.png"/>
+<meta name="google-site-verification" content="7ufvqs-G5eultBdcDfwdRVHs6gtoJvjciGIp5YFNUlQ"/>
 %s</head>
 <body>
 <div id="halp">
