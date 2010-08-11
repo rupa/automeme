@@ -1,5 +1,5 @@
 html {font-size:100.01%; text-transform:uppercase;}
-body {background:#fff; font:1em/1 'Helvetica Neue', 'DejaVu Sans', 'Helvetica', sans-serif; text-rendering:optimizeLegibility;}
+body {background:#fff; font:1em/1 'Helvetica Neue', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-rendering:optimizeLegibility;}
 h1,div,p,body {margin:0; padding:0;}
 a {color:#444; text-decoration:none;}
 a:hover {color:#C00 !important; text-decoration:underline;}
