@@ -2,13 +2,13 @@
 
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
-footer = []
-footer.append('<p id="footer-links">%s</p>' % '\n&middot; '.join((
-    '<a href="/goodies.html">Goodies</a>',
-    '<a href="/api.html">API</a>',
-    '<a href="http://blog.automeme.net/">Blog</a>',
-    )) )
-footer.append("""
+footer = ["""\
+<p id="footer-links">
+    <a href="/goodies.html">Goodies</a>
+    &middot; <a href="/api.html">API</a>
+    &middot; <a href="http://blog.automeme.net/">Blog</a>
+    &nbsp; <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://automeme.net/" data-count="horizontal" data-via="automeme" data-related="inky">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</p>
 <div id="sellout">
 <script type="text/javascript"><!--
 google_ad_client = "pub-6989159164128459";
@@ -20,8 +20,8 @@ google_ad_height = 60;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-</div>
-""".strip())
+</div>\
+"""]
 
 
 easter_eggs = ('awesome',
@@ -48,7 +48,7 @@ Content-type: text/html; charset=UTF-8
 <title>%s</title>
 <meta name="description" content="The automatic meme generator: random nonsense on demand. Inspired by Mad Libs, snowclones, internet memes and the utter insanity of 4chan. Not safe for work."/>
 <meta name="keywords" content="meme generator random nonsense 4chan lulz snowclone madlibs python"/>
-<link rel="stylesheet" type="text/css" media="all" href="/main.css?201004231"/>
+<link rel="stylesheet" type="text/css" media="all" href="/main.css?201008121"/>
 <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="iphone.css?20091227g"/>
 <link rel="icon" type="image/png" href="/icon32.png"/>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds2.feedburner.com/automeme"/>
@@ -88,7 +88,7 @@ Content-type: text/html; charset=UTF-8
   <div id="butan">&nbsp;</div>
   <div id="loading"><span>&nbsp;</span></div>
  </div>
- <script type="text/javascript" src="/pushbutan.js?20100717-1100"></script>
+ <script type="text/javascript" src="/pushbutan.js?201008121"></script>
  <div id="footer-wrap"><div id="footer">%s</div></div>
 </div>
 </body></html>"""
