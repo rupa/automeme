@@ -118,6 +118,8 @@ patterns = [
     ( "My {1} just {2} me; shit was SO {3}", 'noun', 'verb2', ('noun', 'adj', '~cash') ),
     ( "Yo {1}, I'm really happy for you, Imma let you finish, but {2} had one of the "+
       "best {3} of all time", ['name', no_article], 'name', 'noun1' ),
+    ( "Yo dawg, I heard you like {1}, so we put some {1} in your {1} so you can {2} while you {2}.",
+      'noun1', 'iverb' ),
 ]
 
 nsfw_patterns = [
