@@ -1,18 +1,21 @@
 #!/bin/bash
 
-set -e
+if [ -z "$1" ]; then
+    echo "usage: `basename $0` OUTPUT_DIR"
+    exit 1
+fi
 
-outputdir=../html
+outputdir="$1"
 mkdir -p $outputdir
 
 
 # make :awesome: button
 
-convert ../images/awesome.png \
+convert images/awesome.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/b1.png
-convert ../images/awesome.png \
+convert images/awesome.png \
     -swirl 25 \
     -resize 150 \
     /tmp/b2.png
@@ -22,39 +25,39 @@ convert /tmp/b{1,2}.png \
 
 # bonus buttons
 
-convert ../images/awesome.gif \
+convert images/awesome.gif \
     -filter box -resize 150 \
     /tmp/emot.png
 
-convert ../images/awesome-brains.png \
+convert images/awesome-brains.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/brains.png
-convert ../images/awesome-cardcrusher.png \
+convert images/awesome-cardcrusher.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/cardcrusher.png
-convert ../images/awesome-datass.png \
+convert images/awesome-datass.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/datass.png
-convert ../images/awesome-eyebrow.png \
+convert images/awesome-eyebrow.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/eyebrow.png
-convert ../images/awesome-hurrrr.png \
+convert images/awesome-hurrrr.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/hurrrr.png
-convert ../images/awesome-katara.png \
+convert images/awesome-katara.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/katara.png
-convert ../images/awesome-toast.png \
+convert images/awesome-toast.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/toast.png
-convert ../images/awesome-weegee.png \
+convert images/awesome-weegee.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/weegee.png
@@ -78,11 +81,11 @@ convert /tmp/{b1,toast}.png \
 convert /tmp/{b1,weegee}.png \
     -append $outputdir/butan-weegee.png
 
-convert ../images/milkips.png \
+convert images/milkips.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/milkips1.png
-convert ../images/milkips.png \
+convert images/milkips.png \
     -swirl -50 \
     -resize 150 \
     /tmp/milkips2.png
