@@ -14,9 +14,10 @@
 
 <h1>Official Auto-Meme Enterprise&nbsp;API</h1>
 
+
 <h2>Where the memes at?</h2>
 <p>All you have to do is <span class="caps">GET</span>
-one of the following <abbr>URL</abbr>s:</p>
+one of these <abbr>URL</abbr>s:</p>
 
 <ul class="urls">
   <li><code>http://api.automeme.net/<a href="http://api.automeme.net/text">text</a></code></li>
@@ -30,31 +31,57 @@ one of the following <abbr>URL</abbr>s:</p>
 <h3>Format</h3>
 
 <p><code>text</code> and <code>html</code> both return a list of memes,
-separated by newline characters (<code>\n</code>). Output is UTF-8 encoded.</p>
-<p>There are some minor differences between <code>text</code> and
-<code>html</code>:</p>
+separated by newline characters (<code>\n</code>).</p>
+
+<p>Memes may be returned as a <abbr>JSON</abbr> list object by appending
+<code>.json</code> to the <abbr>URL</abbr>.</p>
+
+<p>There are some differences between <code>text</code> and
+<code>html</code> output:</p>
 
 <table cellspacing="0">
   <thead>
     <tr>
+      <th class="minor"><!-- --></th>
       <th><code>text</code></th>
-      <th><code>html</code></th>
+      <th colspan="2"><code>html</code></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>--</code></td>
-      <td><code>&amp;mdash;</code> <span class="hurr">(a dash like &mdash;)</span></td>
+      <td>Emphasis</td>
+      <td><code>_DERP_</code></td>
+      <td><code>&lt;em&gt;DERP&lt;/em&gt;</code></td>
+      <td><em>DERP</em></td>
     </tr>
     <tr>
-      <td><code>_FOO_</code></td>
-      <td><code>&lt;em&gt;FOO&lt;/em&gt;</code></td>
+      <td>Smart quotes</td>
+      <td><code>'DERP'</code></td>
+      <td><code>‘DERP’</code></td>
+      <td>‘DERP’</td>
+    </tr>
+    <tr>
+      <td>Em dash</td>
+      <td><code>--</code></td>
+      <td><code>&amp;mdash;</code></td>
+      <td>&mdash;</td>
+    </tr>
+    <tr>
+      <td>Snowman</td>
+      <td><code>SNOWMAN</code></td>
+      <td><code>&amp;#9731;</code></td>
+      <td>&#9731;</td>
     </tr>
   </tbody>
 </table>
 
-<p>Underscores are used solely for emphasis in <code>text</code> output, and
-can be safely removed.</p>
+<p>As illustrated here, <code>html</code> uses some <abbr>HTML</abbr> entities,
+and <code>&lt;em&gt;</code> for emphasis, while <code>text</code> will try to
+use the <abbr>ASCII</abbr> equivalents. Regardless, all output is UTF-8
+encoded.</p>
+
+<p>The underscore character is used exclusively for emphasis in
+<code>text</code> output, and can be safely removed.</p>
 
 <h3>Parameters</h3>
 <p>Ten memes are returned by default. This can be changed by appending
@@ -96,30 +123,30 @@ getprint 'http://api.automeme.net/text?lines=1';</code></pre>
 <h2>Legacy API</h2>
 
 <p>The domain names <code>automeme.net</code> and
-<code>meme.boxofjunk.ws</code> will still work, though only the old URLs are
-supported.</p>
+<code>meme.boxofjunk.ws</code> will still work, though only the old
+<abbr>URL</abbr>s are supported.</p>
 
 <table cellspacing="0">
   <thead>
-    <th>Old</th>
-    <th>New</th>
+    <th>Current API</th>
+    <th>Old API</th>
   </thead>
   <tbody>
     <tr>
+      <td><code>/text</code></td>
       <td><code>/moar.txt</code></td>
-      <td><code>/text</code> or <code>/txt</code></td>
     </tr>
     <tr>
-      <td><code>/moar.html</code></td>
       <td><code>/html</code></td>
+      <td><code>/moar.html</code></td>
     </tr>
     <tr>
+      <td><code>/text.json</code></td>
       <td><code>/moar.txt.json</code></td>
-      <td><code>/text.json</code> or <code>/txt.json</code></td>
     </tr>
     <tr>
-      <td><code>/moar.html.json</code></td>
       <td><code>/html.json</code></td>
+      <td><code>/moar.html.json</code></td>
     </tr>
   </tbody>
 </table>
