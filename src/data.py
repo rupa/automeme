@@ -3,10 +3,10 @@
 __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 footer = ["""\
-<p id="footer-links">
-    <a href="/goodies.html">Goodies</a>
-    &middot; <a href="/api.html">API</a>
+<p id="footer-links"><a href="/goodies.html">Goodies</a>
+    &middot; <a href="http://api.automeme.net/">API</a>
     &middot; <a href="http://blog.automeme.net/">Blog</a>
+    &middot; <a href="http://twitter.com/automeme">Twitter</a>
     &nbsp; <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://automeme.net/" data-count="horizontal" data-via="automeme" data-related="inky">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </p>
 <div id="sellout">
@@ -88,7 +88,7 @@ Content-type: text/html; charset=UTF-8
   <div id="butan">&nbsp;</div>
   <div id="loading"><span>&nbsp;</span></div>
  </div>
- <script type="text/javascript" src="/pushbutan.js?201008121"></script>
+ <script type="text/javascript" src="/pushbutan.js?201008212"></script>
  <div id="footer-wrap"><div id="footer">%s</div></div>
 </div>
 </body></html>"""
