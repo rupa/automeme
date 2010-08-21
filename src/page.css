@@ -20,20 +20,19 @@ table {border-collapse:collapse; border-spacing:0;}
 
 body {background:#eed; color:#A00; text-rendering:optimizeLegibility;
       font:12pt/1.5 'Helvetica Neue','DejaVu Sans','Helvetica',sans-serif;}
-#body {margin:3em 4em;}
+#body {margin:3em 4em; max-width:40em;}
 h1 {font-weight:bold; font-size:3em; margin-bottom:0.5em; line-height:1;
-    text-shadow:1px 2px 1px #fff; max-width:13.5em;}
-h2 {font-size:1.5em; margin:2em 0 1em; line-height:1;}
-h3 {font-weight:bold; font-size:1.25em; line-height:1.2;}
+    text-shadow:1px 2px 1px #fff;}
+h2 {font-size:1.5em; margin:2em 0 1em; line-height:1; border-bottom:1px solid #A88;}
+h3 {font-weight:bold; font-size:1.25em; margin:1.8em 0 0.6em; line-height:1.2;}
 p, pre {margin-bottom:1.5em;}
 pre, code {color:#622; font-size:1em;}
 ul {margin:0 0 1.5em 2em; list-style:square;}
 ul.urls {list-style:none;}
-p {max-width:40em;}
-ul {max-width: 38em;}
 table {margin:0 2em 1.5em;}
 thead tr {border-bottom:1px solid #CAA;}
-thead code {font-weight:bold;}
+thead th {text-align:left; font-weight:normal;}
+thead code {color:inherit;}
 td {padding-right:2em;}
 hr {margin:3em 0 0.75em; border:0; border-bottom:0.25em solid #A88;}
 a {color:#C00;}

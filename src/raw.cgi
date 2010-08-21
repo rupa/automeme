@@ -23,8 +23,10 @@ def main():
 
         args = cgi.FieldStorage()
         if args.has_key('format'):
-            if args['format'].value in meme.CONTENT_TYPES.keys():
-                format = args['format'].value
+            format = args['format'].value
+            if format == 'text':
+                format = 'txt'
+            if format in meme.CONTENT_TYPES.keys():
                 ctype = meme.CONTENT_TYPES[format]
         if args.has_key('json') and args['json'].value:
             try:

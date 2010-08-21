@@ -14,30 +14,37 @@
 
 <h1>Official Auto-Meme Enterprise&nbsp;API</h1>
 
+<h2>Where the memes at?</h2>
 <p>All you have to do is <span class="caps">GET</span>
 one of the following <abbr>URL</abbr>s:</p>
 
 <ul class="urls">
-  <li><code>http://api.automeme.net/<a
-    href="http://api.automeme.net/moar.txt">moar.txt</a></code></li>
-  <li><code>http://api.automeme.net/moar.html</code></li>
-  <li><code>http://api.automeme.net/moar.txt.json</code></li>
-  <li><code>http://api.automeme.net/moar.html.json</code></li>
+  <li><code>http://api.automeme.net/<a href="http://api.automeme.net/text">text</a></code></li>
+  <li><code>http://api.automeme.net/html</code></li>
+  <li><code>http://api.automeme.net/text.json</code></li>
+  <li><code>http://api.automeme.net/html.json</code></li>
 </ul>
 
-<p>Differences between <code>.txt</code> and <code>.html</code>:</p>
+<p><code>text</code> may be abbreviated to <code>txt</code>.</p>
+
+<h3>Format</h3>
+
+<p><code>text</code> and <code>html</code> both return a list of memes,
+separated by newline characters (<code>\n</code>). Output is UTF-8 encoded.</p>
+<p>There are some minor differences between <code>text</code> and
+<code>html</code>:</p>
 
 <table cellspacing="0">
   <thead>
     <tr>
-      <td><code>.txt</code></td>
-      <td><code>.html</code></td>
+      <th><code>text</code></th>
+      <th><code>html</code></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>--</code></td>
-      <td><code>&amp;mdash;</code> <span class="hurr">(&mdash;)</span></td>
+      <td><code>&amp;mdash;</code> <span class="hurr">(a dash like &mdash;)</span></td>
     </tr>
     <tr>
       <td><code>_FOO_</code></td>
@@ -46,15 +53,16 @@ one of the following <abbr>URL</abbr>s:</p>
   </tbody>
 </table>
 
-<p>Ten memes are returned by default, separated by new line characters. To
-change the number of memes, append <code>?lines=<em>n</em></code> to the
-<abbr>URL</abbr>, where <em>n</em> is a number in the range 1&#8211;80.
-For example: <code>http://api.automeme.net/<a
-    href="http://api.automeme.net/moar.txt?lines=25">moar.txt?lines=25</a></code></p>
+<p>Underscores are used solely for emphasis in <code>text</code> output, and
+can be safely removed.</p>
 
-<p>For backwards compatibility, the domain names <code>automeme.net</code> and
-<code>meme.boxofjunk.ws</code> are also allowed, for now.</p>
+<h3>Parameters</h3>
+<p>Ten memes are returned by default. This can be changed by appending
+<code>?lines=<em>n</em></code> to the <abbr>URL</abbr>, where <em>n</em> is a
+number in the range 1&#8211;80. For example: <code>http://api.automeme.net/<a
+    href="http://api.automeme.net/text?lines=25">text?lines=25</a></code></p>
 
+<h3>Further info</h3>
 <p>Significant changes to the <abbr>API</abbr> will be posted to the
 <a href="http://blog.automeme.net/">Auto-Meme blog</a>.</p>
 
@@ -64,25 +72,57 @@ For example: <code>http://api.automeme.net/<a
 <h2>Diving in</h2>
 
 <h3>From a shell</h3>
-<p><code>curl api.automeme.net/moar.txt?lines=1</code><br/>
+<p><code>curl api.automeme.net/text?lines=1</code><br/>
 <i>or</i><br/>
-<code>wget -q -O - api.automeme.net/moar.txt?lines=1</code></p>
+<code>wget -q -O - api.automeme.net/text?lines=1</code></p>
 
 <h3>Python</h3>
 <pre><code>import urllib
-url = 'http://api.automeme.net/moar.txt'
+url = 'http://api.automeme.net/text'
 memes = urllib.urlopen(url).read().rstrip().split('\n')
 print memes.pop()</code></pre>
 
 <h3>Ruby</h3>
 <pre><code>require 'open-uri'
-url = 'http://api.automeme.net/moar.txt'
+url = 'http://api.automeme.net/text'
 memes = open(url).read.split("\n")
 puts memes.pop</code></pre>
 
 <h3>Perl</h3>
 <pre><code>use LWP::Simple;
-getprint 'http://api.automeme.net/moar.txt?lines=1';</code></pre>
+getprint 'http://api.automeme.net/text?lines=1';</code></pre>
+
+
+<h2>Legacy API</h2>
+
+<p>The domain names <code>automeme.net</code> and
+<code>meme.boxofjunk.ws</code> will still work, though only the old URLs are
+supported.</p>
+
+<table cellspacing="0">
+  <thead>
+    <th>Old</th>
+    <th>New</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>/moar.txt</code></td>
+      <td><code>/text</code> or <code>/txt</code></td>
+    </tr>
+    <tr>
+      <td><code>/moar.html</code></td>
+      <td><code>/html</code></td>
+    </tr>
+    <tr>
+      <td><code>/moar.txt.json</code></td>
+      <td><code>/text.json</code> or <code>/txt.json</code></td>
+    </tr>
+    <tr>
+      <td><code>/moar.html.json</code></td>
+      <td><code>/html.json</code></td>
+    </tr>
+  </tbody>
+</table>
 
 
 <h2>Credits</h2>
