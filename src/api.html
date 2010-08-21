@@ -12,7 +12,7 @@
   <body>
     <div id="body">
 
-<h1>Official Auto-Meme Enterprise API</h1>
+<h1>Official Auto-Meme Enterprise&nbsp;API</h1>
 
 <p>(Not to be confused with the <i>Yahoo Meme</i> API.)</p>
 
@@ -26,9 +26,6 @@ one of the following <abbr>URL</abbr>s:</p>
   <li><code>http://api.automeme.net/moar.txt.json</code></li>
   <li><code>http://api.automeme.net/moar.html.json</code></li>
 </ul>
-
-<p>For backwards compatibility, the domain names <code>automeme.net</code> and
-<code>meme.boxofjunk.ws</code> are also allowed.</p>
 
 <p>Differences between <code>.txt</code> and <code>.html</code>:</p>
 
@@ -53,40 +50,47 @@ one of the following <abbr>URL</abbr>s:</p>
 
 <p>Ten memes are returned by default, separated by new line characters. To
 change the number of memes, append <code>?lines=<em>n</em></code> to the
-<abbr>URL</abbr>, where <em>n</em> is in the range 1&#8211;80.</p>
+<abbr>URL</abbr>, where <em>n</em> is a number in the range 1&#8211;80.
+For example: <code>http://api.automeme.net/<a
+    href="http://api.automeme.net/moar.txt?lines=25">moar.txt?lines=25</a></code></p>
+
+<p>For backwards compatibility, the domain names <code>automeme.net</code> and
+<code>meme.boxofjunk.ws</code> are also allowed, for now.</p>
 
 <p>Significant changes to the <abbr>API</abbr> will be posted to the
 <a href="http://blog.automeme.net/">Auto-Meme blog</a>.</p>
 
-<p>Don't hammer the server plz thx.</p>
+<p>Don't hammer the server plz thx. &lt;3</p>
 
 
 <h2>Diving in</h2>
 
 <h3>From a shell</h3>
-<pre><code><span class="hurr">$</span> curl -s automeme.net/moar.txt?lines=1</code></pre>
+<p><code>curl api.automeme.net/moar.txt?lines=1</code><br/>
+<i>or</i><br/>
+<code>wget -q -O - api.automeme.net/moar.txt?lines=1</code></p>
 
 <h3>Python</h3>
-<pre><code><span class="hurr">&gt;&gt;&gt;</span> import urllib
-<span class="hurr">&gt;&gt;&gt;</span> url = 'http://automeme.net/moar.txt'
-<span class="hurr">&gt;&gt;&gt;</span> memes = urllib.urlopen(url).read().rstrip().split("\n")
-<span class="hurr">&gt;&gt;&gt;</span> print memes.pop()</code></pre>
+<pre><code>import urllib
+url = 'http://api.automeme.net/moar.txt'
+memes = urllib.urlopen(url).read().rstrip().split('\n')
+print memes.pop()</code></pre>
 
 <h3>Ruby</h3>
-<pre><code><span class="hurr">&gt;&gt;</span> require "open-uri"
-<span class="hurr">&gt;&gt;</span> url = "http://automeme.net/moar.txt"
-<span class="hurr">&gt;&gt;</span> memes = open(url).read.split("\n")
-<span class="hurr">&gt;&gt;</span> puts memes.pop</code></pre>
+<pre><code>require 'open-uri'
+url = 'http://api.automeme.net/moar.txt'
+memes = open(url).read.split("\n")
+puts memes.pop</code></pre>
 
 <h3>Perl</h3>
 <pre><code>use LWP::Simple;
-getprint 'http://automeme.net/moar.txt?lines=1';</code></pre>
+getprint 'http://api.automeme.net/moar.txt?lines=1';</code></pre>
 
 
 <h2>Credits</h2>
 <p>
-Ruby example by <a href="http://github.com/jamiew/">jamiew</a>.
-Perl example by <a href="http://github.com/perigrin/">perigrin</a>.
+Ruby example by <a href="http://github.com/jamiew">jamiew</a>.
+Perl example by <a href="http://github.com/perigrin">perigrin</a>.
 </p>
 
 
