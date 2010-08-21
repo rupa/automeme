@@ -108,17 +108,25 @@ number in the range 1&#8211;80. For example: <code>http://api.automeme.net/<a
 <i>or</i><br/>
 <code>wget -q -O - api.automeme.net/text?lines=1</code></p>
 
+<h3>Javascript with jQuery</h3>
+<pre><code>var url = 'http://api.automeme.net/text.json',
+    memes = [];
+$.getJSON(url, function(result) {
+    memes = result;
+    console.log(result[0]);
+});</code></pre>
+
 <h3>Python</h3>
 <pre><code>import urllib
 url = 'http://api.automeme.net/text'
 memes = urllib.urlopen(url).read().rstrip().split('\n')
-print memes.pop()</code></pre>
+print memes[0]</code></pre>
 
 <h3>Ruby</h3>
 <pre><code>require 'open-uri'
 url = 'http://api.automeme.net/text'
 memes = open(url).read.split("\n")
-puts memes.pop</code></pre>
+puts memes.first</code></pre>
 
 <h3>Perl</h3>
 <pre><code>use LWP::Simple;

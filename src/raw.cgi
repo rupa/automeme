@@ -16,10 +16,7 @@ def main():
 
     try:
         import meme
-
-        ref = cgi.os.environ.get('HTTP_REFERER', '')
-        if not re.match('^http://meme.boxofjunk.ws/pc', ref):
-            meme.use_nsfw()
+        meme.use_nsfw()
 
         args = cgi.FieldStorage()
         if args.has_key('format'):
@@ -39,6 +36,10 @@ def main():
         print 'SOMEONE DIVIDED BY ZERO. OH SH-'
         sys.stderr.write('Error: %s\n' % str(err))
         return
+
+    ref = cgi.os.environ.get('HTTP_HOST', '')
+    if ref == 'api.automeme.net':
+        print 'Access-Control-Allow-Origin: *'
 
     print header % ctype
 
