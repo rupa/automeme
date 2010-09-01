@@ -1,4 +1,12 @@
 User-agent: *
+Disallow: /text
+Disallow: /text.json
+Disallow: /txt
+Disallow: /txt.json
+Disallow: /html
+Disallow: /html.json
 Disallow: /moar.txt
+Disallow: /moar.txt.json
 Disallow: /moar.html
+Disallow: /moar.html.json
 Allow: /
