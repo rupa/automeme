@@ -4,6 +4,7 @@ __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 footer = ["""\
 <p id="footer-links"><a href="/goodies.html">Goodies</a>
+    &middot; <a href="http://moar.automeme.net/zing/">Zing</a>
     &middot; <a href="http://api.automeme.net/">API</a>
     &middot; <a href="http://blog.automeme.net/">Blog</a>
     &middot; <a href="http://twitter.com/automeme">Twitter</a>
