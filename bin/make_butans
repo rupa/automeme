@@ -53,6 +53,12 @@ convert images/awesome-katara.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
     /tmp/katara.png
+convert images/awesome-puddi.png \
+    -resize 150 \
+    /tmp/puddi1.png
+convert images/awesome-puddi2.png \
+    -resize 150 \
+    /tmp/puddi2.png
 convert images/awesome-toast.png \
     -bordercolor transparent -border 10x10 \
     -resize 150 \
@@ -76,6 +82,8 @@ convert /tmp/{b1,hurrrr}.png \
     -append $outputdir/butan-hurrrr.png
 convert /tmp/{b1,katara}.png \
     -append $outputdir/butan-katara.png
+convert /tmp/puddi{1,2}.png \
+    -append $outputdir/butan-puddi.png
 convert /tmp/{b1,toast}.png \
     -append $outputdir/butan-toast.png
 convert /tmp/{b1,weegee}.png \

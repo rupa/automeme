@@ -71,6 +71,7 @@ vocab = {
         'Jawsus',
         'Jean-Luc Picard',
         'Jesus',
+        'Jimmy Wales',
         'John Freeman',
         'John Romero',
         'Kanye West',

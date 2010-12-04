@@ -33,6 +33,7 @@ easter_eggs = ('awesome',
                'hurrrr',
                'katara',
                'milkips',
+               'puddi',
                'toast',
                'weegee',
                'original')
