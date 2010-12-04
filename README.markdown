@@ -1,9 +1,9 @@
-Auto-Meme
-=========
+Automeme
+========
 
-Here is the source code for [Auto-Meme](http://automeme.net/).
+Here is the source code for [Automeme](http://automeme.net/).
 
-Auto-Meme is one very cheeky random nonsense generator. It's inspired by the
+Automeme is one very cheeky random nonsense generator. It's inspired by the
 utter insanity of 4chan, and internet memes in general. Sometimes it's cute;
 sometimes it's downright offensive. You have been warned.
 

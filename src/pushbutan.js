@@ -252,7 +252,7 @@ function AutoMeme(tagButton, tagMeme)
     };
 
     if (/mobile.*safari/.test(navigator.userAgent.toLowerCase())) {
-        document.title = 'Auto-Meme';
+        document.title = 'Automeme';
     }
 }
 
