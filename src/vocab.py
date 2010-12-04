@@ -35,6 +35,7 @@ vocab = {
         'Battletoads',
         'Bill Gates',
         'Boxxy',
+        'Brian Cowen',
         'Brian Peppers',
         'Burzum',
         'Catwoman',
@@ -123,6 +124,7 @@ vocab = {
         'Tron Guy',
         'Twitter',
         'Weegee',
+        'Wikileaks',
         'Woll Smoth',
         'W.T. Snacks',
         'Xenu',
@@ -148,6 +150,7 @@ vocab = {
         'atheist; ~s',
         'babby; ~s',
         'bacon',
+        'bailout; ~s',
         'bank; ~s',
         'banker; ~s',
         'bear; ~s',
@@ -367,6 +370,7 @@ vocab = {
     # intransitive verb (no object)
     'iverb': [
         # I write; He writes; I wrote; I have/had written; I am/was writing
+        'bail out; bails out; bailed out; ~; bailing out',
         'blog; ~s; blogged; ~; blogging',
         'chew bees; chews bees; chewed bees; ~; chewing bees',
         'count; ~s; counted; ~; counting',

@@ -63,7 +63,7 @@ Content-type: text/html; charset=UTF-8
 <div id="halp">
  <!-- google_ad_section_start -->
  <h1>INTERNET LULZ MACHINE</h1>
- <p>Auto-Meme is an automated <i>meme generator</i>, churning out random nonsense on demand. Inspired by
+ <p>Automeme is an automated <i>meme generator</i>, churning out random nonsense on demand. Inspired by
     <a href="http://en.wikipedia.org/wiki/Mad_Libs">Mad Libs</a>,
     <a href="http://en.wikipedia.org/wiki/Snowclone">snowclones</a>,
     <a href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>

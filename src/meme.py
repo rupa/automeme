@@ -12,7 +12,7 @@ from patterns import patterns, nsfw_patterns
 from vocab import vocab, nsfw
 
 CONTENT_TYPES = {'html': 'text/html', 'txt': 'text/plain', 'plain': 'text/plain'}
-title = 'AUTO-MEME'
+title = 'AUTOMEME'
 
 nsfw_mode = False
 
