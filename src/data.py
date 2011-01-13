@@ -54,6 +54,7 @@ Content-type: text/html; charset=UTF-8
 <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="iphone.css?20091227g"/>
 <link rel="icon" type="image/png" href="/icon32.png"/>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds2.feedburner.com/automeme"/>
+<link rel="canonical" href="http://automeme.net/"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="viewport" content="width=800"/>
 <meta name="google-site-verification" content="f7s5eHOpjbljxe0cEz_etlYwVNModKW78OFvAKyD4os"/>

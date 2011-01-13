@@ -9,4 +9,5 @@ Disallow: /moar.txt
 Disallow: /moar.txt.json
 Disallow: /moar.html
 Disallow: /moar.html.json
+Disallow: /404.html
 Allow: /
