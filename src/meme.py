@@ -122,7 +122,7 @@ def html(egg=False):
 
     footer = '\n'.join(footer)
     css = ''
-    if egg or not randint(0, 12):
+    if egg or not randint(0, 11):
         if egg not in easter_eggs:
             egg = choice(easter_eggs)
         css = """

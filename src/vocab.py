@@ -102,6 +102,7 @@ vocab = {
         'Obama',
         'Pedobear',
     'The Pirate Bay',
+        'PUDDI PUDDI',
         'Raptorjesus',
         'Reddit',
     'The RIAA',
