@@ -16,8 +16,6 @@ def main():
 
     try:
         import meme
-        meme.use_nsfw()
-
         args = cgi.FieldStorage()
         if args.has_key('format'):
             format = args['format'].value

@@ -8,20 +8,11 @@ __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 from random import randint
 
 from common import *
-from patterns import patterns, nsfw_patterns
-from vocab import vocab, nsfw
+from patterns import patterns
+from vocab import vocab
 
 CONTENT_TYPES = {'html': 'text/html', 'txt': 'text/plain', 'plain': 'text/plain'}
 title = 'AUTOMEME'
-
-nsfw_mode = False
-
-def use_nsfw():
-    global vocab, patterns, nsfw_mode
-    nsfw_mode = True
-    for key in nsfw.keys():
-        vocab[key].extend(nsfw[key])
-    patterns.extend(nsfw_patterns)
 
 def get_word(words, index):
     """Return a word from a list of words. If the word contains
@@ -116,20 +107,3 @@ def generate(format = 'html', pattern = ''):
         meme = meme.replace('...', '&#8230;')
         meme = meme.replace("'", '&rsquo;')
     return meme
-
-def html(egg=False):
-    from data import easter_eggs, html_template, footer
-
-    footer = '\n'.join(footer)
-    css = ''
-    if egg or not randint(0, 11):
-        if egg not in easter_eggs:
-            egg = choice(easter_eggs)
-        css = """
-            <style type="text/css">#butan{background-image:url(/butan-%s.png)}</style>
-            """.strip() % egg
-
-    return html_template % (title, css, footer)
-
-if __name__ == '__main__':
-    print html()

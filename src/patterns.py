@@ -120,9 +120,6 @@ patterns = [
       "best {3} of all time", ['name', no_article], 'name', 'noun1' ),
     ( "Yo dawg, I heard you like {1}, so we put some {1} in your {1} so you can {2} while you {2}.",
       'noun1', 'iverb' ),
-]
-
-nsfw_patterns = [
     ( "{1} don't know about my {2}", ('~bitches', 'noun1'), ('noun', 'noun1') ),
     [( '{1} or gtfo', ('noun1', 'noun1', 'name') ), no_the],
     ( '{1} is the {2} that is killing {3}', ('name', 'noun1'),
