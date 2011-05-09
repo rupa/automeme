@@ -2,11 +2,15 @@
 //if (top !== self)
 //    top.location.href = self.location.href;
 
+var tumblr_quote_quote = 'CLICK FACE, RECEIVE MEME';
+var tumblr_quote_source = '<a href="http://automeme.net/">Automeme</a>';
+
 function AutoMeme(tagButton, tagMeme)
 {
     var memes = new Array(),
         blocked = false,
         max = 10,
+        tumblrButton = null,
         revealTimeout = null,
         easter_eggs = [ 'awesome',
                         'brains',
@@ -60,6 +64,8 @@ function AutoMeme(tagButton, tagMeme)
         if (memes.length > 0) {
             var m = memes.shift();
             tagMeme.innerHTML = m;
+            tumblr_quote_quote = m;
+            tumblrButton.setAttribute("href", "http://www.tumblr.com/share/quote?quote=" + encodeURIComponent(tumblr_quote_quote) + "&source=" + encodeURIComponent(tumblr_quote_source));
         }
     }
 
@@ -113,6 +119,13 @@ function AutoMeme(tagButton, tagMeme)
         $(tagButton).css('background-image', 'url(/butan-' + egg + '.png)');
     }
 
+    tumblrButton = document.createElement("a");
+    tumblrButton.setAttribute("href", "http://www.tumblr.com/share/quote?quote=" + encodeURIComponent(tumblr_quote_quote) + "&source=" + encodeURIComponent(tumblr_quote_source));
+    tumblrButton.setAttribute("title", "Share on Tumblr");
+    tumblrButton.setAttribute("style", "display:inline-block; text-indent:-9999px; overflow:hidden; width:81px; height:20px; background:url('http://platform.tumblr.com/v1/share_1T.png') top left no-repeat transparent;");
+    tumblrButton.innerHTML = "Share on Tumblr";
+    document.getElementById("tumblr_button_abc123").appendChild(tumblrButton);
+
     tagButton.onclick = meme;
     $('body').upUpDownDown({
         watchFor: [38,38,40,40,37,39,37,39,66,65],
@@ -136,7 +149,7 @@ function AutoMeme(tagButton, tagMeme)
         e.preventDefault();
         toggleHalp();
     }
-    $('<span><a href="#" id="wut">wut?</a> &middot;&nbsp;</span>').prependTo($('#footer-links'));
+    $('<span><a href="#" id="wut">wut?</a> &middot;&nbsp;</span>').prependTo($('#footer-nav'));
     $('#wut').click(clickHalp);
     $('<p><a id="dismiss" href="#">okay</a></p>').appendTo($('#halp'));
     $('#dismiss').click(clickHalp);
