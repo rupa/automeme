@@ -8,7 +8,7 @@ footer = ["""\
     &middot; <a href="http://api.automeme.net/">API</a>
     &middot; <a href="http://blog.automeme.net/">Blog</a>
     &middot; <a href="http://twitter.com/automeme">Twitter</a>
-    &nbsp; <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://automeme.net/" data-count="horizontal" data-via="automeme" data-related="inky">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    &nbsp; <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://automeme.net/" data-count="horizontal" data-via="automeme" data-related="inky:Creator of Automeme">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </p>
 <div id="sellout">
 <script type="text/javascript"><!--
@@ -91,7 +91,7 @@ Content-type: text/html; charset=UTF-8
   <div id="butan">&nbsp;</div>
   <div id="loading"><span>&nbsp;</span></div>
  </div>
- <script type="text/javascript" src="/pushbutan.js?201008212"></script>
+ <script type="text/javascript" src="/pushbutan.js?20110411"></script>
  <div id="footer-wrap"><div id="footer">%s</div></div>
 </div>
 </body></html>"""
