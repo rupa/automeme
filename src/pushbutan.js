@@ -122,7 +122,7 @@ function AutoMeme(tagButton, tagMeme)
     tumblrButton = document.createElement("a");
     tumblrButton.setAttribute("href", "http://www.tumblr.com/share/quote?quote=" + encodeURIComponent(tumblr_quote_quote) + "&source=" + encodeURIComponent(tumblr_quote_source));
     tumblrButton.setAttribute("title", "Share on Tumblr");
-    tumblrButton.setAttribute("style", "display:inline-block; text-indent:-9999px; overflow:hidden; width:81px; height:20px; background:url('http://platform.tumblr.com/v1/share_1T.png') top left no-repeat transparent;");
+    tumblrButton.setAttribute("style", "display:inline-block; text-indent:-9999px; overflow:hidden; width:81px; height:20px; background:url('http://platform.tumblr.com/v1/share_1.png') top left no-repeat transparent;");
     tumblrButton.innerHTML = "Share on Tumblr";
     document.getElementById("tumblr_button_abc123").appendChild(tumblrButton);
 

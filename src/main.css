@@ -42,11 +42,12 @@ a,img {border:none !important;}
 #footer-wrap {padding: 3em 0; clear: both;}
 #footer {border-top: 5px solid #eed; color: #888; font-size: 0.8em;
          margin: 0 3em 0 250px; padding: 1.5em 0;}
-#footer p {margin:0 0 0.75em; line-height:1.5;}
+#footer p {margin:0 0 1.5em; line-height:1.5;}
 #footer p#footer-nav {margin-left: -0.4em; margin-right: -0.4em;}
 #footer p#footer-nav a {padding:0.2em 0.4em;}
+#footer p#footer-share-buttons {float:right; display:inline; margin-left:1.5em;}
 #wut {font-weight:bold;}
-#sellout {padding:1.5em 0;}
+#sellout {clear:both; padding-bottom:1.5em;}
 #sellout div {padding-bottom:0.5em;}
 .share-button, .twitter-share-button {vertical-align:top;}
 .tumblr-share-button a {display:inline-block; text-indent:-9999px; overflow:hidden; width:81px; height:20px; background:url('http://platform.tumblr.com/v1/share_1T.png') top left no-repeat transparent;}
