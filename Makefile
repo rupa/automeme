@@ -16,15 +16,20 @@ JS_OUTPUT = $(OUT)/pushbutan.js
 
 
 default:
-	@echo "make live or make dev?"
+	@echo "usage: make (live|dryrun|dev)"
 
-live: html
-	chmod 711 $(OUT)
+live: html perms
 	rsync -Pcav --del --rsh=ssh $(OUT)/ $(DEST)/
 
-dev: html
-	chmod 711 $(OUT)
+dryrun: html perms
+	rsync -Pcav --del --rsh=ssh $(OUT)/ $(DEST)/ --dry-run
+
+dev: html perms
 	rsync -Pcav --del --rsh=ssh $(OUT)/ $(DEST_DEV)/
+
+perms:
+	chmod 711 $(OUT)
+
 
 html: images javascript update
 
