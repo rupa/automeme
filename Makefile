@@ -5,6 +5,7 @@ OUT = html
 
 HOST = boxofjunk
 DEST = $(HOST):domains/automeme.net/html
+DEST_DEV = $(HOST):domains/dev.automeme.net/html
 
 SRC_FILES = $(SRC)/.htaccess $(SRC)/*.py $(SRC)/*.cgi $(SRC)/*.html $(SRC)/*.txt $(SRC)/*.css
 IMG_FILES = $(IMG)/*.png $(IMG)/*.jpg $(IMG)/*.gif
@@ -14,18 +15,23 @@ JS_FILES  = $(SRC)/plugins.js $(SRC)/pushbutan.js
 JS_OUTPUT = $(OUT)/pushbutan.js
 
 
+default:
+	@echo "make live or make dev?"
+
 live: html
 	chmod 711 $(OUT)
 	rsync -Pcav --del --rsh=ssh $(OUT)/ $(DEST)/
+
+dev: html
+	chmod 711 $(OUT)
+	rsync -Pcav --del --rsh=ssh $(OUT)/ $(DEST_DEV)/
 
 html: images javascript update
 
 update:
 	cp -p $(SRC_FILES) $(IMG_FILES) $(OUT)
 
-javascript: $(JS_JQUERY) $(JS_FILES) $(JS_OUTPUT)
-
-$(JS_OUTPUT):
+javascript:
 	cp $(JS_JQUERY) $(JS_OUTPUT)
 	cat $(JS_FILES) | $(BIN)/jsmin.py >> $(JS_OUTPUT)
 

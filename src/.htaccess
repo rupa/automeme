@@ -14,11 +14,16 @@ AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
 AddOutputFilterByType application/x-javascript text/javascript application/javascript application/json
 </IfModule>
 
+<IfModule mod_alias.c>
+Redirect permanent stuff.html http://automeme.net/goodies.html
+</IfModule>
+
+<IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 
 # redirect invalid domain names
-RewriteCond %{HTTP_HOST} !^(api\.|moar\.)?(automeme.net|autome.me)$ [NC]
+RewriteCond %{HTTP_HOST} !^(api\.|moar\.|dev\.)?(automeme.net|autome.me)$ [NC]
 RewriteCond %{HTTP_HOST} !^meme\.boxofjunk\.ws$ [NC]
 RewriteRule ^(.*)$ http://automeme.net/$1 [R=301,L]
 
@@ -31,15 +36,12 @@ RewriteCond %{HTTP_HOST} ^api\.(automeme.net|autome.me)$ [NC]
 RewriteRule ^(te?xt|html).json$ raw.cgi?format=$1&json=1 [QSA,L]
 
 # redirect the old domain name for the front page only
-RewriteCond %{HTTP_HOST} !^(automeme.net|autome.me)$ [NC]
+RewriteCond %{HTTP_HOST} !^((dev\.)?automeme.net|autome.me)$ [NC]
 RewriteRule ^$ http://automeme.net/ [R=301,L]
-
-RewriteRule ^$ index.cgi [QSA,L]
 
 # legacy api
 RewriteRule ^moar.(txt|html)$ raw.cgi?format=$1 [QSA,L]
 RewriteRule ^moar.(txt|html).json$ raw.cgi?format=$1&json=1 [QSA,L]
 
 RewriteRule \.py - [F,L]
-
-RewriteRule ^stuff.html$ goodies.html [R=301,QSA,L]
+</IfModule>
