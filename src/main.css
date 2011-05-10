@@ -43,12 +43,15 @@ a,img {border:none !important;}
 #footer {border-top: 5px solid #eed; color: #888; font-size: 0.8em;
          margin: 0 3em 0 250px; padding: 1.5em 0;}
 #footer p {line-height:1.5;}
-#footer-share-buttons {margin-bottom: 1.5em;}
+#footer-share-buttons {margin-bottom: 1em;}
 #footer-nav {margin: 0 -0.4em;}
 #footer-nav a {padding:0.2em 0.4em;}
 #wut {font-weight:bold;}
 #sellout {float:right; display:inline; margin-left:1.5em;}
-.share-button, .twitter-share-button {vertical-align:top;}
+.tumblr-share-button, .twitter-share-button, .facebook-share-button iframe {
+    margin-bottom: 0.5em;
+    vertical-align:top;
+}
 .tumblr-share-button {margin-right: 0.5em;}
 .tumblr-share-button a {display:inline-block; text-indent:-9999px; overflow:hidden; width:81px; height:20px; background:url('http://platform.tumblr.com/v1/share_1T.png') top left no-repeat transparent;}
 .hide {display:none;}
