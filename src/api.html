@@ -26,17 +26,20 @@ one of these <abbr>URL</abbr>s:</p>
   <li><code>http://api.automeme.net/html.json</code></li>
 </ul>
 
-<p><code>text</code> may be abbreviated to <code>txt</code>.</p>
-
-<p>The domain name <code>api.autome.me</code> also works.</p>
+<ul class="notes">
+  <li><code>text</code> may be abbreviated to <code>txt</code>.</li>
+  <li>The domain name <code>api.autome.me</code> also works.</li>
+</ul>
 
 <h3>Format</h3>
 
-<p><code>text</code> and <code>html</code> both return a list of memes,
-separated by newline characters (<code>\n</code>).</p>
-
-<p>Memes may be returned as a <abbr>JSON</abbr> list object by appending
-<code>.json</code> to the <abbr>URL</abbr>.</p>
+<ul>
+  <li>The default output is a list of memes, separated by newline characters
+    (<code>\n</code>).</li>
+  <li>Memes may be returned as a <abbr>JSON</abbr> list object by appending
+    <code>.json</code> to the <abbr>URL</abbr>.</li>
+  <li>Everything is UTF-8 encoded.</li>
+</ul>
 
 <p>There are some differences between <code>text</code> and
 <code>html</code> output:</p>
@@ -44,7 +47,7 @@ separated by newline characters (<code>\n</code>).</p>
 <table cellspacing="0">
   <thead>
     <tr>
-      <th class="minor"><!-- --></th>
+      <th><!-- --></th>
       <th><code>text</code></th>
       <th colspan="2"><code>html</code></th>
     </tr>
@@ -82,13 +85,13 @@ separated by newline characters (<code>\n</code>).</p>
   </tbody>
 </table>
 
-<p>As illustrated here, <code>html</code> uses some <abbr>HTML</abbr> entities,
-and <code>&lt;em&gt;</code> for emphasis, while <code>text</code> will try to
-use the <abbr>ASCII</abbr> equivalents. Regardless, all output is UTF-8
-encoded.</p>
+<ul>
+  <li><code>html</code> uses some <abbr>HTML</abbr> entities,
+    and <code>&lt;em&gt;</code> tags for emphasis.</li>
+  <li><code>text</code> will try to use the <abbr>ASCII</abbr> equivalents.</li>
+  <li>Underscores are used exclusively for emphasis, and can be safely removed.</li>
+</ul>
 
-<p>The underscore character is used exclusively for emphasis in
-<code>text</code> output, and can be safely removed.</p>
 
 <h3>Parameters</h3>
 <p>Ten memes are returned by default. This can be changed by appending
@@ -100,15 +103,11 @@ number in the range 1&#8211;80. For example: <code>http://api.automeme.net/<a
 <p>Significant changes to the <abbr>API</abbr> will be posted to the
 <a href="http://blog.automeme.net/">Automeme blog</a>.</p>
 
-<p>Don't hammer the server plz thx. &lt;3</p>
-
 
 <h2>Diving in</h2>
 
 <h3>From a shell</h3>
-<p><code>curl api.automeme.net/text?lines=1</code><br/>
-or<br/>
-<code>wget -q -O - api.automeme.net/text?lines=1</code></p>
+<p><code>curl api.automeme.net/text?lines=1</code></p>
 
 <h3>Javascript with jQuery</h3>
 <pre><code>var url = 'http://api.automeme.net/text.json',
@@ -121,7 +120,7 @@ $.getJSON(url, function(result) {
 <h3>Python</h3>
 <pre><code>import urllib
 url = 'http://api.automeme.net/text'
-memes = urllib.urlopen(url).read().rstrip().split('\n')
+memes = urllib.urlopen(url).read().splitlines()
 print memes[0]</code></pre>
 
 <h3>Ruby</h3>
@@ -165,7 +164,7 @@ getprint 'http://api.automeme.net/text?lines=1';</code></pre>
 </table>
 
 <p>The domain names <code>automeme.net</code> and
-<code>meme.boxofjunk.ws</code> can still be used, but only the old commands
+<code>meme.boxofjunk.ws</code> can still be used for now, but only the old commands
 will work with these.</p>
 
 

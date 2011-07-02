@@ -29,12 +29,13 @@ p, pre {margin-bottom:1.5em;}
 pre, code {color:#622; font-size:1em;}
 ul {margin:0 0 1.5em 2em; list-style:square;}
 ul.urls {list-style:none;}
-table {margin:0 2em 1.5em;}
-thead th {border-bottom:1px solid #CAA; text-align:left; font-weight:normal;}
-thead th.minor {border-bottom-color:#EED;}
+table {margin:0 2em 1.5em 1.75em; border: double #CAA; border-width:3px 0;}
+th, td {padding: 0 0.25em;}
+thead th {border:solid #CAA; border-width:0 0 1px 1px; text-align:left; font-weight:normal;}
+thead th:first-child {border-left-width: 0;}
 thead code {color:inherit;}
-th, td {padding-right:2em;}
-hr {margin:3em 0 0.75em; border:0; border-bottom:0.25em solid #A88;}
+th, td {padding: 0 2em 0 0.25em;}
+hr {margin:3em 0 0.75em; border:0; border-bottom:3px double #A88;}
 a {color:#C00;}
 a:hover {color:#A88;}
 code a {color:#622;}
