@@ -41,17 +41,24 @@ a,img {border:none !important;}
                display:block;}
 #footer-wrap {padding: 3em 0; clear: both;}
 #footer {border-top: 5px solid #eed; color: #888; font-size: 0.8em;
-         margin: 0 3em 0 250px; padding: 1.5em 0;}
-#footer p {line-height:1.5;}
-#footer-share-buttons {margin-bottom: 1em;}
-#footer-nav {margin: 0 -0.4em;}
+         margin: 0 3em; padding: 1.5em 0; -webkit-transition: margin-left 0.2s ease-out;}
+#footer p {line-height:1.5; margin-bottom: 0.5em;}
+#footer p#footer-nav {margin: 0 -0.4em 2em;}
 #footer-nav a {padding:0.2em 0.4em;}
 #wut {font-weight:bold;}
-#sellout {float:right; display:inline; margin-left:1.5em;}
-.tumblr-share-button, .twitter-share-button, .facebook-share-button iframe {
+#sellout {float:right; display:inline; margin-left:1.5em; margin-bottom: 1em;}
+#share-buttons { float: left; display: inline; }
+.tumblr-share-button, .twitter-share-button {
     margin-bottom: 0.5em;
     vertical-align:top;
 }
 .tumblr-share-button {margin-right: 0.5em;}
 .tumblr-share-button a {display:inline-block; text-indent:-9999px; overflow:hidden; width:81px; height:20px; background:url('http://platform.tumblr.com/v1/share_1T.png') top left no-repeat transparent;}
 .hide {display:none;}
+
+
+@media all and (min-width: 820px) {
+    #footer {
+        margin-left: 250px;
+    }
+}
