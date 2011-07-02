@@ -127,7 +127,6 @@ function AutoMeme(tagButton, tagMeme)
     document.getElementById("tumblr_button_abc123").appendChild(tumblrButton);
 
     tagButton.onclick = meme;
-    $(tagButton).removeClass('disabled');
 
     $('body').upUpDownDown({
         watchFor: [38,38,40,40,37,39,37,39,66,65],
@@ -171,6 +170,8 @@ function AutoMeme(tagButton, tagMeme)
         }
     };
 
+    $('#loading span').hide().css({'visibility':'visible'});
+
     if (/mobile.*safari/.test(navigator.userAgent.toLowerCase())) {
         document.title = 'Automeme';
     }
@@ -178,7 +179,6 @@ function AutoMeme(tagButton, tagMeme)
 
 $(document).ready(function() {
     $('#halp').hide().css({'z-index':'9001','visibility':'visible'});
-    $('#loading span').hide().css({'visibility':'visible'});
 
     var automeme = new AutoMeme(document.getElementById('butan'),
                                 document.getElementById('meme'));

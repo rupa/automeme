@@ -8,6 +8,7 @@ DEST = $(HOST):domains/automeme.net/html
 DEST_DEV = $(HOST):domains/dev.automeme.net/html
 
 SRC_FILES = $(SRC)/.htaccess $(SRC)/*.py $(SRC)/*.cgi $(SRC)/*.html $(SRC)/*.txt $(SRC)/*.css
+STATIC_FILES = static/
 IMG_FILES = $(IMG)/*.png $(IMG)/*.jpg $(IMG)/*.gif
 
 JS_JQUERY = $(SRC)/jquery-1.3.2.min.js
@@ -34,7 +35,8 @@ perms:
 html: images javascript update
 
 update:
-	cp -p $(SRC_FILES) $(IMG_FILES) $(OUT)
+	cp -vp $(SRC_FILES) $(IMG_FILES) $(OUT)
+	cp -vR $(STATIC_FILES) $(OUT)
 
 javascript:
 	cp $(JS_JQUERY) $(JS_OUTPUT)
