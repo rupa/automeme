@@ -71,3 +71,4 @@ a:hover {
 .floatleft { float: left; display: inline; }
 .floatright { float: right; display: inline; }
 .roundedbottom { border-radius: 0 0 4px 4px; -webkit-border-bottom-left-radius:4px; -webkit-border-bottom-right-radius:4px; -moz-border-radius: 0 0 4px 4px; -o-border-radius: 0 0 4px 4px; -khtml-border-radius: 0 0 4px 4px; }
+.share-button { display: inline-block; margin: 0 0 0 0.25em; vertical-align: top; line-height: 20px; }
