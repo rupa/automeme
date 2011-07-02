@@ -127,6 +127,8 @@ function AutoMeme(tagButton, tagMeme)
     document.getElementById("tumblr_button_abc123").appendChild(tumblrButton);
 
     tagButton.onclick = meme;
+    $(tagButton).removeClass('disabled');
+
     $('body').upUpDownDown({
         watchFor: [38,38,40,40,37,39,37,39,66,65],
         callback: function() {
