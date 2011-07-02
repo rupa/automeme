@@ -48,11 +48,14 @@ a,img {border:none !important;}
 #wut {font-weight:bold;}
 #sellout {float:right; display:inline; margin-left:1.5em; margin-bottom: 1em;}
 #share-buttons { float: left; display: inline; }
-.tumblr-share-button, .twitter-share-button {
-    margin-bottom: 0.5em;
-    vertical-align:top;
+.share-button {
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0;
+    vertical-align: top;
 }
-.tumblr-share-button {margin-right: 0.5em;}
+.share-button img {
+    vertical-align: top;
+}
 .tumblr-share-button a {display:inline-block; text-indent:-9999px; overflow:hidden; width:81px; height:20px; background:url('http://platform.tumblr.com/v1/share_1T.png') top left no-repeat transparent;}
 .hide {display:none;}
 
