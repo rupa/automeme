@@ -134,4 +134,5 @@ patterns = [
     ( 'WHAT THE FUCK? YOU ARE {1}! AND {2}', ('adj','name','noun'), 'adj' ),
     ( "Ceiling {1} is watching you {2}", 'noun', ('~fap', 'iverb', 'iverb') ),
     ( 'Fucking {1}, how do they work?', 'noun1' ),
+    ( '{1} _all_ the {2}', 'verb', 'noun1' ),
 ]
