@@ -16,8 +16,11 @@ JS_FILES  = $(SRC)/plugins.js $(SRC)/pushbutan.js
 JS_OUTPUT = $(OUT)/pushbutan.js
 
 
+
+.PHONY: default live dryrun dev perms
+
 default:
-	@echo "usage: make (live|dryrun|dev)"
+	@echo "usage: make (live|dryrun|dev|assets)"
 
 live: html perms
 	rsync -Pcav --del --rsh=ssh $(OUT)/ $(DEST)/
@@ -32,20 +35,27 @@ perms:
 	chmod 711 $(OUT)
 
 
-html: images javascript update
 
-update:
+.PHONY: html assets javascript buttons
+
+html: assets
 	cp -vp $(SRC_FILES) $(IMG_FILES) $(OUT)
 	cp -vR $(STATIC_FILES) $(OUT)
 
-javascript:
+assets: buttons javascript
+
+javascript: $(JS_OUTPUT)
+$(JS_OUTPUT): $(JS_JQUERY) $(JS_FILES)
 	cp $(JS_JQUERY) $(JS_OUTPUT)
 	cat $(JS_FILES) | $(BIN)/jsmin.py >> $(JS_OUTPUT)
 
-images: $(OUT)/butan-original.png
-
+buttons: $(OUT)/butan-original.png
 $(OUT)/butan-original.png:
 	$(BIN)/make_butans $(OUT)
+
+
+
+.PHONY: clean
 
 clean:
 	rm -rfv $(OUT)
