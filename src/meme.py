@@ -9,7 +9,7 @@ from random import randint
 
 from common import *
 from patterns import patterns
-from vocab import vocab
+from vocab import vocab as primary_vocab
 
 CONTENT_TYPES = {'html': 'text/html', 'txt': 'text/plain', 'plain': 'text/plain'}
 title = 'AUTOMEME'
@@ -23,7 +23,7 @@ def get_word(words, index):
         return words[v].replace('~', v > 0 and get_word(words, v-1) or '')
     return words[v]
 
-def randword(category):
+def randword(category, vocab):
     """Return a random word using a specified word category or
     list of word categories. A category is denoted by one of
     the following formats:
@@ -38,14 +38,14 @@ def randword(category):
             return ''
         if len(category) > 1:
             if callable(category[-1]):
-                return category[-1](randword(category[:-1]))
+                return category[-1](randword(category[:-1], vocab))
             else:
-                return randword(category[:-1])
+                return randword(category[:-1], vocab)
         else:
             category = expand(category[0])
 
     if type(category) == tuple:
-        return randword(choice(category))
+        return randword(choice(category), vocab)
 
     if category[0] == '~':  # literal
         return category[1:]
@@ -70,7 +70,13 @@ def a_word(word):
     else:
         return 'a ' + word
 
-def generate(format = 'html', pattern = ''):
+def generate(format='html', pattern='', vocab=None):
+    if vocab == 'hipster':
+        import hipster
+        vocab = hipster.vocab(primary_vocab)
+    else:
+        vocab = primary_vocab
+
     p = pattern and expand(pattern) or expand(choice(patterns))
 
     if type(p) == str:
@@ -92,7 +98,7 @@ def generate(format = 'html', pattern = ''):
     subs = p[1:]
 
     for i, s in enumerate(subs):
-        word = randword(s)
+        word = randword(s, vocab)
         meme = meme.replace('{%s}' % (i+1), word)
         if '{%sa}' % (i+1) in meme:
             meme = meme.replace('{%sa}' % (i+1), a_word(word))

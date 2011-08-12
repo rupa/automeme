@@ -1,0 +1,48 @@
+def vocab(v):
+    v['name'] = [
+        'Brooklyn',
+        'Helvetica',
+        'Pitchfork',
+        'Shoreditch',
+        'Tumblr',
+        'Wes Anderson',
+        'Williamsburg',
+        '3 Wolf Moon',
+    ]
+    v['noun'] = [
+        'art party; art parties',
+        'bicycle; ~s',
+        'cardigan; ~s',
+        'chambray; ~s',
+        'Cosby sweater; ~s',
+        'fixie; ~s',
+        'hoodie; ~s',
+        'iPhone; ~s',
+        'keffiyah; ~s',
+        'keytar; ~s',
+        'messenger bag; ~s',
+        'mixtape; ~s',
+        'moustache; ~s',
+        'PBR',
+        'vinyl record; vinyl',
+        'skateboard; ~s',
+    ]
+    v['adj'] = [
+        'American Apparel',
+        'denim',
+        'freegan',
+        'gluten-free',
+        'ironic',
+        'lo-fi',
+        'organic',
+        'quinoa',
+        'readymade',
+        'retro',
+        'scenester',
+        'tattooed',
+        'tofu',
+        'VHS',
+        'vintage',
+        'vinyl',
+    ]
+    return v

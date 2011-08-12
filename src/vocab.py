@@ -258,6 +258,7 @@ vocab = {
         'Linux user; ~s',
         'lion; ~s',
         'LiveJournal; ~s',
+        'llama; ~s',
         'loli; ~s',
         'lupus',
         'lulz',

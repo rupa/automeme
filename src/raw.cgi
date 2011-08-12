@@ -1,8 +1,4 @@
 #!/usr/bin/env python
-"""
-This code is an absolute mess.
-"""
-
 import cgi
 import re
 import sys
@@ -11,7 +7,7 @@ __author__ = 'Liam Cooke <http://boxofjunk.ws/>'
 
 def main():
     header = 'Content-type: %s; charset=utf-8\n'
-    lines = 10
+    lines, vocab = 10, None
     format, ctype = 'html', 'text/html'
 
     try:
@@ -45,8 +41,10 @@ def main():
         if args.has_key('lines'):
             if args['lines'].value.isdigit():
                 lines = min(80, int(args['lines'].value)) or lines
+        if args.has_key('vocab'):
+            vocab = args['vocab'].value.strip().lower()
 
-        memes = (meme.generate(format) for x in xrange(lines))
+        memes = (meme.generate(format, vocab=vocab) for x in xrange(lines))
         if ctype.endswith('json'):
             print json.write(tuple(memes))
         else:

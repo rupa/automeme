@@ -7,6 +7,8 @@ import time
 import meme
 
 
+VOCAB = 'hipster'
+
 def dumb_debug(grep):
     memes = []
     lines = 20
@@ -17,7 +19,7 @@ def dumb_debug(grep):
                 time.sleep(1)
             else:
                 memes = filter(lambda s: grep in s,
-                               (meme.generate('txt') for x in xrange(lines)))
+                               (meme.generate('txt', vocab=VOCAB) for x in xrange(lines)))
                 if lines < 1000:
                     lines += lines
     except KeyboardInterrupt:
