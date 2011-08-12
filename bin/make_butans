@@ -23,6 +23,20 @@ convert /tmp/b{1,2}.png \
     -append $outputdir/butan-original.png
 
 
+# I was making hipster buttons before it was cool
+
+convert images/awesome-pabst1.png \
+    -bordercolor transparent -border 10x10 \
+    -resize 150 \
+    /tmp/pbr1.png
+convert images/awesome-pabst2.png \
+    -swirl 25 \
+    -resize 150 \
+    /tmp/pbr2.png
+convert /tmp/pbr{1,2}.png \
+    -append $outputdir/butan-pabst.png
+
+
 # bonus buttons
 
 convert images/awesome.gif \

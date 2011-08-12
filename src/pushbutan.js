@@ -12,6 +12,7 @@ function AutoMeme(tagButton, tagMeme)
         max = 10,
         tumblrButton = null,
         revealTimeout = null,
+        hipsterMode = !!window.location.search.match(/(hipster|fixie|vinyl)/),
         easter_eggs = [ 'awesome',
                         'brains',
                         'cardcrusher',
@@ -76,7 +77,11 @@ function AutoMeme(tagButton, tagMeme)
 
         var recd = false;
         $('#loading span').fadeIn('fast');
-        req.open("GET", "http://api.automeme.net/html?lines="+max+"&ts="+new Date().getTime(), true);
+
+        var url = "http://api.automeme.net/html?lines="+max+"&ts="+new Date().getTime();
+        if (hipsterMode) url += '&vocab=hipster';
+        req.open('GET', url, true);
+
         if (max < 40) max += max;
         req.send(null);
         req.onreadystatechange = function()
@@ -113,9 +118,11 @@ function AutoMeme(tagButton, tagMeme)
         }
     }
 
-    function randomButton()
+    function changeButton(egg)
     {
-        var egg = easter_eggs[Math.floor(Math.random() * easter_eggs.length)];
+        if (typeof egg == 'undefined') {
+            egg = easter_eggs[Math.floor(Math.random() * easter_eggs.length)];
+        }
         $(tagButton).css('background-image', 'url(/butan-' + egg + '.png)');
     }
 
@@ -131,13 +138,15 @@ function AutoMeme(tagButton, tagMeme)
     $('body').upUpDownDown({
         watchFor: [38,38,40,40,37,39,37,39,66,65],
         callback: function() {
-            randomButton();
+            changeButton();
             $(tagButton).addClass('reveal');
             revealTimeout = setTimeout(function() {
                 $(tagButton).removeClass('reveal');
             }, 500);
         }
     });
+
+    if (hipsterMode) changeButton('pabst');
 
     var halp = false;
     var toggleHalp = function() {
