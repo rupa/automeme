@@ -1,6 +1,7 @@
 def vocab(v):
     v['name'] = [
         'Brooklyn',
+        'Etsy',
         'Helvetica',
         'Pitchfork',
         'Shoreditch',
@@ -15,6 +16,7 @@ def vocab(v):
         'cardigan; ~s',
         'chambray; ~s',
         'Cosby sweater; ~s',
+        'dreamcatcher; ~s',
         'fixie; ~s',
         'hoodie; ~s',
         'iPhone; ~s',
@@ -24,25 +26,31 @@ def vocab(v):
         'mixtape; ~s',
         'moustache; ~s',
         'PBR',
+        'quinoa',
         'vinyl record; vinyl',
         'skateboard; ~s',
     ]
     v['adj'] = [
         'American Apparel',
         'denim',
+        'Etsy',
         'freegan',
         'gluten-free',
         'ironic',
         'lo-fi',
+        'lomo',
         'organic',
-        'quinoa',
         'readymade',
         'retro',
         'scenester',
+        'sustainable',
         'tattooed',
         'tofu',
         'VHS',
         'vintage',
         'vinyl',
     ]
+    v['iverb'].append([
+        'sell out; sells out; sold out; ~; selling out',
+    ]);
     return v
