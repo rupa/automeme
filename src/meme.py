@@ -71,7 +71,8 @@ def a_word(word):
         return 'a ' + word
 
 def generate(format='html', pattern='', vocab=None):
-    if vocab == 'hipster':
+    mode = vocab
+    if mode == 'hipster':
         import hipster
         vocab = hipster.vocab(primary_vocab)
     else:
@@ -112,4 +113,6 @@ def generate(format='html', pattern='', vocab=None):
         meme = re_sub(r'SNOWM[AE]N', r'&#9731;', meme)
         meme = meme.replace('...', '&#8230;')
         meme = meme.replace("'", '&rsquo;')
+    if mode == 'hipster':
+        meme = meme.replace('YOUR', 'YR')
     return meme
