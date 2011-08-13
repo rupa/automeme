@@ -370,7 +370,6 @@ vocab = {
     'verb': [
         # I write; He writes; I wrote; I have/had written; I am/was writing
         'accidentally; ~; ~; ~; ~',
-        'blog about; blogs about; blogged about; ~; blogging about',
         'blow; blows; blew; blown; blowing',
         'bobba; ~; ~; ~; ~',
         'burn; ~s; burned; ~; burning',

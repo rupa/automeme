@@ -1,17 +1,22 @@
 def vocab(v):
     v['name'] = [
+        'beer pong',
         'Brooklyn',
         'Echo Park',
         'Etsy',
         'Helvetica',
         "McSweeney's",
         'Pitchfork',
+        'Portland',
         'Shoreditch',
         'Silverlake',
+        'Terry Richardson',
+        'Three Wolf Moon',
+        'Thundercats',
         'Tumblr',
+        'Vice',
         'Wes Anderson',
         'Williamsburg',
-        '3 Wolf Moon',
     ]
     v['noun'] = [
         'art party; art parties',
@@ -22,6 +27,8 @@ def vocab(v):
         'dreamcatcher; ~s',
         'fedora; ~s',
         'fixie; ~s',
+        'food truck; ~s',
+        'Four Loko',
         'hoodie; ~s',
         'iPhone; ~s',
         'jeggings',
@@ -62,6 +69,7 @@ def vocab(v):
         'VHS',
         'vintage',
         'vinyl',
+        'witch house',
     ]
     v['iverb'].extend([
         'sell out; sells out; sold out; ~; selling out',

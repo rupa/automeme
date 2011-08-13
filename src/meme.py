@@ -115,4 +115,5 @@ def generate(format='html', pattern='', vocab=None):
         meme = meme.replace("'", '&rsquo;')
     if mode == 'hipster':
         meme = meme.replace('YOUR', 'YR')
+        meme = meme.replace('ABOUT', 'ABT')
     return meme
