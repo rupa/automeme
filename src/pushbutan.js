@@ -78,7 +78,7 @@ function AutoMeme(tagButton, tagMeme)
         var recd = false;
         $('#loading span').fadeIn('fast');
 
-        var url = "http://api.automeme.net/html?lines="+max+"&ts="+new Date().getTime();
+        var url = "/moar.html?lines="+max+"&ts="+new Date().getTime();
         if (hipsterMode) url += '&vocab=hipster';
         req.open('GET', url, true);
 
