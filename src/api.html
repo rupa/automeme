@@ -135,6 +135,11 @@ puts memes.first</code></pre>
 <pre><code>use LWP::Simple;
 getprint 'http://api.automeme.net/text?lines=1';</code></pre>
 
+<h3>PHP</h3>
+<pre><code>$url  = 'http://api.automeme.net/text?lines=1';
+$meme = file_get_contents($url);
+echo $meme;</code></pre>
+
 
 <h2>Legacy API</h2>
 
