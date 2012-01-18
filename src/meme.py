@@ -14,6 +14,12 @@ from vocab import vocab as primary_vocab
 CONTENT_TYPES = {'html': 'text/html', 'txt': 'text/plain', 'plain': 'text/plain'}
 title = 'AUTOMEME'
 
+
+# SOPA/PIPA blackout
+import datetime
+BLACKOUT_TIME = datetime.datetime.now().timetuple()[:3] == (2012, 1, 18)
+
+
 def get_word(words, index):
     """Return a word from a list of words. If the word contains
     the character ~, this is replaced with the word at index-1.
@@ -71,6 +77,9 @@ def a_word(word):
         return 'a ' + word
 
 def generate(format='html', pattern='', vocab=None):
+    if BLACKOUT_TIME:
+        return 'I MADE U A MEME BUT SOPA EATED IT'
+
     mode = vocab
     if mode == 'hipster':
         import hipster
