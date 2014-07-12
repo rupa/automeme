@@ -7,7 +7,7 @@ import time
 import meme
 
 
-VOCAB = 'hipster'
+VOCAB = None  #'hipster'
 
 def dumb_debug(grep):
     memes = []

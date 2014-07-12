@@ -23,25 +23,30 @@ RewriteEngine On
 RewriteBase /
 
 # redirect invalid domain names
-RewriteCond %{HTTP_HOST} !^(api\.|moar\.|dev\.)?(automeme.net|autome.me)$ [NC]
-RewriteCond %{HTTP_HOST} !^meme\.boxofjunk\.ws$ [NC]
+RewriteCond %{HTTP_HOST} !^(api\.|moar\.|dev\.)?automeme\.net$ [NC]
+RewriteCond %{HTTP_HOST} !^api\.autome\.me$ [NC]
 RewriteRule ^(.*)$ http://automeme.net/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^api\.autome\.me$ [NC]
+RewriteRule ^(.*)$ http://api.automeme.net/$1 [R=301,L]
 
-# api
-RewriteCond %{HTTP_HOST} ^api\.(automeme.net|autome.me)$ [NC]
+# api commands and docs
+RewriteCond %{HTTP_HOST} ^api\.automeme\.net$ [NC]
 RewriteRule ^$ api.html [QSA,L]
-RewriteCond %{HTTP_HOST} ^api\.(automeme.net|autome.me)$ [NC]
+RewriteCond %{HTTP_HOST} ^api\.automeme\.net$ [NC]
 RewriteRule ^(te?xt|html)$ raw.cgi?format=$1 [QSA,L]
-RewriteCond %{HTTP_HOST} ^api\.(automeme.net|autome.me)$ [NC]
+RewriteCond %{HTTP_HOST} ^api\.automeme\.net$ [NC]
 RewriteRule ^(te?xt|html).json$ raw.cgi?format=$1&json=1 [QSA,L]
 
-# redirect the old domain name for the front page only
-RewriteCond %{HTTP_HOST} !^((dev\.)?automeme.net|autome.me)$ [NC]
+# canonical home url
+RewriteCond %{HTTP_HOST} !^(dev\.)?automeme\.net$ [NC]
+
+# point the home url to the script
 RewriteRule ^$ http://automeme.net/ [R=301,L]
 
 # legacy api
 RewriteRule ^moar.(txt|html)$ raw.cgi?format=$1 [QSA,L]
 RewriteRule ^moar.(txt|html).json$ raw.cgi?format=$1&json=1 [QSA,L]
 
+# forbid access to python files
 RewriteRule \.py - [F,L]
 </IfModule>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Official Automeme Enterprise API</title>
-    <link rel="stylesheet" type="text/css" href="page.css">
+    <link rel="stylesheet" type="text/css" href="page.css?20130105">
     <link rel="icon" type="image/png" href="icon32.png">
     <meta name="description" content="Not the Yahoo Meme API!">
     <meta name="canonical" content="http://api.automeme.net/">
@@ -14,7 +14,28 @@
 <h1>Official Automeme Enterprise&nbsp;API</h1>
 
 
-<h2>Where the memes at?</h2>
+<ol class="contents">
+  <li><a href="#How">Where the memes at?</a></li>
+  <li><a href="#Examples">Diving in</a></li>
+  <li><a href="#Legacy">Legacy API</a></li>
+  <li><a href="#Credits">Credits</a></li>
+</ol>
+
+
+<h2>Changes <small>(5 Jan 2013)</small></h2>
+
+<p>The following domains are no longer supported:</p>
+
+<ul class="urls">
+  <li><code>meme.boxofjunk.ws</code></li>
+  <li><code>api.autome.me</code></li>
+</ul>
+
+<p>These will continue to redirect to <code>api.automeme.net</code> until
+February 2013.</p>
+
+
+<h2 id="How">Where the memes at?</h2>
 <p>All you have to do is <span class="caps">GET</span>
 one of these <abbr>URL</abbr>s:</p>
 
@@ -27,7 +48,6 @@ one of these <abbr>URL</abbr>s:</p>
 
 <ul class="notes">
   <li><code>text</code> may be abbreviated to <code>txt</code>.</li>
-  <li>The domain name <code>api.autome.me</code> also works.</li>
 </ul>
 
 <h3>Format</h3>
@@ -35,8 +55,7 @@ one of these <abbr>URL</abbr>s:</p>
 <ul>
   <li>The default output is a list of memes, separated by newline characters
     (<code>\n</code>).</li>
-  <li>Memes may be returned as a <abbr>JSON</abbr> list object by appending
-    <code>.json</code> to the <abbr>URL</abbr>.</li>
+  <li>To get a <abbr>JSON</abbr> list, append <code>.json</code> to the <abbr>URL</abbr>.</li>
   <li>Everything is UTF-8 encoded.</li>
 </ul>
 
@@ -93,7 +112,7 @@ one of these <abbr>URL</abbr>s:</p>
 
 
 <h3>Parameters</h3>
-<p>Ten memes are returned by default. This can be changed by appending
+<p>Ten memes are returned by default. Change this by appending
 <code>?lines=<em>n</em></code> to the <abbr>URL</abbr>, where <em>n</em> is a
 number in the range 1&#8211;80. For example: <code>http://api.automeme.net/<a
     href="http://api.automeme.net/text?lines=25">text?lines=25</a></code></p>
@@ -102,11 +121,13 @@ number in the range 1&#8211;80. For example: <code>http://api.automeme.net/<a
 parameter for some unique <a href="http://automeme.net/?fixie">hipster</a> words.</p>
 
 <h3>Further info</h3>
-<p>Significant changes to the <abbr>API</abbr> will be posted to the
-<a href="http://blog.automeme.net/">Automeme blog</a>.</p>
+<p>Clients should handle <abbr>HTTP</abbr> redirects, which can occur if
+changes are made to the <abbr>API</abbr>.
+Significant <abbr>API</abbr> changes will be posted
+to the <a href="http://blog.automeme.net/">Automeme blog</a>.</p>
 
 
-<h2>Diving in</h2>
+<h2 id="Examples">Diving in</h2>
 
 <h3>From a shell</h3>
 <p><code>curl api.automeme.net/text?lines=1</code></p>
@@ -141,9 +162,9 @@ $meme = file_get_contents($url);
 echo $meme;</code></pre>
 
 
-<h2>Legacy API</h2>
+<h2 id="Legacy">Legacy API</h2>
 
-<p>Old <abbr>API</abbr> commands are still supported:</p>
+<p>These old <abbr>API</abbr> commands still work:</p>
 
 <table cellspacing="0">
   <thead>
@@ -170,12 +191,19 @@ echo $meme;</code></pre>
   </tbody>
 </table>
 
-<p>The domain names <code>automeme.net</code> and
-<code>meme.boxofjunk.ws</code> can still be used for now, but only the old commands
-will work with these.</p>
+<p>These will also work with the <code>automeme.net</code> domain.
+
+<h3>Deprecated</h3>
+
+<p>The following domains are no longer supported:</p>
+
+<ul class="urls">
+  <li><code>meme.boxofjunk.ws</code></li>
+  <li><code>api.autome.me</code></li>
+</ul>
 
 
-<h2>Credits</h2>
+<h2 id="Credits">Credits</h2>
 <p>
 Ruby example by <a href="https://github.com/jamiew">jamiew</a>.
 Perl example by <a href="https://github.com/perigrin">perigrin</a>.

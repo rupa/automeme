@@ -35,7 +35,6 @@ patterns = [
     ( 'I have reported you to {1} for {2} {3} as it is a crime.',
         'name', ('~stealing', 'verb4'), 'noun1' ),
     ( 'Imma {1} mah {2}', ('~chargin','~firin'), ('noun','noun1') ),
-    ( 'Your {1} is not {2}', 'noun', ('~cool','adj') ),  #tumblrs represent
     ( 'is it can be {1} tiem nao plees?', ('noun','noun','noun1','adj') ),
     ( "It's over. {1} is finished.", ('name','noun') ),
     ( 'The {1} is a lie', 'noun' ),
@@ -124,8 +123,6 @@ patterns = [
     [( '{1} or gtfo', ('noun1', 'noun1', 'name') ), no_the],
     ( '{1} is the {2} that is killing {3}', ('name', 'noun1'),
             ('~cancer','noun'), ('name','noun','noun1') ),
-    ( "I really do hope you're {1} and not actually that fucking {2}",
-            'iverb4', 'adj' ),
     [( '{1} {2} {3}', ('~LOLI', 'name'), ('~HAET', '~LOEV', '~HAET'),
             ('noun','noun1','name') ), no_the],
     lambda: ( "I'M {1a}! I'M {1a}! SUCK MY D%sCK! I'M {1a}!" % ('I' * randint(5,8)),
@@ -135,4 +132,10 @@ patterns = [
     ( "Ceiling {1} is watching you {2}", 'noun', ('~fap', 'iverb', 'iverb') ),
     ( 'Fucking {1}, how do they work?', 'noun1' ),
     ( '{1} _all_ the {2}', 'verb', 'noun1' ),
+    ( 'better {1} my own {2}', 'verb', 'noun' ),  # bear grylls
+    ( "I don't always {1}, but when I do, I {2} {3}", 'iverb', 'verb', ('noun', 'noun1', 'name') ),
+    ( 'Not sure if {1}, or just {2}', 'iverb4', 'adj' ),
+    ( 'hello? yes, this is {1}', 'noun' ),
+    ( '"This is not acceptable!" I screamed as {1} {2}', 'name', 'iverb2' ),  # horse_ebooks
+    ( 'very important for {1} to {2} him {3}', 'name', ('~do', 'verb'), ('~job', 'noun') ),
 ]

@@ -1,53 +1,159 @@
-html {font-size:100.01%; text-transform:uppercase;}
-body {background:#fff; font:1em/1 'Helvetica Neue', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-rendering:optimizeLegibility;}
-h1,div,p,body {margin:0; padding:0;}
-a {color:#444; text-decoration:none;}
-a:hover {color:#C00 !important; text-decoration:underline;}
-a,img {border:none !important;}
+html {
+    font-size: 100.01%;
+    text-transform: uppercase;
+}
+body {
+    background: #fff;
+    font: 1em/1 'Helvetica Neue', 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif;
+    /*text-rendering: optimizeLegibility;*/  /* bug: shifts <em> to the right */
+}
+h1, div, p, body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #444;
+    text-decoration: none;
+}
+a:hover {
+    color: #C00 !important;
+    text-decoration: underline;
+}
+a, img {
+    border: none !important;
+}
 #halp {
     background: #fff;
     border: 5px solid #eed;
-    padding: 1.5em;
-    position: fixed;
-    left: 1.5em; top: 1.5em;
-    max-width: 32em;
-    visibility: hidden;
-    z-index: 0;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+    max-width: 32em;
+    padding: 1.5em;
+    visibility: hidden;
+    z-index: 0;
+
+    position: fixed;
+    left: 1.5em;
+    top: 1.5em;
 }
-#halp h1 {font-size:1.5em;}
-#halp p {margin-bottom:1em;}
-#halp p:last-child {margin:2em 0 0;}
-#halp a {color:#C00;}
-#halp img {vertical-align:text-bottom;}
-#halp .warning {white-space:nowrap; font-weight:bold;}
-#body {margin-top:40px;}
-#meme-w1 {width:100%; float:right; color:#C00; margin-left:-250px;}
-#meme-w2 {margin-left:250px; font-weight:bold;}
-#meme-w2 div {background:#eed; font-size:3em; letter-spacing:-0.05em; position:relative;
-              word-spacing:0.1em; margin:0 40px 0 0; padding:0.3em 0.4em 0.4em; float:left;
-              -moz-border-radius:0.25em; -webkit-border-radius:0.25em; border-radius:0.25em; }
-#meme-w2 .arrow {width:0; height:0; line-height:0; position:absolute;
-                 border-right:35px solid #eed; border-top:0.5em solid transparent;
-                 border-bottom:0.1em solid transparent; bottom:0.5em; left:-34px;}
-#push {width:250px; float:left;}
-#butan {width:150px; height:0; padding-top:150px; margin:80px 0 20px 50px;
-        overflow:hidden; background:url(butan-original.png) 0 0px no-repeat;
-        cursor:pointer;}
-#butan:hover, #butan.reveal {background-position:0 -150px;}
-#loading {height:16px;}
-#loading span {background:url(loading.gif) 50% 0 no-repeat; display: block;}
-#footer-wrap {padding: 3em 0; clear: both;}
-#footer {border-top: 5px solid #eed; color: #888; font-size: 0.8em;
-         margin: 0 3em; padding: 1.5em 0; -webkit-transition: margin-left 0.2s ease-out;}
-#footer p {line-height:1.5; margin-bottom: 0.5em;}
-#footer p#footer-nav {margin: 0 -0.4em 2em;}
-#footer-nav a {padding:0.2em 0.4em;}
-#wut {font-weight:bold;}
-#sellout {float:right; display:inline; margin-left:1.5em; margin-bottom: 1em;}
-#share-buttons { float: left; display: inline; }
+#halp h1 {
+    font-size: 1.5em;
+}
+#halp p {
+    margin-bottom: 1em;
+}
+#halp p:last-child {
+    margin: 2em 0 0;
+}
+#halp a {
+    color: #C00;
+}
+#halp img {
+    vertical-align: text-bottom;
+}
+#halp .warning {
+    font-weight: bold;
+    white-space: nowrap;
+}
+#body {
+    margin-top: 40px;
+}
+#meme-w1 {
+    color: #C00;
+    float: right; display: inline;
+    margin-left: -250px;
+    width: 100%;
+}
+#meme-w2 {
+    margin-left: 250px;
+    font-weight: bold;
+}
+#meme-w2 div {
+    background: #eed;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    border-radius: 0.25em;
+    float: left; display: inline;
+    font-size: 3em;
+    letter-spacing: -0.05em;
+    margin: 0 40px 0 0;
+    padding: 0.3em 0.4em 0.4em;
+    position: relative;
+    word-spacing: 0.1em;
+}
+#meme-w2 .arrow {
+    border-right: 35px solid #eed;
+    border-top: 0.5em solid transparent;
+    border-bottom: 0.1em solid transparent;
+    line-height: 0;
+
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0.5em;
+    left: -34px;
+}
+#push {
+    float: left; display: inline;
+    width: 250px;
+}
+#butan {
+    background: url(butan-original.png) 0 0px no-repeat;
+    cursor: pointer;
+    margin: 80px 0 20px 50px;
+    overflow: hidden;
+    padding-top: 150px;
+
+    width: 150px;
+    height: 0;
+}
+#butan:hover, #butan.reveal {
+    background-position: 0 -150px;
+}
+#loading {
+    height: 16px;
+}
+#loading span {
+    background: url(loading.gif) 50% 0 no-repeat;
+    display: block;
+}
+#footer-wrap {
+    clear: both;
+    padding: 3em 0;
+}
+#footer {
+    border-top: 5px solid #eed;
+    color: #888;
+    font-size: 0.8em;
+    margin: 0 3em;
+    padding: 1.5em 0;
+    -webkit-transition: margin-left 0.2s ease-out;
+}
+#footer p {
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+}
+#footer p#footer-nav {
+    margin: 0 -0.4em 2em;
+}
+#footer-nav a {
+    padding: 0.2em 0.4em;
+}
+#wut {
+    font-weight: bold;
+}
+#sellout {
+    float: right; display: inline;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+#promo img {
+    max-width: 100%;
+}
+#share-buttons {
+    float: left; display: inline;
+}
 .share-button {
     display: inline-block;
     margin: 0 0.5em 0.5em 0;
@@ -56,9 +162,9 @@ a,img {border:none !important;}
 .share-button img {
     vertical-align: top;
 }
-.tumblr-share-button a {display:inline-block; text-indent:-9999px; overflow:hidden; width:81px; height:20px; background:url('http://platform.tumblr.com/v1/share_1T.png') top left no-repeat transparent;}
-.stumbleupon-share-button { padding-top: 1px; }
-.hide {display:none;}
+.hide {
+    display: none;
+}
 
 
 @media all and (min-width: 820px) {

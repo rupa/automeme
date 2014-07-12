@@ -3,7 +3,7 @@ SRC = src
 IMG = images
 OUT = html
 
-HOST = boxofjunk
+HOST = mt
 DEST = $(HOST):domains/automeme.net/html
 DEST_DEV = $(HOST):domains/dev.automeme.net/html
 
