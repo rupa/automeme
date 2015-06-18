@@ -1,22 +1,54 @@
-# vim: set fileencoding=utf-8 :
+from random import choice, randint
 
-__author__ = 'Liam Cooke <http://boxofjunk.ws/>'
-
-from common import *
-
-spengbab = lambda: choice(\
-        ['Spange','Speng','Sporg','Splorg','Spang',
-        'Spernd','Splort','Spunk','Scram','Spange','Speeng',
-        'Splen','Spengj','Spinge','Spong']\
-        ) + choice(\
-        ['bob','bob','bob','bab','bab','beb','blat','berp','bharb',
-        'blar','borg'])
-sqarpents = lambda: choice(\
-        ['Sqar','Skur','Sven','Squat','Spleen','Snare','Sklabh',
-        'Squere','Dildo']\
-        ) + choice(\
-        ['pents','ponce','porks','peeps','pops','pans','pints',
-        'ponts'])
+spengbab = lambda: choice([
+    'Spange',
+    'Speng',
+    'Sporg',
+    'Splorg',
+    'Spang',
+    'Spernd',
+    'Splort',
+    'Spunk',
+    'Scram',
+    'Spange',
+    'Speeng',
+    'Splen',
+    'Spengj',
+    'Spinge',
+    'Spong'
+]) + choice([
+    'bob',
+    'bob',
+    'bob',
+    'bab',
+    'bab',
+    'beb',
+    'blat',
+    'berp',
+    'bharb',
+    'blar',
+    'borg'
+])
+sqarpents = lambda: choice([
+    'Sqar',
+    'Skur',
+    'Sven',
+    'Squat',
+    'Spleen',
+    'Snare',
+    'Sklabh',
+    'Squere',
+    'Dildo'
+]) + choice([
+    'pents',
+    'ponce',
+    'porks',
+    'peeps',
+    'pops',
+    'pans',
+    'pints',
+    'ponts'
+])
 
 vocab = {
     'spengbab': [
@@ -43,15 +75,15 @@ vocab = {
         'Digg',
         'Domokun',
         'Dragonforce',
-    'The Dude',
+        'The Dude',
         'Duke Nukem',
         'Dumbledore',
         'Elvis',
         'Facebook login',
-    'The FBI',
-    'The Flying Spaghetti Monster',
+        'The FBI',
+        'The Flying Spaghetti Monster',
         'FOX News',
-    'The Fresh Prince',
+        'The Fresh Prince',
         'George Bush',
         'G.I. Joe',
         'Goatse',
@@ -82,16 +114,16 @@ vocab = {
         'Microsoft',
         'Milhouse',
         'moot',
-    'The music industry',
+        'The music industry',
         'Nine Inch Nails',
         'Nod Flenders',
-    'The NSA',
+        'The NSA',
         'Obama',
         'Pinterest',
-    'The Pirate Bay',
+        'The Pirate Bay',
         'Raptorjesus',
         'Reddit',
-    'The RIAA',
+        'The RIAA',
         'Richard Stallman',
         'Scientology',
         'Serious Cat',
@@ -362,8 +394,7 @@ vocab = {
         'chew bees; chews bees; chewed bees; ~; chewing bees',
         'count; ~s; counted; ~; counting',
         'dance; ~s; danced; ~; dancing',
-        'do a barrel roll; does a barrel roll; did a barrel roll; '\
-                'done a barrel roll; doing a barrel roll',
+        'do a barrel roll; does a barrel roll; did a barrel roll; done a barrel roll; doing a barrel roll',
         'download mp3s; downloads mp3s; downloaded mp3s; ~; downloading mp3s',
         'drink; ~s; drank; drunk; drinking',
         'drive; ~s; drove; driven; driving',
@@ -421,7 +452,7 @@ vocab = {
         'mighty',
         'necro',
         'old',
-        lambda: 'o' * randint(3,8) + 'ld',
+        lambda: 'o' * randint(3, 8) + 'ld',
         'photoshopped',
         'pig disgusting',
         'pirated',

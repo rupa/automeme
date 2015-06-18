@@ -1,0 +1,23 @@
+A cheeky random nonsense generator.
+
+Based on automeme by Liam Cooke https://github.com/inky/automeme.
+
+Install
+=======
+
+git clone git@github.com:rupa/automeme.git
+cd automeme
+python setup.py sdist
+pip install dist/automeme*tar.gz
+
+Usage
+=====
+
+>>> from automeme import generate
+>>> generate()
+"YOU WOULDN'T DOWNLOAD AN ANT"
+
+A CLI script is included:
+
+~$ automeme
+BANK'S CLOSED DUE TO EXTRA LIVES

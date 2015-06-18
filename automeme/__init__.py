@@ -1,36 +1,25 @@
-#!/usr/bin/env python
-# vim: set fileencoding=utf-8 :
+import re
+from random import choice
 
-# note: python parses 'coding=' above
-
-__author__ = 'Liam Cooke <http://boxofjunk.ws/>'
-
-from random import randint
-
-from common import *
 from patterns import patterns
 from vocab import vocab as primary_vocab
 
-CONTENT_TYPES = {'html': 'text/html', 'txt': 'text/plain', 'plain': 'text/plain'}
-title = 'AUTOMEME'
-
-
-# SOPA/PIPA blackout
-import datetime
-BLACKOUT_TIME = datetime.datetime.now().timetuple()[:3] == (2012, 1, 18)
-
+expand = lambda v: (callable(v) and [v()] or [v])[0]
+re_sub = lambda p, r, s: re.compile(p, re.U | re.VERBOSE).sub(r, s)
 
 def get_word(words, index):
-    """Return a word from a list of words. If the word contains
-    the character ~, this is replaced with the word at index-1.
     """
-    v = min(index, len(words)-1)
+    Return a word from a list of words. If the word contains
+    the character ~, this is replaced with the word at index - 1.
+    """
+    v = min(index, len(words) - 1)
     if '~' in words[v]:
-        return words[v].replace('~', v > 0 and get_word(words, v-1) or '')
+        return words[v].replace('~', v > 0 and get_word(words, v - 1) or '')
     return words[v]
 
 def randword(category, vocab):
-    """Return a random word using a specified word category or
+    """
+    Return a random word using a specified word category or
     list of word categories. A category is denoted by one of
     the following formats:
         X       category X, variant 0
@@ -67,7 +56,9 @@ def randword(category, vocab):
     return get_word(vars, var)
 
 def a_word(word):
-    """Prepend 'a' or 'an' to a word."""
+    """
+    Prepend 'a' or 'an' to a word.
+    """
     w = word.split(' ', 1)[0].lower()
     if w in ('unix', ):
         return 'a ' + word
@@ -76,9 +67,10 @@ def a_word(word):
     else:
         return 'a ' + word
 
-def generate(format='html', pattern='', vocab=None):
-    if BLACKOUT_TIME:
-        return 'I MADE U A MEME BUT SOPA EATED IT'
+def generate(format='plain', pattern='', vocab=None):
+    """
+    MAKE YOU A MEME
+    """
 
     mode = vocab
     if mode == 'hipster':
@@ -104,14 +96,14 @@ def generate(format='html', pattern='', vocab=None):
         else:
             p = expand(p[0])
 
-    meme = expand( p[0] )
+    meme = expand(p[0])
     subs = p[1:]
 
     for i, s in enumerate(subs):
         word = randword(s, vocab)
-        meme = meme.replace('{%s}' % (i+1), word)
-        if '{%sa}' % (i+1) in meme:
-            meme = meme.replace('{%sa}' % (i+1), a_word(word))
+        meme = meme.replace('{%s}' % (i + 1), word)
+        if '{%sa}' % (i + 1) in meme:
+            meme = meme.replace('{%sa}' % (i + 1), a_word(word))
 
     meme = meme.upper()
     if format in ('plain', 'twitter'):
