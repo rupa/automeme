@@ -10,7 +10,7 @@ setup(
     license='GPL',
     packages=['automeme'],
     entry_points={
-        'console_scripts': ['automeme=automeme:generate'],
+        'console_scripts': ['automeme=automeme:cli'],
     },
     zip_safe=False
 )
